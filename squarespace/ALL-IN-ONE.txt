@@ -1,0 +1,3521 @@
+MY WELLNESS PHYSICIANS: ALL WEBSITE CODE IN ONE FILE
+====================================================
+
+Each block below is complete: it carries its own styling, so nothing needs
+to go in Custom CSS or Code Injection.
+
+For each page:
+  1. In Squarespace, create the page (Blank page) and set its URL slug.
+  2. Delete the "Empty Page" section. Add a blank section.
+  3. Add Block -> Code (a Code block, not a Text block).
+  4. Copy everything between the START and END lines for that page
+     (not the START/END lines themselves) and paste it into the Code block.
+     Turn off "Display Source" if you see it.
+  5. Stretch the block to full width. Save.
+  6. Page settings (gear icon) -> SEO: paste the title and description shown.
+
+Header button: "Book an appointment" -> https://scheduling.symplast.com/mywellnessphysicians/3?provider=7
+
+
+====================================================
+PAGE: Home (new)
+URL slug: home-new
+Note: Set as your homepage when everything is ready.
+SEO title: Lipedema, Weight Loss & Obesity Doctor in Leesburg, VA | My Wellness Physicians
+SEO description: Lipedema and lymphedema care, weight loss and obesity management, hormone therapy, primary care and IV therapy in Leesburg, VA. Dr. Minnie Cruz-Tolentino, MD, FAAFP, DABOM, serves Loudoun County and Northern Virginia in person and by telemedicine.
+====================================================
+----- START HOME (copy from the next line) -----
+<style>
+/* Fonts (loaded here so Code Injection isn't needed) */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&family=Playfair+Display:wght@600;700&display=swap');
+
+.mwp {
+  
+  --plum-900: #2a1f42;   
+  --plum-800: #3d2d61;   
+  --plum-700: #543e82;   
+  --lilac:    #9e7ebc;   
+  --lilac-300: #b49bd0;  
+  --plum-100: #e9e1f2;
+  --plum-50:  #f6f2fa;
+  --ink: #2a1f42;
+  --ink-muted: #5b5670;  
+  --line: #d9d9d9;
+  --white: #ffffff;
+  --ph: #b45309;          
+
+  --font-head: "Playfair Display", Georgia, serif;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4.5rem;
+  --space-7: 6rem;
+
+  --radius-sm: 8px;
+  --radius-lg: 20px;
+  --container: 1160px;
+  --focus: 0 0 0 3px var(--white), 0 0 0 6px var(--plum-700);
+}
+.mwp *, .mwp *::before, .mwp *::after { box-sizing: border-box; }
+@media (prefers-reduced-motion: reduce) {
+.mwp *, .mwp *::before, .mwp *::after { transition: none !important; }
+}
+.mwp {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--white);
+}
+.mwp h1, .mwp h2, .mwp h3 {
+  font-family: var(--font-head);
+  line-height: 1.15;
+  margin: 0 0 var(--space-2);
+  color: var(--plum-900);
+  text-wrap: balance;
+}
+.mwp h1 { font-size: clamp(2.25rem, 4.6vw, 3.5rem); font-weight: 700; letter-spacing: -0.01em; }
+.mwp h2 { font-size: clamp(1.75rem, 3vw, 2.375rem); font-weight: 700; }
+.mwp h3 { font-family: var(--font-body); font-size: 1.1875rem; font-weight: 800; }
+.mwp p { margin: 0 0 var(--space-2); max-width: 65ch; }
+.mwp a { color: var(--plum-700); text-underline-offset: 0.2em; }
+.mwp a:hover { color: var(--plum-900); }
+.mwp :focus-visible { outline: none; box-shadow: var(--focus); border-radius: 4px; }
+.mwp .container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+.mwp .container { padding-inline: 2rem; }
+}
+.mwp .visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+.mwp .ph {
+  color: var(--ph);
+  background: #fff7ed;
+  outline: 1px dashed #f59e0b;
+  outline-offset: 1px;
+  border-radius: 3px;
+}
+.mwp .icon {
+  width: 1.125rem; height: 1.125rem;
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+  flex-shrink: 0;
+}
+.mwp .icon-lg { width: 2rem; height: 2rem; stroke-width: 1.75; }
+.mwp .btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4em;
+  min-height: 44px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+.mwp .btn-lg { min-height: 52px; padding: 0.75rem 1.5rem; font-size: 1.0625rem; }
+.mwp .btn-primary { background: var(--plum-700); color: var(--white); }
+.mwp .btn-primary:hover { background: var(--plum-900); color: var(--white); }
+.mwp .btn-quiet { background: var(--white); color: var(--plum-900); border-color: var(--line); }
+.mwp .btn-quiet:hover { border-color: var(--plum-700); color: var(--plum-900); }
+.mwp .btn-light { background: var(--white); color: var(--plum-900); }
+.mwp .btn-light:hover { background: var(--plum-100); color: var(--plum-900); }
+.mwp .btn-outline-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.7); }
+.mwp .btn-outline-light:hover { background: rgba(255,255,255,.12); color: var(--white); border-color: var(--white); }
+.mwp .cta-band .ph, .mwp .btn .ph { color: inherit; background: transparent; }
+.mwp .hero { background: var(--white); color: var(--ink); padding-block: var(--space-5) var(--space-6); }
+.mwp .hero-inner { display: grid; gap: var(--space-5); align-items: center; }
+.mwp .hero h1 { margin-bottom: var(--space-3); }
+.mwp .hero-name { display: block; font-size: clamp(2.5rem, 5.2vw, 4.25rem); line-height: 1.05; letter-spacing: -0.015em; color: var(--plum-900); }
+.mwp .hero-credentials {
+  display: block; margin-top: 0.75rem;
+  font-family: var(--font-body); font-weight: 800; font-size: 0.9375rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--plum-700);
+}
+.mwp .hero-role { display: block; margin-top: var(--space-3); font-size: clamp(1.5rem, 2.6vw, 2.125rem); line-height: 1.2; color: var(--plum-700); font-weight: 600; }
+.mwp .lede { font-size: 1.1875rem; color: inherit; }
+.mwp .hero p { max-width: 58ch; }
+.mwp .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: var(--space-4); }
+.mwp .hero-media { margin: 0; position: relative; }
+.mwp .hero-media::before {
+  content: ""; position: absolute; inset: 24px -16px -16px 24px;
+  border-radius: 28px; background: var(--plum-50); border: 1px solid var(--plum-100);
+  z-index: 0;
+}
+.mwp .hero-media img {
+  position: relative; z-index: 1;
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 32% 50%;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px -32px rgba(42,31,66,.5);
+}
+.mwp .hero-caption {
+  position: absolute; z-index: 2; right: var(--space-2); bottom: var(--space-2); left: var(--space-2);
+  max-width: 300px; margin-left: auto;
+  padding: var(--space-2) var(--space-3);
+  background: rgba(42,31,66,.86);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 16px;
+  font: italic 600 1.125rem/1.35 var(--font-head);
+  color: var(--white);
+}
+@media (min-width: 900px) {
+.mwp .hero { padding-block: var(--space-6) var(--space-7); }
+.mwp .hero-inner { grid-template-columns: 1.4fr 1fr; gap: var(--space-6); }
+.mwp .hero-media { max-width: 500px; justify-self: end; width: 100%; }
+}
+.mwp .btn-outline { background: var(--white); color: var(--plum-900); border-color: var(--plum-900); }
+.mwp .btn-outline:hover { background: var(--plum-900); color: var(--white); }
+.mwp .btn-lilac { background: var(--lilac-300); color: var(--plum-900); }
+.mwp .btn-lilac:hover { background: #c4b0dc; color: var(--plum-900); }
+.mwp .btn-ghost-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.55); }
+.mwp .btn-ghost-light:hover { background: rgba(255,255,255,.1); color: var(--white); border-color: var(--white); }
+.mwp .trust-bar { border-block: 1px solid var(--line); background: var(--white); }
+.mwp .trust-list {
+  list-style: none; margin-block: 0;
+  display: grid; grid-template-columns: 1fr;
+}
+.mwp .trust-list li {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: var(--space-2) 0;
+  font-size: 0.9375rem; color: var(--ink-muted); line-height: 1.35;
+}
+.mwp .trust-list li + li { border-top: 1px solid var(--line); }
+.mwp .trust-list strong { display: block; color: var(--plum-900); font-size: 1rem; }
+.mwp .trust-list .icon { color: var(--plum-700); }
+@media (min-width: 520px) {
+.mwp .trust-list { grid-template-columns: repeat(2, 1fr); }
+.mwp .trust-list li { padding: var(--space-3) var(--space-2); }
+.mwp .trust-list li:nth-child(2) { border-top: 0; }
+.mwp .trust-list li:nth-child(even) { border-left: 1px solid var(--line); }
+}
+@media (min-width: 900px) {
+.mwp .trust-list { grid-template-columns: repeat(4, 1fr); }
+.mwp .trust-list li { padding: var(--space-3); border-top: 0 !important; }
+.mwp .trust-list li + li { border-left: 1px solid var(--line); }
+}
+.mwp .about { background: var(--white); padding-block: var(--space-6); }
+.mwp .about-inner { display: grid; gap: var(--space-5); align-items: center; }
+.mwp .about-photo {
+  display: block; width: 100%; max-width: 460px; height: auto;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 15%;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px -32px rgba(42,31,66,.45);
+}
+.mwp .about h2 { font-size: clamp(2.125rem, 4vw, 3.25rem); letter-spacing: -0.01em; }
+.mwp .about-lede { font-size: 1.1875rem; }
+.mwp .about strong { color: var(--plum-900); }
+.mwp .features {
+  list-style: none; margin: var(--space-4) 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3);
+  text-align: center;
+}
+.mwp .features li { display: grid; justify-items: center; gap: 0.5rem; font-weight: 800; color: var(--plum-900); line-height: 1.3; }
+.mwp .features .icon { color: var(--plum-700); }
+@media (min-width: 640px) {
+.mwp .features { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 900px) {
+.mwp .about-inner { grid-template-columns: 1fr 1.3fr; gap: var(--space-6); }
+}
+.mwp .credentials {
+  list-style: none; margin: var(--space-4) 0 0; padding: var(--space-3);
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3);
+  align-items: center; justify-items: center;
+  background: var(--white); border: 1px solid var(--line); border-radius: 20px;
+}
+.mwp .credentials li { min-width: 0; }
+.mwp .credentials img { display: block; width: auto; height: auto; max-width: 100%; max-height: 84px; }
+@media (min-width: 1100px) {
+.mwp .credentials { grid-template-columns: repeat(4, auto); justify-content: space-between; }
+}
+.mwp .services { background: var(--plum-50); padding-block: var(--space-6); }
+.mwp .services-panel {
+  background: var(--white);
+  border-radius: 28px;
+  padding: var(--space-4) var(--space-3);
+  box-shadow: 0 30px 60px -40px rgba(42,31,66,.45);
+  overflow: hidden;
+}
+.mwp .services .section-head { max-width: 860px; margin-bottom: var(--space-4); }
+.mwp .services .section-head h2 { font-size: clamp(2.125rem, 4vw, 3.25rem); letter-spacing: -0.01em; color: var(--plum-900); }
+.mwp .services .section-head p { color: var(--ink-muted); font-size: 1.0625rem; margin: 0; }
+@media (min-width: 768px) {
+.mwp .services-panel { padding: var(--space-5) var(--space-6); }
+}
+.mwp .service-cards {
+  list-style: none; margin: 0; padding: 0.5rem 0.25rem 1.5rem;
+  display: flex; gap: var(--space-3);
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-padding-inline: 0.25rem;
+  scrollbar-width: none;
+}
+.mwp .service-cards::-webkit-scrollbar { display: none; }
+.mwp .service-cards:focus-visible { box-shadow: var(--focus); border-radius: 20px; }
+.mwp .service-card {
+  position: relative;
+  flex: 0 0 82%; max-width: 340px;
+  scroll-snap-align: start;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: var(--space-4) var(--space-3);
+  border-radius: 22px;
+  color: var(--white);
+  background: linear-gradient(160deg, #7259a8 0%, var(--plum-700) 45%, #3d2d61 100%);
+  box-shadow: 0 18px 36px -22px rgba(42,31,66,.7);
+  transition: transform 200ms ease;
+}
+@media (min-width: 640px) {
+.mwp .service-card { flex-basis: 44%; }
+}
+@media (min-width: 1000px) {
+.mwp .service-card { flex-basis: 30%; }
+}
+.mwp .service-card:first-child, .mwp .service-card:hover, .mwp .service-card:focus-within {
+  background: linear-gradient(160deg, #c4b0dc 0%, var(--lilac-300) 100%);
+  color: var(--plum-900);
+}
+.mwp .service-cards:hover .service-card:first-child:not(:hover), .mwp .service-cards:focus-within .service-card:first-child:not(:focus-within) {
+  background: linear-gradient(160deg, #7259a8 0%, var(--plum-700) 45%, #3d2d61 100%);
+  color: var(--white);
+}
+@media (prefers-reduced-motion: no-preference) {
+.mwp .service-card:hover { transform: translateY(-4px); }
+}
+.mwp .card-icon {
+  display: grid; place-items: center;
+  width: 64px; height: 64px; margin-bottom: var(--space-3);
+  background: var(--white); border-radius: 16px;
+  box-shadow: 0 8px 18px -10px rgba(42,31,66,.6);
+}
+.mwp .card-icon svg { width: 34px; height: 34px; fill: none; stroke: var(--plum-700); stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.mwp .service-card h3 { color: inherit; font-family: var(--font-body); font-weight: 800; font-size: 1.375rem; line-height: 1.25; margin-bottom: 0.75rem; }
+.mwp .service-card p { color: inherit; font-size: 0.9875rem; margin: 0 0 var(--space-3); }
+.mwp .card-link {
+  margin-top: auto;
+  font-weight: 800; color: inherit; text-decoration: underline; text-underline-offset: 0.25em;
+}
+.mwp .card-link:hover { color: inherit; }
+.mwp .card-link::after { content: ""; position: absolute; inset: 0; border-radius: 22px; }
+.mwp .card-link:focus-visible { box-shadow: none; }
+.mwp .card-link:focus-visible::after { box-shadow: var(--focus); }
+.mwp .carousel-controls { display: flex; align-items: center; gap: 0.75rem; margin-top: var(--space-2); }
+.mwp .carousel-btn {
+  display: grid; place-items: center;
+  width: 48px; height: 48px; padding: 0;
+  background: var(--white); color: var(--plum-900);
+  border: 1.5px solid var(--plum-900); border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+.mwp .carousel-btn:hover:not(:disabled) { background: var(--plum-900); color: var(--white); }
+.mwp .carousel-btn:disabled { opacity: .35; cursor: default; }
+.mwp .carousel-progress {
+  flex: 1; max-width: 320px; height: 3px; margin-left: var(--space-2);
+  background: var(--line); border-radius: 3px; overflow: hidden;
+}
+.mwp .carousel-progress span { display: block; height: 100%; width: 30%; background: var(--plum-700); border-radius: 3px; transition: margin-left 160ms ease; }
+.mwp .new-patients { padding-block: var(--space-6); }
+.mwp .steps { list-style: none; counter-reset: step; margin: var(--space-3) 0 0; padding: 0; display: grid; gap: var(--space-4); }
+.mwp .steps li { counter-increment: step; position: relative; padding-left: 3.5rem; }
+.mwp .steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: -0.15rem;
+  width: 2.5rem; height: 2.5rem; display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--plum-700); color: var(--white);
+  font: 800 1.0625rem var(--font-body);
+}
+.mwp .steps p { color: var(--ink-muted); }
+@media (min-width: 900px) {
+.mwp .steps { grid-template-columns: repeat(3, 1fr); }
+}
+.mwp .visit { padding-block: var(--space-6); border-top: 1px solid var(--line); }
+.mwp .visit-inner { display: grid; gap: var(--space-5); }
+.mwp .address { font-style: normal; margin-bottom: var(--space-3); font-size: 1.125rem; }
+.mwp .hours { border-collapse: collapse; width: 100%; max-width: 440px; margin-bottom: var(--space-3); }
+.mwp .hours th, .mwp .hours td { text-align: left; padding: 0.625rem 0; border-bottom: 1px solid var(--line); }
+.mwp .hours th { font-weight: 600; padding-right: var(--space-3); }
+.mwp .hours td { white-space: nowrap; }
+.mwp .hint { color: var(--ink-muted); font-size: 0.9625rem; }
+.mwp .map { width: 100%; aspect-ratio: 4 / 3; border: 1px solid var(--line); border-radius: var(--radius-lg); }
+@media (min-width: 900px) {
+.mwp .visit-inner { grid-template-columns: 1fr 1.2fr; gap: var(--space-6); align-items: start; }
+}
+.mwp .cta-band { background: var(--plum-700); color: #f1ecf8; padding-block: var(--space-6); }
+.mwp .cta-band h2 { color: var(--white); }
+.mwp .cta-band p { color: #f1ecf8; }
+.mwp .cta-inner { display: grid; gap: var(--space-3); align-items: center; }
+.mwp .cta-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+@media (min-width: 900px) {
+.mwp .cta-inner { grid-template-columns: 1.4fr 1fr; }
+.mwp .cta-actions { justify-content: flex-end; }
+}
+.mwp .page-hero {
+  background: var(--plum-50);
+  border-bottom: 1px solid var(--plum-100);
+  padding-block: var(--space-4) var(--space-5);
+}
+.mwp .page-hero h1 { max-width: 22ch; color: var(--plum-900); font-size: clamp(2.25rem, 4.6vw, 3.5rem); }
+.mwp .page-hero .lede { max-width: 60ch; color: var(--ink); }
+.mwp .page-hero .hero-actions { margin-top: var(--space-3); }
+.mwp .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; margin: 0 0 var(--space-3); padding: 0; font-size: 0.9375rem; }
+.mwp .breadcrumb li + li::before { content: "/"; margin-right: 0.5rem; color: var(--ink-muted); }
+.mwp .breadcrumb [aria-current] { color: var(--ink-muted); }
+.mwp .page-body { display: grid; gap: var(--space-5); padding-block: var(--space-5) var(--space-6); }
+@media (min-width: 1000px) {
+.mwp .page-body { grid-template-columns: minmax(0, 1fr) 300px; gap: var(--space-6); align-items: start; }
+.mwp .page-body--single { grid-template-columns: minmax(0, 1fr); }
+.mwp .side-card { position: sticky; top: 120px; }
+}
+.mwp .prose { max-width: 70ch; }
+.mwp .prose h2 { font-size: clamp(1.5rem, 2.4vw, 1.875rem); margin-top: var(--space-5); }
+.mwp .prose h2:first-child { margin-top: 0; }
+.mwp .prose ul { padding-left: 1.25rem; margin: 0 0 var(--space-2); }
+.mwp .prose li { margin-bottom: 0.5rem; }
+.mwp .prose li::marker { color: var(--plum-700); }
+.mwp .callout {
+  border-left: 4px solid var(--plum-700);
+  background: var(--plum-50);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.mwp .side-card {
+  display: grid; gap: var(--space-2);
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  max-width: 420px;
+}
+.mwp .side-card img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 15%; border-radius: var(--radius-sm); }
+.mwp .side-card p { margin-bottom: 0.5rem; }
+.mwp .side-name { font: 700 1.25rem var(--font-head); color: var(--plum-900); }
+.mwp .side-card a { font-weight: 700; }
+.mwp .empty-state {
+  font-size: 1.1875rem;
+  padding: var(--space-4);
+  background: var(--plum-50); border: 1px dashed var(--plum-100); border-radius: 20px;
+}
+
+/* ===== My Wellness Physicians: Squarespace glue =====
+   Every page's content sits inside <div class="mwp"> in a Code Block.
+   These rules let that content run edge to edge and remove the
+   section padding Squarespace adds around it. */
+.mwp {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  text-align: left;
+}
+body:has(.mwp) { overflow-x: clip; }
+.page-section:has(.mwp) {
+  padding-bottom: 0 !important;
+  min-height: 0 !important;
+}
+/* Keep the first section's top spacing: Squarespace uses it to make room
+   for the header, which can sit on top of the first section. */
+.page-section:has(.mwp):not(:first-child) { padding-top: 0 !important; }
+.page-section:has(.mwp) .content-wrapper {
+  padding: 0 !important;
+  max-width: none !important;
+}
+.sqs-block-code:has(.mwp) { padding: 0 !important; }
+/* Hide a whole section (for example the image library) by adding a Code Block
+   containing <div class="mwp-hidden-section"></div> to it. */
+.page-section:has(.mwp-hidden-section) { display: none !important; }
+.mwp img { max-width: 100%; }
+/* Keep the theme's heading and link styling out of this content. */
+.mwp h1, .mwp h2, .mwp h3, .mwp p, .mwp li, .mwp a, .mwp dt, .mwp dd, .mwp th, .mwp td, .mwp address {
+  text-transform: none;
+}
+.mwp h2, .mwp h3, .mwp p, .mwp li, .mwp a { letter-spacing: normal; }
+.mwp h1 { letter-spacing: -0.01em; }
+.mwp a { background-image: none; }
+.mwp ul, .mwp ol { margin-top: 0; }
+
+/* Footer snippet */
+.mwp-footer { background: var(--plum-900); color: #ddd5ea; padding-block: var(--space-5); font-size: 0.9375rem; }
+.mwp-footer a { color: var(--white); }
+.mwp-footer .footer-grid { display: grid; gap: var(--space-3); }
+.mwp-footer .footer-name { font: 700 1.25rem var(--font-head); color: var(--white); margin-bottom: 0.5rem; }
+.mwp-footer .footer-emergency { font-weight: 600; color: var(--white); }
+.mwp-footer .footer-legal { margin: 0; color: #c9bddb; }
+@media (min-width: 900px) {
+  .mwp-footer .footer-grid { grid-template-columns: 1fr 1fr; }
+  .mwp-footer .footer-legal { grid-column: 1 / -1; padding-top: var(--space-3); border-top: 1px solid rgba(255,255,255,.15); }
+}
+
+</style>
+<div class="mwp">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <h1 id="hero-title">
+            <span class="hero-name">Meet Minnie Cruz-Tolentino</span>
+            <span class="hero-credentials">MD, FAAFP, DABOM</span>
+            <span class="hero-role">Lipedema, Weight Loss and Obesity Physician in Loudoun County &amp; Northern Virginia</span>
+          </h1>
+          <p class="lede">Looking for a lipedema specialist, a medical weight loss doctor, or hormone therapy in Loudoun County? You’re in the right place.</p>
+          <p>Dr. Cruz-Tolentino is double board-certified in Family Medicine and Obesity Medicine, with over 19 years of experience. She looks for the root causes of weight gain, hormonal imbalance and chronic health concerns, and builds a personalized plan for sustainable results, not quick fixes.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">
+              Book an appointment
+              <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn-outline btn-lg" href="#about">Meet Dr. Cruz-Tolentino</a>
+          </div>
+        </div>
+        <figure class="hero-media">
+          <img
+            src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/757e3715-907f-4480-b5a3-70a8eca5c328/dr-cruz-tolentino-clinic.jpg?format=1500w"
+            width="1200" height="675"
+            alt="Dr. Minnie Cruz-Tolentino in the hallway of My Wellness Physicians in Leesburg, VA"
+            >
+          <figcaption class="hero-caption">In person in Leesburg, or by telemedicine from home</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="trust-bar" aria-label="Credentials">
+      <ul class="container trust-list">
+        <li>
+          <svg class="icon icon-md" aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.5 13 17 22l-5-3-5 3 1.5-9"/></svg>
+          <span><strong>Double board-certified</strong> Family &amp; Obesity Medicine</span>
+        </li>
+        <li>
+          <svg class="icon icon-md" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 2l3.1 6.3 6.9 1-5 4.8 1.2 6.9-6.2-3.2-6.2 3.2L7 14.1 2 9.3l6.9-1z"/></svg>
+          <span><strong>Best of Loudoun</strong> 2025 winner</span>
+        </li>
+        <li>
+          <svg class="icon icon-md" aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-3v10l-6-3"/></svg>
+          <span><strong>Telemedicine</strong> Visits from home</span>
+        </li>
+        <li>
+          <svg class="icon icon-md" aria-hidden="true" viewBox="0 0 24 24"><path d="M12 22s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <span><strong>Serving</strong> Loudoun County, VA</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="container about-inner">
+        <img class="about-photo"
+          src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/61a7e950-1824-4f75-941b-242c34c58927/dr-cruz-tolentino-portrait.jpg?format=1000w"
+          width="900" height="984" loading="lazy"
+          alt="Portrait of Dr. Minnie Cruz-Tolentino, obesity medicine physician in Leesburg, VA">
+        <div>
+          <h2 id="about-title">Root causes, not quick fixes.</h2>
+          <p class="about-lede">Dr. Cruz-Tolentino is <strong>double board-certified in Family Medicine and Obesity Medicine</strong>, with <strong>over 19 years of experience</strong> helping patients achieve lasting wellness. As the founder of My Wellness Physicians, she specializes in <strong>lipedema and lymphedema</strong> diagnosis and management, <strong>medical weight loss</strong>, <strong>hormone replacement therapy</strong> and preventive health care for men and women across Loudoun County and surrounding areas.</p>
+          <p>She pairs her medical background with a compassionate, patient-centered approach. Her goal is to guide every patient toward sustainable results through evidence-based treatment, nutritional education and a personalized care plan, because true transformation begins when you understand your body.</p>
+          <ul class="features">
+            <li>
+              <svg class="icon icon-lg" aria-hidden="true" viewBox="0 0 24 24"><rect x="8" y="2" width="8" height="4" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M9 12h6M9 16h4"/></svg>
+              <span>Personalized care plans</span>
+            </li>
+            <li>
+              <svg class="icon icon-lg" aria-hidden="true" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              <span>Evidence-based treatment</span>
+            </li>
+            <li>
+              <svg class="icon icon-lg" aria-hidden="true" viewBox="0 0 24 24"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-3v10l-6-3"/></svg>
+              <span>In person or telemedicine</span>
+            </li>
+            <li>
+              <svg class="icon icon-lg" aria-hidden="true" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18M9 16l2 2 4-4"/></svg>
+              <span>Book online anytime</span>
+            </li>
+          </ul>
+          <ul class="credentials" aria-label="Certifications and recognition">
+            <li><img src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/a41b11d4-63fa-4343-aace-c71d86c2e567/abfm-board-certified.png?format=500w" width="199" height="152" loading="lazy" alt="Board Certified, American Board of Family Medicine"></li>
+            <li><img src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/0e838b43-73f1-4aad-b476-1fac945b27e6/abom-diplomate.png?format=750w" width="293" height="78" loading="lazy" alt="American Board of Obesity Medicine, Certified Diplomate"></li>
+            <li><img src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/7071d39f-ec71-45a9-bb00-8a8038a1ce7d/menopause-society.png?format=500w" width="218" height="102" loading="lazy" alt="The Menopause Society"></li>
+            <li><img src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/4c68c64d-b413-44ef-aa23-8019bd356824/best-of-loudoun-2025.png?format=500w" width="123" height="134" loading="lazy" alt="Best of Loudoun 2025 Winner, Loudoun Times-Mirror"></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services" aria-labelledby="services-title">
+      <div class="container">
+        <div class="services-panel">
+          <div class="section-head">
+            <h2 id="services-title">Clinical specialties.</h2>
+            <p>Each specialty draws on double board certification in Family Medicine and Obesity Medicine and over 19 years of experience, with care that addresses the root causes of weight gain, hormonal imbalance and chronic health concerns.</p>
+          </div>
+          <div class="carousel" data-carousel>
+            <ul class="service-cards" id="service-cards" tabindex="0" aria-label="Clinical specialties, scroll sideways for more">
+          <li class="service-card" id="lipedema">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.7s-6 6.3-6 11.3a6 6 0 0 0 12 0c0-5-6-11.3-6-11.3z"/></svg></span>
+            <h3>Lipedema</h3>
+            <p>Diagnosis and ongoing management of lipedema, a chronic condition that causes painful fat build-up, usually in the legs and arms, and is often mistaken for ordinary weight gain.</p>
+            <a class="card-link" href="/lipedema-treatment">Learn more<span class="visually-hidden"> about lipedema treatment</span></a>
+          </li>
+          <li class="service-card" id="lymphedema">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 7c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2M2 12c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2M2 17c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2"/></svg></span>
+            <h3>Lymphedema</h3>
+            <p>Diagnosis and management of lymphedema, swelling caused by a build-up of lymph fluid when the lymphatic system is blocked or damaged.</p>
+            <a class="card-link" href="/lymphedema-treatment">Learn more<span class="visually-hidden"> about lymphedema treatment</span></a>
+          </li>
+          <li class="service-card" id="weight-loss">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg></span>
+            <h3>Weight loss &amp; obesity management</h3>
+            <p>Physician-supervised weight loss from a board-certified obesity medicine doctor, with nutritional education and a plan built around your health history.</p>
+            <a class="card-link" href="/medical-weight-loss">Learn more<span class="visually-hidden"> about weight loss and obesity management</span></a>
+          </li>
+          <li class="service-card" id="hormone-therapy">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7zM8.5 8.5l7 7"/></svg></span>
+            <h3>Hormone therapy for men &amp; women</h3>
+            <p>Hormone replacement therapy (HRT) for men and women dealing with hormonal imbalance, guided by your symptoms and health history.</p>
+            <a class="card-link" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book a visit<span class="visually-hidden"> for hormone therapy</span></a>
+          </li>
+          <li class="service-card" id="primary-care">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <h3>Primary care</h3>
+            <p>Comprehensive primary care for men and women: preventive check-ups, early detection and ongoing management of chronic conditions.</p>
+            <a class="card-link" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book a visit<span class="visually-hidden"> for primary care</span></a>
+          </li>
+          <li class="service-card" id="wellness-consultation">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></span>
+            <h3>Wellness consultation</h3>
+            <p>A one-on-one visit to review your health, goals and concerns, and map out a personalized plan for feeling your best.</p>
+            <a class="card-link" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book a visit<span class="visually-hidden"> for a wellness consultation</span></a>
+          </li>
+          <li class="service-card" id="iv-therapy-peptides">
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 2h6M10 2v3M14 2v3M7 5h10v6a5 5 0 0 1-10 0z"/><path d="M12 16v6"/></svg></span>
+            <h3>IV therapy &amp; peptides</h3>
+            <p>IV therapy and peptide therapy, offered when appropriate as part of a personalized, physician-guided plan.</p>
+            <a class="card-link" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book a visit<span class="visually-hidden"> for IV therapy and peptides</span></a>
+          </li>
+            </ul>
+            <div class="carousel-controls">
+              <button class="carousel-btn" type="button" data-dir="-1" aria-controls="service-cards" aria-label="Previous specialties">
+                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+              </button>
+              <button class="carousel-btn" type="button" data-dir="1" aria-controls="service-cards" aria-label="Next specialties">
+                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+              <div class="carousel-progress" aria-hidden="true"><span></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="new-patients" id="new-patients" aria-labelledby="np-title">
+      <div class="container">
+        <h2 id="np-title">Your first visit</h2>
+        <ol class="steps">
+          <li>
+            <h3>Book your appointment</h3>
+            <p>
+              <a href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book online</a>, call <a href="tel:+17037779355">703-777-9355</a>
+              or email <a href="mailto:info@mywellnessphysicians.com">info@mywellnessphysicians.com</a>.
+            </p>
+          </li>
+          <li>
+            <h3>Choose how to meet</h3>
+            <p>Visit us in Leesburg or have your appointment by telemedicine.</p>
+          </li>
+          <li>
+            <h3>Bring what you have</h3>
+            <p>Your medical records, a list of your current medications, and any questions you’d like to ask.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="visit" id="visit" aria-labelledby="visit-title">
+      <div class="container visit-inner">
+        <div>
+          <h2 id="visit-title">Hours &amp; location</h2>
+          <address class="address">
+            1604 Village Market Blvd SE, Suite 119<br>
+            Leesburg, VA 20175
+          </address>
+          <table class="hours">
+            <caption class="visually-hidden">Opening hours</caption>
+            <tbody>
+              <tr><th scope="row">Monday</th><td>8:30 am – 5:30 pm</td></tr>
+              <tr><th scope="row">Tuesday</th><td>8:30 am – 5:30 pm</td></tr>
+              <tr><th scope="row">Wednesday</th><td>8:30 am – 5:30 pm</td></tr>
+              <tr><th scope="row">Thursday</th><td>8:30 am – 5:30 pm</td></tr>
+              <tr><th scope="row">Friday</th><td>8:30 am – 5:30 pm</td></tr>
+              <tr><th scope="row">Saturday &amp; Sunday</th><td>Closed</td></tr>
+            </tbody>
+          </table>
+          <p class="hint">Serving Leesburg, Ashburn, Sterling and the rest of Loudoun County, with telemedicine visits available.</p>
+          <a class="btn btn-quiet" href="https://www.google.com/maps/dir/?api=1&amp;destination=1604+Village+Market+Blvd+SE+Suite+119+Leesburg+VA+20175">Get directions</a>
+        </div>
+        <iframe class="map"
+          title="Map showing My Wellness Physicians at 1604 Village Market Blvd SE, Leesburg, VA"
+          src="https://www.google.com/maps?q=1604+Village+Market+Blvd+SE+Suite+119+Leesburg+VA+20175&amp;output=embed"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+
+    <section class="cta-band" id="contact" aria-labelledby="contact-title">
+      <div class="container cta-inner">
+        <div>
+          <h2 id="contact-title">Ready to feel your best?</h2>
+          <p>Book online, call during office hours, or send us an email.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-light btn-lg" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book an appointment</a>
+          <a class="btn btn-outline-light btn-lg" href="tel:+17037779355">Call 703-777-9355</a>
+          <a class="btn btn-outline-light btn-lg" href="mailto:info@mywellnessphysicians.com">Email us</a>
+        </div>
+      </div>
+    </section>
+  
+</div>
+<script>
+// Services carousel: previous/next buttons and a progress bar for a scroll-snap row.
+// Without this script the row still scrolls sideways by touch, trackpad or keyboard.
+document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+  const track = carousel.querySelector('.service-cards');
+  const [prev, next] = carousel.querySelectorAll('.carousel-btn');
+  const bar = carousel.querySelector('.carousel-progress span');
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  const step = () => {
+    const card = track.querySelector('.service-card');
+    const gap = parseFloat(getComputedStyle(track).columnGap) || 0;
+    return card ? card.getBoundingClientRect().width + gap : track.clientWidth;
+  };
+
+  const update = () => {
+    const max = track.scrollWidth - track.clientWidth;
+    const pos = max > 0 ? track.scrollLeft / max : 1;
+    prev.disabled = track.scrollLeft <= 2;
+    next.disabled = track.scrollLeft >= max - 2;
+    // The indicator is as wide as the visible share of the row and slides along with it.
+    const visible = Math.min(track.clientWidth / track.scrollWidth, 1) * 100;
+    bar.style.width = `${visible}%`;
+    bar.style.marginLeft = `${pos * (100 - visible)}%`;
+  };
+
+  [prev, next].forEach((btn) => btn.addEventListener('click', () => {
+    track.scrollBy({ left: Number(btn.dataset.dir) * step(), behavior: reduce ? 'auto' : 'smooth' });
+  }));
+  track.addEventListener('scroll', update, { passive: true });
+  window.addEventListener('resize', update);
+  update();
+});
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "@id": "https://www.mywellnessphysicians.com/#clinic",
+  "name": "My Wellness Physicians",
+  "description": "Lipedema, weight loss and obesity medicine practice in Leesburg, Virginia offering lipedema and lymphedema care, weight loss and obesity management, hormone therapy for men and women, primary care, wellness consultations, and IV therapy and peptides.",
+  "url": "https://www.mywellnessphysicians.com/",
+  "telephone": "+1-703-777-9355",
+  "email": "info@mywellnessphysicians.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1604 Village Market Blvd SE, Suite 119",
+    "addressLocality": "Leesburg",
+    "addressRegion": "VA",
+    "postalCode": "20175",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Leesburg, VA"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Loudoun County, VA"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Northern Virginia"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:30",
+      "closes": "17:30"
+    }
+  ],
+  "medicalSpecialty": [
+    "PrimaryCare"
+  ],
+  "availableService": [
+    {
+      "@type": "MedicalTherapy",
+      "name": "Lipedema diagnosis and management"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Lymphedema diagnosis and management"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Weight loss and obesity management"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Hormone therapy for men and women"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Wellness consultation"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "IV therapy and peptides"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Primary care"
+    }
+  ],
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": "https://scheduling.symplast.com/mywellnessphysicians/3?provider=7"
+  },
+  "employee": {
+    "@type": "Physician",
+    "name": "Minnie Cruz-Tolentino, MD, FAAFP, DABOM"
+  }
+}
+</script>
+----- END HOME (copy down to the line above) -----
+
+
+====================================================
+PAGE: Lipedema treatment
+URL slug: lipedema-treatment
+SEO title: Lipedema Treatment in Leesburg, VA | My Wellness Physicians
+SEO description: Lipedema diagnosis and management in Leesburg, VA. Dr. Minnie Cruz-Tolentino helps patients across Loudoun County understand and manage lipedema, in person or by telemedicine.
+====================================================
+----- START LIPEDEMA (copy from the next line) -----
+<style>
+/* Fonts (loaded here so Code Injection isn't needed) */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&family=Playfair+Display:wght@600;700&display=swap');
+
+.mwp {
+  
+  --plum-900: #2a1f42;   
+  --plum-800: #3d2d61;   
+  --plum-700: #543e82;   
+  --lilac:    #9e7ebc;   
+  --lilac-300: #b49bd0;  
+  --plum-100: #e9e1f2;
+  --plum-50:  #f6f2fa;
+  --ink: #2a1f42;
+  --ink-muted: #5b5670;  
+  --line: #d9d9d9;
+  --white: #ffffff;
+  --ph: #b45309;          
+
+  --font-head: "Playfair Display", Georgia, serif;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4.5rem;
+  --space-7: 6rem;
+
+  --radius-sm: 8px;
+  --radius-lg: 20px;
+  --container: 1160px;
+  --focus: 0 0 0 3px var(--white), 0 0 0 6px var(--plum-700);
+}
+.mwp *, .mwp *::before, .mwp *::after { box-sizing: border-box; }
+@media (prefers-reduced-motion: reduce) {
+.mwp *, .mwp *::before, .mwp *::after { transition: none !important; }
+}
+.mwp {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--white);
+}
+.mwp h1, .mwp h2, .mwp h3 {
+  font-family: var(--font-head);
+  line-height: 1.15;
+  margin: 0 0 var(--space-2);
+  color: var(--plum-900);
+  text-wrap: balance;
+}
+.mwp h1 { font-size: clamp(2.25rem, 4.6vw, 3.5rem); font-weight: 700; letter-spacing: -0.01em; }
+.mwp h2 { font-size: clamp(1.75rem, 3vw, 2.375rem); font-weight: 700; }
+.mwp h3 { font-family: var(--font-body); font-size: 1.1875rem; font-weight: 800; }
+.mwp p { margin: 0 0 var(--space-2); max-width: 65ch; }
+.mwp a { color: var(--plum-700); text-underline-offset: 0.2em; }
+.mwp a:hover { color: var(--plum-900); }
+.mwp :focus-visible { outline: none; box-shadow: var(--focus); border-radius: 4px; }
+.mwp .container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+.mwp .container { padding-inline: 2rem; }
+}
+.mwp .visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+.mwp .ph {
+  color: var(--ph);
+  background: #fff7ed;
+  outline: 1px dashed #f59e0b;
+  outline-offset: 1px;
+  border-radius: 3px;
+}
+.mwp .icon {
+  width: 1.125rem; height: 1.125rem;
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+  flex-shrink: 0;
+}
+.mwp .icon-lg { width: 2rem; height: 2rem; stroke-width: 1.75; }
+.mwp .btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4em;
+  min-height: 44px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+.mwp .btn-lg { min-height: 52px; padding: 0.75rem 1.5rem; font-size: 1.0625rem; }
+.mwp .btn-primary { background: var(--plum-700); color: var(--white); }
+.mwp .btn-primary:hover { background: var(--plum-900); color: var(--white); }
+.mwp .btn-quiet { background: var(--white); color: var(--plum-900); border-color: var(--line); }
+.mwp .btn-quiet:hover { border-color: var(--plum-700); color: var(--plum-900); }
+.mwp .btn-light { background: var(--white); color: var(--plum-900); }
+.mwp .btn-light:hover { background: var(--plum-100); color: var(--plum-900); }
+.mwp .btn-outline-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.7); }
+.mwp .btn-outline-light:hover { background: rgba(255,255,255,.12); color: var(--white); border-color: var(--white); }
+.mwp .cta-band .ph, .mwp .btn .ph { color: inherit; background: transparent; }
+.mwp .hero { background: var(--white); color: var(--ink); padding-block: var(--space-5) var(--space-6); }
+.mwp .hero-inner { display: grid; gap: var(--space-5); align-items: center; }
+.mwp .hero h1 { margin-bottom: var(--space-3); }
+.mwp .hero-name { display: block; font-size: clamp(2.5rem, 5.2vw, 4.25rem); line-height: 1.05; letter-spacing: -0.015em; color: var(--plum-900); }
+.mwp .hero-credentials {
+  display: block; margin-top: 0.75rem;
+  font-family: var(--font-body); font-weight: 800; font-size: 0.9375rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--plum-700);
+}
+.mwp .hero-role { display: block; margin-top: var(--space-3); font-size: clamp(1.5rem, 2.6vw, 2.125rem); line-height: 1.2; color: var(--plum-700); font-weight: 600; }
+.mwp .lede { font-size: 1.1875rem; color: inherit; }
+.mwp .hero p { max-width: 58ch; }
+.mwp .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: var(--space-4); }
+.mwp .hero-media { margin: 0; position: relative; }
+.mwp .hero-media::before {
+  content: ""; position: absolute; inset: 24px -16px -16px 24px;
+  border-radius: 28px; background: var(--plum-50); border: 1px solid var(--plum-100);
+  z-index: 0;
+}
+.mwp .hero-media img {
+  position: relative; z-index: 1;
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 32% 50%;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px -32px rgba(42,31,66,.5);
+}
+.mwp .hero-caption {
+  position: absolute; z-index: 2; right: var(--space-2); bottom: var(--space-2); left: var(--space-2);
+  max-width: 300px; margin-left: auto;
+  padding: var(--space-2) var(--space-3);
+  background: rgba(42,31,66,.86);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 16px;
+  font: italic 600 1.125rem/1.35 var(--font-head);
+  color: var(--white);
+}
+@media (min-width: 900px) {
+.mwp .hero { padding-block: var(--space-6) var(--space-7); }
+.mwp .hero-inner { grid-template-columns: 1.4fr 1fr; gap: var(--space-6); }
+.mwp .hero-media { max-width: 500px; justify-self: end; width: 100%; }
+}
+.mwp .btn-outline { background: var(--white); color: var(--plum-900); border-color: var(--plum-900); }
+.mwp .btn-outline:hover { background: var(--plum-900); color: var(--white); }
+.mwp .btn-lilac { background: var(--lilac-300); color: var(--plum-900); }
+.mwp .btn-lilac:hover { background: #c4b0dc; color: var(--plum-900); }
+.mwp .btn-ghost-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.55); }
+.mwp .btn-ghost-light:hover { background: rgba(255,255,255,.1); color: var(--white); border-color: var(--white); }
+.mwp .trust-bar { border-block: 1px solid var(--line); background: var(--white); }
+.mwp .trust-list {
+  list-style: none; margin-block: 0;
+  display: grid; grid-template-columns: 1fr;
+}
+.mwp .trust-list li {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: var(--space-2) 0;
+  font-size: 0.9375rem; color: var(--ink-muted); line-height: 1.35;
+}
+.mwp .trust-list li + li { border-top: 1px solid var(--line); }
+.mwp .trust-list strong { display: block; color: var(--plum-900); font-size: 1rem; }
+.mwp .trust-list .icon { color: var(--plum-700); }
+@media (min-width: 520px) {
+.mwp .trust-list { grid-template-columns: repeat(2, 1fr); }
+.mwp .trust-list li { padding: var(--space-3) var(--space-2); }
+.mwp .trust-list li:nth-child(2) { border-top: 0; }
+.mwp .trust-list li:nth-child(even) { border-left: 1px solid var(--line); }
+}
+@media (min-width: 900px) {
+.mwp .trust-list { grid-template-columns: repeat(4, 1fr); }
+.mwp .trust-list li { padding: var(--space-3); border-top: 0 !important; }
+.mwp .trust-list li + li { border-left: 1px solid var(--line); }
+}
+.mwp .about { background: var(--white); padding-block: var(--space-6); }
+.mwp .about-inner { display: grid; gap: var(--space-5); align-items: center; }
+.mwp .about-photo {
+  display: block; width: 100%; max-width: 460px; height: auto;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 15%;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px -32px rgba(42,31,66,.45);
+}
+.mwp .about h2 { font-size: clamp(2.125rem, 4vw, 3.25rem); letter-spacing: -0.01em; }
+.mwp .about-lede { font-size: 1.1875rem; }
+.mwp .about strong { color: var(--plum-900); }
+.mwp .features {
+  list-style: none; margin: var(--space-4) 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3);
+  text-align: center;
+}
+.mwp .features li { display: grid; justify-items: center; gap: 0.5rem; font-weight: 800; color: var(--plum-900); line-height: 1.3; }
+.mwp .features .icon { color: var(--plum-700); }
+@media (min-width: 640px) {
+.mwp .features { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 900px) {
+.mwp .about-inner { grid-template-columns: 1fr 1.3fr; gap: var(--space-6); }
+}
+.mwp .credentials {
+  list-style: none; margin: var(--space-4) 0 0; padding: var(--space-3);
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3);
+  align-items: center; justify-items: center;
+  background: var(--white); border: 1px solid var(--line); border-radius: 20px;
+}
+.mwp .credentials li { min-width: 0; }
+.mwp .credentials img { display: block; width: auto; height: auto; max-width: 100%; max-height: 84px; }
+@media (min-width: 1100px) {
+.mwp .credentials { grid-template-columns: repeat(4, auto); justify-content: space-between; }
+}
+.mwp .services { background: var(--plum-50); padding-block: var(--space-6); }
+.mwp .services-panel {
+  background: var(--white);
+  border-radius: 28px;
+  padding: var(--space-4) var(--space-3);
+  box-shadow: 0 30px 60px -40px rgba(42,31,66,.45);
+  overflow: hidden;
+}
+.mwp .services .section-head { max-width: 860px; margin-bottom: var(--space-4); }
+.mwp .services .section-head h2 { font-size: clamp(2.125rem, 4vw, 3.25rem); letter-spacing: -0.01em; color: var(--plum-900); }
+.mwp .services .section-head p { color: var(--ink-muted); font-size: 1.0625rem; margin: 0; }
+@media (min-width: 768px) {
+.mwp .services-panel { padding: var(--space-5) var(--space-6); }
+}
+.mwp .service-cards {
+  list-style: none; margin: 0; padding: 0.5rem 0.25rem 1.5rem;
+  display: flex; gap: var(--space-3);
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-padding-inline: 0.25rem;
+  scrollbar-width: none;
+}
+.mwp .service-cards::-webkit-scrollbar { display: none; }
+.mwp .service-cards:focus-visible { box-shadow: var(--focus); border-radius: 20px; }
+.mwp .service-card {
+  position: relative;
+  flex: 0 0 82%; max-width: 340px;
+  scroll-snap-align: start;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: var(--space-4) var(--space-3);
+  border-radius: 22px;
+  color: var(--white);
+  background: linear-gradient(160deg, #7259a8 0%, var(--plum-700) 45%, #3d2d61 100%);
+  box-shadow: 0 18px 36px -22px rgba(42,31,66,.7);
+  transition: transform 200ms ease;
+}
+@media (min-width: 640px) {
+.mwp .service-card { flex-basis: 44%; }
+}
+@media (min-width: 1000px) {
+.mwp .service-card { flex-basis: 30%; }
+}
+.mwp .service-card:first-child, .mwp .service-card:hover, .mwp .service-card:focus-within {
+  background: linear-gradient(160deg, #c4b0dc 0%, var(--lilac-300) 100%);
+  color: var(--plum-900);
+}
+.mwp .service-cards:hover .service-card:first-child:not(:hover), .mwp .service-cards:focus-within .service-card:first-child:not(:focus-within) {
+  background: linear-gradient(160deg, #7259a8 0%, var(--plum-700) 45%, #3d2d61 100%);
+  color: var(--white);
+}
+@media (prefers-reduced-motion: no-preference) {
+.mwp .service-card:hover { transform: translateY(-4px); }
+}
+.mwp .card-icon {
+  display: grid; place-items: center;
+  width: 64px; height: 64px; margin-bottom: var(--space-3);
+  background: var(--white); border-radius: 16px;
+  box-shadow: 0 8px 18px -10px rgba(42,31,66,.6);
+}
+.mwp .card-icon svg { width: 34px; height: 34px; fill: none; stroke: var(--plum-700); stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.mwp .service-card h3 { color: inherit; font-family: var(--font-body); font-weight: 800; font-size: 1.375rem; line-height: 1.25; margin-bottom: 0.75rem; }
+.mwp .service-card p { color: inherit; font-size: 0.9875rem; margin: 0 0 var(--space-3); }
+.mwp .card-link {
+  margin-top: auto;
+  font-weight: 800; color: inherit; text-decoration: underline; text-underline-offset: 0.25em;
+}
+.mwp .card-link:hover { color: inherit; }
+.mwp .card-link::after { content: ""; position: absolute; inset: 0; border-radius: 22px; }
+.mwp .card-link:focus-visible { box-shadow: none; }
+.mwp .card-link:focus-visible::after { box-shadow: var(--focus); }
+.mwp .carousel-controls { display: flex; align-items: center; gap: 0.75rem; margin-top: var(--space-2); }
+.mwp .carousel-btn {
+  display: grid; place-items: center;
+  width: 48px; height: 48px; padding: 0;
+  background: var(--white); color: var(--plum-900);
+  border: 1.5px solid var(--plum-900); border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+.mwp .carousel-btn:hover:not(:disabled) { background: var(--plum-900); color: var(--white); }
+.mwp .carousel-btn:disabled { opacity: .35; cursor: default; }
+.mwp .carousel-progress {
+  flex: 1; max-width: 320px; height: 3px; margin-left: var(--space-2);
+  background: var(--line); border-radius: 3px; overflow: hidden;
+}
+.mwp .carousel-progress span { display: block; height: 100%; width: 30%; background: var(--plum-700); border-radius: 3px; transition: margin-left 160ms ease; }
+.mwp .new-patients { padding-block: var(--space-6); }
+.mwp .steps { list-style: none; counter-reset: step; margin: var(--space-3) 0 0; padding: 0; display: grid; gap: var(--space-4); }
+.mwp .steps li { counter-increment: step; position: relative; padding-left: 3.5rem; }
+.mwp .steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: -0.15rem;
+  width: 2.5rem; height: 2.5rem; display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--plum-700); color: var(--white);
+  font: 800 1.0625rem var(--font-body);
+}
+.mwp .steps p { color: var(--ink-muted); }
+@media (min-width: 900px) {
+.mwp .steps { grid-template-columns: repeat(3, 1fr); }
+}
+.mwp .visit { padding-block: var(--space-6); border-top: 1px solid var(--line); }
+.mwp .visit-inner { display: grid; gap: var(--space-5); }
+.mwp .address { font-style: normal; margin-bottom: var(--space-3); font-size: 1.125rem; }
+.mwp .hours { border-collapse: collapse; width: 100%; max-width: 440px; margin-bottom: var(--space-3); }
+.mwp .hours th, .mwp .hours td { text-align: left; padding: 0.625rem 0; border-bottom: 1px solid var(--line); }
+.mwp .hours th { font-weight: 600; padding-right: var(--space-3); }
+.mwp .hours td { white-space: nowrap; }
+.mwp .hint { color: var(--ink-muted); font-size: 0.9625rem; }
+.mwp .map { width: 100%; aspect-ratio: 4 / 3; border: 1px solid var(--line); border-radius: var(--radius-lg); }
+@media (min-width: 900px) {
+.mwp .visit-inner { grid-template-columns: 1fr 1.2fr; gap: var(--space-6); align-items: start; }
+}
+.mwp .cta-band { background: var(--plum-700); color: #f1ecf8; padding-block: var(--space-6); }
+.mwp .cta-band h2 { color: var(--white); }
+.mwp .cta-band p { color: #f1ecf8; }
+.mwp .cta-inner { display: grid; gap: var(--space-3); align-items: center; }
+.mwp .cta-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+@media (min-width: 900px) {
+.mwp .cta-inner { grid-template-columns: 1.4fr 1fr; }
+.mwp .cta-actions { justify-content: flex-end; }
+}
+.mwp .page-hero {
+  background: var(--plum-50);
+  border-bottom: 1px solid var(--plum-100);
+  padding-block: var(--space-4) var(--space-5);
+}
+.mwp .page-hero h1 { max-width: 22ch; color: var(--plum-900); font-size: clamp(2.25rem, 4.6vw, 3.5rem); }
+.mwp .page-hero .lede { max-width: 60ch; color: var(--ink); }
+.mwp .page-hero .hero-actions { margin-top: var(--space-3); }
+.mwp .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; margin: 0 0 var(--space-3); padding: 0; font-size: 0.9375rem; }
+.mwp .breadcrumb li + li::before { content: "/"; margin-right: 0.5rem; color: var(--ink-muted); }
+.mwp .breadcrumb [aria-current] { color: var(--ink-muted); }
+.mwp .page-body { display: grid; gap: var(--space-5); padding-block: var(--space-5) var(--space-6); }
+@media (min-width: 1000px) {
+.mwp .page-body { grid-template-columns: minmax(0, 1fr) 300px; gap: var(--space-6); align-items: start; }
+.mwp .page-body--single { grid-template-columns: minmax(0, 1fr); }
+.mwp .side-card { position: sticky; top: 120px; }
+}
+.mwp .prose { max-width: 70ch; }
+.mwp .prose h2 { font-size: clamp(1.5rem, 2.4vw, 1.875rem); margin-top: var(--space-5); }
+.mwp .prose h2:first-child { margin-top: 0; }
+.mwp .prose ul { padding-left: 1.25rem; margin: 0 0 var(--space-2); }
+.mwp .prose li { margin-bottom: 0.5rem; }
+.mwp .prose li::marker { color: var(--plum-700); }
+.mwp .callout {
+  border-left: 4px solid var(--plum-700);
+  background: var(--plum-50);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.mwp .side-card {
+  display: grid; gap: var(--space-2);
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  max-width: 420px;
+}
+.mwp .side-card img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 15%; border-radius: var(--radius-sm); }
+.mwp .side-card p { margin-bottom: 0.5rem; }
+.mwp .side-name { font: 700 1.25rem var(--font-head); color: var(--plum-900); }
+.mwp .side-card a { font-weight: 700; }
+.mwp .empty-state {
+  font-size: 1.1875rem;
+  padding: var(--space-4);
+  background: var(--plum-50); border: 1px dashed var(--plum-100); border-radius: 20px;
+}
+
+/* ===== My Wellness Physicians: Squarespace glue =====
+   Every page's content sits inside <div class="mwp"> in a Code Block.
+   These rules let that content run edge to edge and remove the
+   section padding Squarespace adds around it. */
+.mwp {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  text-align: left;
+}
+body:has(.mwp) { overflow-x: clip; }
+.page-section:has(.mwp) {
+  padding-bottom: 0 !important;
+  min-height: 0 !important;
+}
+/* Keep the first section's top spacing: Squarespace uses it to make room
+   for the header, which can sit on top of the first section. */
+.page-section:has(.mwp):not(:first-child) { padding-top: 0 !important; }
+.page-section:has(.mwp) .content-wrapper {
+  padding: 0 !important;
+  max-width: none !important;
+}
+.sqs-block-code:has(.mwp) { padding: 0 !important; }
+/* Hide a whole section (for example the image library) by adding a Code Block
+   containing <div class="mwp-hidden-section"></div> to it. */
+.page-section:has(.mwp-hidden-section) { display: none !important; }
+.mwp img { max-width: 100%; }
+/* Keep the theme's heading and link styling out of this content. */
+.mwp h1, .mwp h2, .mwp h3, .mwp p, .mwp li, .mwp a, .mwp dt, .mwp dd, .mwp th, .mwp td, .mwp address {
+  text-transform: none;
+}
+.mwp h2, .mwp h3, .mwp p, .mwp li, .mwp a { letter-spacing: normal; }
+.mwp h1 { letter-spacing: -0.01em; }
+.mwp a { background-image: none; }
+.mwp ul, .mwp ol { margin-top: 0; }
+
+/* Footer snippet */
+.mwp-footer { background: var(--plum-900); color: #ddd5ea; padding-block: var(--space-5); font-size: 0.9375rem; }
+.mwp-footer a { color: var(--white); }
+.mwp-footer .footer-grid { display: grid; gap: var(--space-3); }
+.mwp-footer .footer-name { font: 700 1.25rem var(--font-head); color: var(--white); margin-bottom: 0.5rem; }
+.mwp-footer .footer-emergency { font-weight: 600; color: var(--white); }
+.mwp-footer .footer-legal { margin: 0; color: #c9bddb; }
+@media (min-width: 900px) {
+  .mwp-footer .footer-grid { grid-template-columns: 1fr 1fr; }
+  .mwp-footer .footer-legal { grid-column: 1 / -1; padding-top: var(--space-3); border-top: 1px solid rgba(255,255,255,.15); }
+}
+
+</style>
+<div class="mwp">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><span aria-current="page">Lipedema treatment</span></li>
+          </ol>
+        </nav>
+        <h1 id="page-title">Lipedema treatment in Leesburg, VA</h1>
+        <p class="lede">Diagnosis and ongoing management of lipedema from Dr. Minnie Cruz-Tolentino, for patients across Loudoun County.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book an appointment</a>
+          <a class="btn btn-outline btn-lg" href="tel:+17037779355">Call 703-777-9355</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container page-body">
+      <article class="prose">
+        <h2>What is lipedema?</h2>
+        <p>Lipedema is a chronic condition in which fat builds up in an abnormal way, usually in the legs and sometimes the arms. It affects mostly women and often starts or gets worse around hormonal changes such as puberty, pregnancy or menopause.</p>
+        <p>Lipedema is often mistaken for ordinary weight gain or for lymphedema. Many people live with it for years before getting a diagnosis, and the fat it causes usually doesn’t respond to diet and exercise alone.</p>
+
+        <h2>Common signs</h2>
+        <ul>
+          <li>Fat build-up on both legs, or both arms, that looks out of proportion with the rest of the body</li>
+          <li>Feet and hands that are not affected, sometimes with a “cuff” of tissue at the ankles or wrists</li>
+          <li>Legs that feel painful, tender or heavy</li>
+          <li>Bruising easily</li>
+          <li>Little change in the affected areas despite weight loss</li>
+        </ul>
+
+        <h2>How we help</h2>
+        <p>Dr. Cruz-Tolentino starts with a careful evaluation to confirm the diagnosis and rule out other causes of swelling. From there, she creates a personalized plan to manage your symptoms, support your overall health and help you stay active.</p>
+        <p>Because lipedema often appears alongside weight and hormonal concerns, care is coordinated with our medical weight loss and hormone therapy services when that helps.</p>
+
+        <h2>In person or by telemedicine</h2>
+        <p>See us at our office in Leesburg, or have follow-up visits by telemedicine. Patients come to us from across Loudoun County and surrounding areas.</p>
+      </article>
+      <aside class="side-card" aria-label="About the doctor">
+        <img src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/61a7e950-1824-4f75-941b-242c34c58927/dr-cruz-tolentino-portrait.jpg?format=1000w" width="500" height="547" loading="lazy" alt="Dr. Minnie Cruz-Tolentino">
+        <div>
+          <p class="side-name">Dr. Minnie Cruz-Tolentino</p>
+          <p>Double board-certified in Family Medicine and Obesity Medicine, with over 19 years of experience.</p>
+          <a href="/#about">About Dr. Cruz-Tolentino</a>
+        </div>
+      </aside>
+    </div>
+
+    <section class="cta-band" id="contact" aria-labelledby="contact-title">
+      <div class="container cta-inner">
+        <div>
+          <h2 id="contact-title">Ready to feel your best?</h2>
+          <p>Book online, call during office hours, or send us an email.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-light btn-lg" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book an appointment</a>
+          <a class="btn btn-outline-light btn-lg" href="tel:+17037779355">Call 703-777-9355</a>
+          <a class="btn btn-outline-light btn-lg" href="mailto:info@mywellnessphysicians.com">Email us</a>
+        </div>
+      </div>
+    </section>
+  
+</div>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.mywellnessphysicians.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Lipedema treatment",
+        "item": "https://www.mywellnessphysicians.com/lipedema-treatment"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "url": "https://www.mywellnessphysicians.com/lipedema-treatment",
+    "name": "Lipedema treatment in Leesburg, VA",
+    "about": {
+      "@type": "MedicalCondition",
+      "name": "Lipedema",
+      "alternateName": [
+        "Lipoedema"
+      ]
+    },
+    "description": "Lipedema diagnosis and management in Leesburg, VA.",
+    "audience": {
+      "@type": "Patient"
+    },
+    "lastReviewed": "2026-10-01",
+    "reviewedBy": {
+      "@type": "Physician",
+      "name": "Dr. Minnie Cruz-Tolentino"
+    },
+    "publisher": {
+      "@id": "https://www.mywellnessphysicians.com/#clinic"
+    }
+  }
+]
+</script>
+----- END LIPEDEMA (copy down to the line above) -----
+
+
+====================================================
+PAGE: Lymphedema treatment
+URL slug: lymphedema-treatment
+SEO title: Lymphedema Treatment in Leesburg, VA | My Wellness Physicians
+SEO description: Lymphedema diagnosis and management in Leesburg, VA. Dr. Minnie Cruz-Tolentino helps patients across Loudoun County manage swelling from lymphedema, in person or by telemedicine.
+====================================================
+----- START LYMPHEDEMA (copy from the next line) -----
+<style>
+/* Fonts (loaded here so Code Injection isn't needed) */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&family=Playfair+Display:wght@600;700&display=swap');
+
+.mwp {
+  
+  --plum-900: #2a1f42;   
+  --plum-800: #3d2d61;   
+  --plum-700: #543e82;   
+  --lilac:    #9e7ebc;   
+  --lilac-300: #b49bd0;  
+  --plum-100: #e9e1f2;
+  --plum-50:  #f6f2fa;
+  --ink: #2a1f42;
+  --ink-muted: #5b5670;  
+  --line: #d9d9d9;
+  --white: #ffffff;
+  --ph: #b45309;          
+
+  --font-head: "Playfair Display", Georgia, serif;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4.5rem;
+  --space-7: 6rem;
+
+  --radius-sm: 8px;
+  --radius-lg: 20px;
+  --container: 1160px;
+  --focus: 0 0 0 3px var(--white), 0 0 0 6px var(--plum-700);
+}
+.mwp *, .mwp *::before, .mwp *::after { box-sizing: border-box; }
+@media (prefers-reduced-motion: reduce) {
+.mwp *, .mwp *::before, .mwp *::after { transition: none !important; }
+}
+.mwp {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--white);
+}
+.mwp h1, .mwp h2, .mwp h3 {
+  font-family: var(--font-head);
+  line-height: 1.15;
+  margin: 0 0 var(--space-2);
+  color: var(--plum-900);
+  text-wrap: balance;
+}
+.mwp h1 { font-size: clamp(2.25rem, 4.6vw, 3.5rem); font-weight: 700; letter-spacing: -0.01em; }
+.mwp h2 { font-size: clamp(1.75rem, 3vw, 2.375rem); font-weight: 700; }
+.mwp h3 { font-family: var(--font-body); font-size: 1.1875rem; font-weight: 800; }
+.mwp p { margin: 0 0 var(--space-2); max-width: 65ch; }
+.mwp a { color: var(--plum-700); text-underline-offset: 0.2em; }
+.mwp a:hover { color: var(--plum-900); }
+.mwp :focus-visible { outline: none; box-shadow: var(--focus); border-radius: 4px; }
+.mwp .container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+.mwp .container { padding-inline: 2rem; }
+}
+.mwp .visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+.mwp .ph {
+  color: var(--ph);
+  background: #fff7ed;
+  outline: 1px dashed #f59e0b;
+  outline-offset: 1px;
+  border-radius: 3px;
+}
+.mwp .icon {
+  width: 1.125rem; height: 1.125rem;
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+  flex-shrink: 0;
+}
+.mwp .icon-lg { width: 2rem; height: 2rem; stroke-width: 1.75; }
+.mwp .btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4em;
+  min-height: 44px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+.mwp .btn-lg { min-height: 52px; padding: 0.75rem 1.5rem; font-size: 1.0625rem; }
+.mwp .btn-primary { background: var(--plum-700); color: var(--white); }
+.mwp .btn-primary:hover { background: var(--plum-900); color: var(--white); }
+.mwp .btn-quiet { background: var(--white); color: var(--plum-900); border-color: var(--line); }
+.mwp .btn-quiet:hover { border-color: var(--plum-700); color: var(--plum-900); }
+.mwp .btn-light { background: var(--white); color: var(--plum-900); }
+.mwp .btn-light:hover { background: var(--plum-100); color: var(--plum-900); }
+.mwp .btn-outline-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.7); }
+.mwp .btn-outline-light:hover { background: rgba(255,255,255,.12); color: var(--white); border-color: var(--white); }
+.mwp .cta-band .ph, .mwp .btn .ph { color: inherit; background: transparent; }
+.mwp .hero { background: var(--white); color: var(--ink); padding-block: var(--space-5) var(--space-6); }
+.mwp .hero-inner { display: grid; gap: var(--space-5); align-items: center; }
+.mwp .hero h1 { margin-bottom: var(--space-3); }
+.mwp .hero-name { display: block; font-size: clamp(2.5rem, 5.2vw, 4.25rem); line-height: 1.05; letter-spacing: -0.015em; color: var(--plum-900); }
+.mwp .hero-credentials {
+  display: block; margin-top: 0.75rem;
+  font-family: var(--font-body); font-weight: 800; font-size: 0.9375rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--plum-700);
+}
+.mwp .hero-role { display: block; margin-top: var(--space-3); font-size: clamp(1.5rem, 2.6vw, 2.125rem); line-height: 1.2; color: var(--plum-700); font-weight: 600; }
+.mwp .lede { font-size: 1.1875rem; color: inherit; }
+.mwp .hero p { max-width: 58ch; }
+.mwp .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: var(--space-4); }
+.mwp .hero-media { margin: 0; position: relative; }
+.mwp .hero-media::before {
+  content: ""; position: absolute; inset: 24px -16px -16px 24px;
+  border-radius: 28px; background: var(--plum-50); border: 1px solid var(--plum-100);
+  z-index: 0;
+}
+.mwp .hero-media img {
+  position: relative; z-index: 1;
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 32% 50%;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px -32px rgba(42,31,66,.5);
+}
+.mwp .hero-caption {
+  position: absolute; z-index: 2; right: var(--space-2); bottom: var(--space-2); left: var(--space-2);
+  max-width: 300px; margin-left: auto;
+  padding: var(--space-2) var(--space-3);
+  background: rgba(42,31,66,.86);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 16px;
+  font: italic 600 1.125rem/1.35 var(--font-head);
+  color: var(--white);
+}
+@media (min-width: 900px) {
+.mwp .hero { padding-block: var(--space-6) var(--space-7); }
+.mwp .hero-inner { grid-template-columns: 1.4fr 1fr; gap: var(--space-6); }
+.mwp .hero-media { max-width: 500px; justify-self: end; width: 100%; }
+}
+.mwp .btn-outline { background: var(--white); color: var(--plum-900); border-color: var(--plum-900); }
+.mwp .btn-outline:hover { background: var(--plum-900); color: var(--white); }
+.mwp .btn-lilac { background: var(--lilac-300); color: var(--plum-900); }
+.mwp .btn-lilac:hover { background: #c4b0dc; color: var(--plum-900); }
+.mwp .btn-ghost-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.55); }
+.mwp .btn-ghost-light:hover { background: rgba(255,255,255,.1); color: var(--white); border-color: var(--white); }
+.mwp .trust-bar { border-block: 1px solid var(--line); background: var(--white); }
+.mwp .trust-list {
+  list-style: none; margin-block: 0;
+  display: grid; grid-template-columns: 1fr;
+}
+.mwp .trust-list li {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: var(--space-2) 0;
+  font-size: 0.9375rem; color: var(--ink-muted); line-height: 1.35;
+}
+.mwp .trust-list li + li { border-top: 1px solid var(--line); }
+.mwp .trust-list strong { display: block; color: var(--plum-900); font-size: 1rem; }
+.mwp .trust-list .icon { color: var(--plum-700); }
+@media (min-width: 520px) {
+.mwp .trust-list { grid-template-columns: repeat(2, 1fr); }
+.mwp .trust-list li { padding: var(--space-3) var(--space-2); }
+.mwp .trust-list li:nth-child(2) { border-top: 0; }
+.mwp .trust-list li:nth-child(even) { border-left: 1px solid var(--line); }
+}
+@media (min-width: 900px) {
+.mwp .trust-list { grid-template-columns: repeat(4, 1fr); }
+.mwp .trust-list li { padding: var(--space-3); border-top: 0 !important; }
+.mwp .trust-list li + li { border-left: 1px solid var(--line); }
+}
+.mwp .about { background: var(--white); padding-block: var(--space-6); }
+.mwp .about-inner { display: grid; gap: var(--space-5); align-items: center; }
+.mwp .about-photo {
+  display: block; width: 100%; max-width: 460px; height: auto;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 15%;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px -32px rgba(42,31,66,.45);
+}
+.mwp .about h2 { font-size: clamp(2.125rem, 4vw, 3.25rem); letter-spacing: -0.01em; }
+.mwp .about-lede { font-size: 1.1875rem; }
+.mwp .about strong { color: var(--plum-900); }
+.mwp .features {
+  list-style: none; margin: var(--space-4) 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3);
+  text-align: center;
+}
+.mwp .features li { display: grid; justify-items: center; gap: 0.5rem; font-weight: 800; color: var(--plum-900); line-height: 1.3; }
+.mwp .features .icon { color: var(--plum-700); }
+@media (min-width: 640px) {
+.mwp .features { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 900px) {
+.mwp .about-inner { grid-template-columns: 1fr 1.3fr; gap: var(--space-6); }
+}
+.mwp .credentials {
+  list-style: none; margin: var(--space-4) 0 0; padding: var(--space-3);
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3);
+  align-items: center; justify-items: center;
+  background: var(--white); border: 1px solid var(--line); border-radius: 20px;
+}
+.mwp .credentials li { min-width: 0; }
+.mwp .credentials img { display: block; width: auto; height: auto; max-width: 100%; max-height: 84px; }
+@media (min-width: 1100px) {
+.mwp .credentials { grid-template-columns: repeat(4, auto); justify-content: space-between; }
+}
+.mwp .services { background: var(--plum-50); padding-block: var(--space-6); }
+.mwp .services-panel {
+  background: var(--white);
+  border-radius: 28px;
+  padding: var(--space-4) var(--space-3);
+  box-shadow: 0 30px 60px -40px rgba(42,31,66,.45);
+  overflow: hidden;
+}
+.mwp .services .section-head { max-width: 860px; margin-bottom: var(--space-4); }
+.mwp .services .section-head h2 { font-size: clamp(2.125rem, 4vw, 3.25rem); letter-spacing: -0.01em; color: var(--plum-900); }
+.mwp .services .section-head p { color: var(--ink-muted); font-size: 1.0625rem; margin: 0; }
+@media (min-width: 768px) {
+.mwp .services-panel { padding: var(--space-5) var(--space-6); }
+}
+.mwp .service-cards {
+  list-style: none; margin: 0; padding: 0.5rem 0.25rem 1.5rem;
+  display: flex; gap: var(--space-3);
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-padding-inline: 0.25rem;
+  scrollbar-width: none;
+}
+.mwp .service-cards::-webkit-scrollbar { display: none; }
+.mwp .service-cards:focus-visible { box-shadow: var(--focus); border-radius: 20px; }
+.mwp .service-card {
+  position: relative;
+  flex: 0 0 82%; max-width: 340px;
+  scroll-snap-align: start;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: var(--space-4) var(--space-3);
+  border-radius: 22px;
+  color: var(--white);
+  background: linear-gradient(160deg, #7259a8 0%, var(--plum-700) 45%, #3d2d61 100%);
+  box-shadow: 0 18px 36px -22px rgba(42,31,66,.7);
+  transition: transform 200ms ease;
+}
+@media (min-width: 640px) {
+.mwp .service-card { flex-basis: 44%; }
+}
+@media (min-width: 1000px) {
+.mwp .service-card { flex-basis: 30%; }
+}
+.mwp .service-card:first-child, .mwp .service-card:hover, .mwp .service-card:focus-within {
+  background: linear-gradient(160deg, #c4b0dc 0%, var(--lilac-300) 100%);
+  color: var(--plum-900);
+}
+.mwp .service-cards:hover .service-card:first-child:not(:hover), .mwp .service-cards:focus-within .service-card:first-child:not(:focus-within) {
+  background: linear-gradient(160deg, #7259a8 0%, var(--plum-700) 45%, #3d2d61 100%);
+  color: var(--white);
+}
+@media (prefers-reduced-motion: no-preference) {
+.mwp .service-card:hover { transform: translateY(-4px); }
+}
+.mwp .card-icon {
+  display: grid; place-items: center;
+  width: 64px; height: 64px; margin-bottom: var(--space-3);
+  background: var(--white); border-radius: 16px;
+  box-shadow: 0 8px 18px -10px rgba(42,31,66,.6);
+}
+.mwp .card-icon svg { width: 34px; height: 34px; fill: none; stroke: var(--plum-700); stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.mwp .service-card h3 { color: inherit; font-family: var(--font-body); font-weight: 800; font-size: 1.375rem; line-height: 1.25; margin-bottom: 0.75rem; }
+.mwp .service-card p { color: inherit; font-size: 0.9875rem; margin: 0 0 var(--space-3); }
+.mwp .card-link {
+  margin-top: auto;
+  font-weight: 800; color: inherit; text-decoration: underline; text-underline-offset: 0.25em;
+}
+.mwp .card-link:hover { color: inherit; }
+.mwp .card-link::after { content: ""; position: absolute; inset: 0; border-radius: 22px; }
+.mwp .card-link:focus-visible { box-shadow: none; }
+.mwp .card-link:focus-visible::after { box-shadow: var(--focus); }
+.mwp .carousel-controls { display: flex; align-items: center; gap: 0.75rem; margin-top: var(--space-2); }
+.mwp .carousel-btn {
+  display: grid; place-items: center;
+  width: 48px; height: 48px; padding: 0;
+  background: var(--white); color: var(--plum-900);
+  border: 1.5px solid var(--plum-900); border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+.mwp .carousel-btn:hover:not(:disabled) { background: var(--plum-900); color: var(--white); }
+.mwp .carousel-btn:disabled { opacity: .35; cursor: default; }
+.mwp .carousel-progress {
+  flex: 1; max-width: 320px; height: 3px; margin-left: var(--space-2);
+  background: var(--line); border-radius: 3px; overflow: hidden;
+}
+.mwp .carousel-progress span { display: block; height: 100%; width: 30%; background: var(--plum-700); border-radius: 3px; transition: margin-left 160ms ease; }
+.mwp .new-patients { padding-block: var(--space-6); }
+.mwp .steps { list-style: none; counter-reset: step; margin: var(--space-3) 0 0; padding: 0; display: grid; gap: var(--space-4); }
+.mwp .steps li { counter-increment: step; position: relative; padding-left: 3.5rem; }
+.mwp .steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: -0.15rem;
+  width: 2.5rem; height: 2.5rem; display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--plum-700); color: var(--white);
+  font: 800 1.0625rem var(--font-body);
+}
+.mwp .steps p { color: var(--ink-muted); }
+@media (min-width: 900px) {
+.mwp .steps { grid-template-columns: repeat(3, 1fr); }
+}
+.mwp .visit { padding-block: var(--space-6); border-top: 1px solid var(--line); }
+.mwp .visit-inner { display: grid; gap: var(--space-5); }
+.mwp .address { font-style: normal; margin-bottom: var(--space-3); font-size: 1.125rem; }
+.mwp .hours { border-collapse: collapse; width: 100%; max-width: 440px; margin-bottom: var(--space-3); }
+.mwp .hours th, .mwp .hours td { text-align: left; padding: 0.625rem 0; border-bottom: 1px solid var(--line); }
+.mwp .hours th { font-weight: 600; padding-right: var(--space-3); }
+.mwp .hours td { white-space: nowrap; }
+.mwp .hint { color: var(--ink-muted); font-size: 0.9625rem; }
+.mwp .map { width: 100%; aspect-ratio: 4 / 3; border: 1px solid var(--line); border-radius: var(--radius-lg); }
+@media (min-width: 900px) {
+.mwp .visit-inner { grid-template-columns: 1fr 1.2fr; gap: var(--space-6); align-items: start; }
+}
+.mwp .cta-band { background: var(--plum-700); color: #f1ecf8; padding-block: var(--space-6); }
+.mwp .cta-band h2 { color: var(--white); }
+.mwp .cta-band p { color: #f1ecf8; }
+.mwp .cta-inner { display: grid; gap: var(--space-3); align-items: center; }
+.mwp .cta-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+@media (min-width: 900px) {
+.mwp .cta-inner { grid-template-columns: 1.4fr 1fr; }
+.mwp .cta-actions { justify-content: flex-end; }
+}
+.mwp .page-hero {
+  background: var(--plum-50);
+  border-bottom: 1px solid var(--plum-100);
+  padding-block: var(--space-4) var(--space-5);
+}
+.mwp .page-hero h1 { max-width: 22ch; color: var(--plum-900); font-size: clamp(2.25rem, 4.6vw, 3.5rem); }
+.mwp .page-hero .lede { max-width: 60ch; color: var(--ink); }
+.mwp .page-hero .hero-actions { margin-top: var(--space-3); }
+.mwp .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; margin: 0 0 var(--space-3); padding: 0; font-size: 0.9375rem; }
+.mwp .breadcrumb li + li::before { content: "/"; margin-right: 0.5rem; color: var(--ink-muted); }
+.mwp .breadcrumb [aria-current] { color: var(--ink-muted); }
+.mwp .page-body { display: grid; gap: var(--space-5); padding-block: var(--space-5) var(--space-6); }
+@media (min-width: 1000px) {
+.mwp .page-body { grid-template-columns: minmax(0, 1fr) 300px; gap: var(--space-6); align-items: start; }
+.mwp .page-body--single { grid-template-columns: minmax(0, 1fr); }
+.mwp .side-card { position: sticky; top: 120px; }
+}
+.mwp .prose { max-width: 70ch; }
+.mwp .prose h2 { font-size: clamp(1.5rem, 2.4vw, 1.875rem); margin-top: var(--space-5); }
+.mwp .prose h2:first-child { margin-top: 0; }
+.mwp .prose ul { padding-left: 1.25rem; margin: 0 0 var(--space-2); }
+.mwp .prose li { margin-bottom: 0.5rem; }
+.mwp .prose li::marker { color: var(--plum-700); }
+.mwp .callout {
+  border-left: 4px solid var(--plum-700);
+  background: var(--plum-50);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.mwp .side-card {
+  display: grid; gap: var(--space-2);
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  max-width: 420px;
+}
+.mwp .side-card img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 15%; border-radius: var(--radius-sm); }
+.mwp .side-card p { margin-bottom: 0.5rem; }
+.mwp .side-name { font: 700 1.25rem var(--font-head); color: var(--plum-900); }
+.mwp .side-card a { font-weight: 700; }
+.mwp .empty-state {
+  font-size: 1.1875rem;
+  padding: var(--space-4);
+  background: var(--plum-50); border: 1px dashed var(--plum-100); border-radius: 20px;
+}
+
+/* ===== My Wellness Physicians: Squarespace glue =====
+   Every page's content sits inside <div class="mwp"> in a Code Block.
+   These rules let that content run edge to edge and remove the
+   section padding Squarespace adds around it. */
+.mwp {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  text-align: left;
+}
+body:has(.mwp) { overflow-x: clip; }
+.page-section:has(.mwp) {
+  padding-bottom: 0 !important;
+  min-height: 0 !important;
+}
+/* Keep the first section's top spacing: Squarespace uses it to make room
+   for the header, which can sit on top of the first section. */
+.page-section:has(.mwp):not(:first-child) { padding-top: 0 !important; }
+.page-section:has(.mwp) .content-wrapper {
+  padding: 0 !important;
+  max-width: none !important;
+}
+.sqs-block-code:has(.mwp) { padding: 0 !important; }
+/* Hide a whole section (for example the image library) by adding a Code Block
+   containing <div class="mwp-hidden-section"></div> to it. */
+.page-section:has(.mwp-hidden-section) { display: none !important; }
+.mwp img { max-width: 100%; }
+/* Keep the theme's heading and link styling out of this content. */
+.mwp h1, .mwp h2, .mwp h3, .mwp p, .mwp li, .mwp a, .mwp dt, .mwp dd, .mwp th, .mwp td, .mwp address {
+  text-transform: none;
+}
+.mwp h2, .mwp h3, .mwp p, .mwp li, .mwp a { letter-spacing: normal; }
+.mwp h1 { letter-spacing: -0.01em; }
+.mwp a { background-image: none; }
+.mwp ul, .mwp ol { margin-top: 0; }
+
+/* Footer snippet */
+.mwp-footer { background: var(--plum-900); color: #ddd5ea; padding-block: var(--space-5); font-size: 0.9375rem; }
+.mwp-footer a { color: var(--white); }
+.mwp-footer .footer-grid { display: grid; gap: var(--space-3); }
+.mwp-footer .footer-name { font: 700 1.25rem var(--font-head); color: var(--white); margin-bottom: 0.5rem; }
+.mwp-footer .footer-emergency { font-weight: 600; color: var(--white); }
+.mwp-footer .footer-legal { margin: 0; color: #c9bddb; }
+@media (min-width: 900px) {
+  .mwp-footer .footer-grid { grid-template-columns: 1fr 1fr; }
+  .mwp-footer .footer-legal { grid-column: 1 / -1; padding-top: var(--space-3); border-top: 1px solid rgba(255,255,255,.15); }
+}
+
+</style>
+<div class="mwp">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><span aria-current="page">Lymphedema treatment</span></li>
+          </ol>
+        </nav>
+        <h1 id="page-title">Lymphedema treatment in Leesburg, VA</h1>
+        <p class="lede">Diagnosis and ongoing management of lymphedema from Dr. Minnie Cruz-Tolentino, for patients across Loudoun County.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book an appointment</a>
+          <a class="btn btn-outline btn-lg" href="tel:+17037779355">Call 703-777-9355</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container page-body">
+      <article class="prose">
+        <h2>What is lymphedema?</h2>
+        <p>Lymphedema is swelling caused by a build-up of lymph fluid when the lymphatic system can’t drain it properly. It most often affects an arm or a leg.</p>
+        <p>Some people are born with differences in their lymphatic system. More often, lymphedema develops after the lymph nodes or vessels are damaged, for example by cancer surgery, radiation, infection or injury.</p>
+
+        <h2>Common signs</h2>
+        <ul>
+          <li>Swelling in part or all of an arm or leg, including fingers or toes</li>
+          <li>A feeling of heaviness or tightness</li>
+          <li>Clothing, rings or shoes that feel tighter than usual</li>
+          <li>Less flexibility in the affected limb</li>
+          <li>Skin that becomes thicker or harder over time</li>
+        </ul>
+        <p class="callout"><strong>Get urgent care</strong> for sudden swelling in one leg or arm, especially with pain, warmth or redness, or with shortness of breath. These can be signs of a blood clot or infection.</p>
+
+        <h2>How we help</h2>
+        <p>Dr. Cruz-Tolentino evaluates your swelling to find its cause and confirm the diagnosis. She then builds a personalized management plan to reduce symptoms, protect your skin and help you stay active, with regular follow-up.</p>
+        <p>Lymphedema and lipedema can occur together and are often confused. Getting the right diagnosis is the first step toward the right care.</p>
+
+        <h2>In person or by telemedicine</h2>
+        <p>See us at our office in Leesburg, or have follow-up visits by telemedicine. Patients come to us from across Loudoun County and surrounding areas.</p>
+      </article>
+      <aside class="side-card" aria-label="About the doctor">
+        <img src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/61a7e950-1824-4f75-941b-242c34c58927/dr-cruz-tolentino-portrait.jpg?format=1000w" width="500" height="547" loading="lazy" alt="Dr. Minnie Cruz-Tolentino">
+        <div>
+          <p class="side-name">Dr. Minnie Cruz-Tolentino</p>
+          <p>Double board-certified in Family Medicine and Obesity Medicine, with over 19 years of experience.</p>
+          <a href="/#about">About Dr. Cruz-Tolentino</a>
+        </div>
+      </aside>
+    </div>
+
+    <section class="cta-band" id="contact" aria-labelledby="contact-title">
+      <div class="container cta-inner">
+        <div>
+          <h2 id="contact-title">Ready to feel your best?</h2>
+          <p>Book online, call during office hours, or send us an email.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-light btn-lg" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book an appointment</a>
+          <a class="btn btn-outline-light btn-lg" href="tel:+17037779355">Call 703-777-9355</a>
+          <a class="btn btn-outline-light btn-lg" href="mailto:info@mywellnessphysicians.com">Email us</a>
+        </div>
+      </div>
+    </section>
+  
+</div>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.mywellnessphysicians.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Lymphedema treatment",
+        "item": "https://www.mywellnessphysicians.com/lymphedema-treatment"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "url": "https://www.mywellnessphysicians.com/lymphedema-treatment",
+    "name": "Lymphedema treatment in Leesburg, VA",
+    "about": {
+      "@type": "MedicalCondition",
+      "name": "Lymphedema",
+      "alternateName": [
+        "Lymphoedema"
+      ]
+    },
+    "description": "Lymphedema diagnosis and management in Leesburg, VA.",
+    "audience": {
+      "@type": "Patient"
+    },
+    "lastReviewed": "2026-10-01",
+    "reviewedBy": {
+      "@type": "Physician",
+      "name": "Dr. Minnie Cruz-Tolentino"
+    },
+    "publisher": {
+      "@id": "https://www.mywellnessphysicians.com/#clinic"
+    }
+  }
+]
+</script>
+----- END LYMPHEDEMA (copy down to the line above) -----
+
+
+====================================================
+PAGE: Medical weight loss
+URL slug: medical-weight-loss
+SEO title: Medical Weight Loss Doctor in Leesburg, VA | My Wellness Physicians
+SEO description: Physician-supervised medical weight loss in Leesburg, VA from a board-certified obesity medicine doctor. Personalized plans for lasting results, serving Loudoun County in person and by telemedicine.
+====================================================
+----- START WEIGHT LOSS (copy from the next line) -----
+<style>
+/* Fonts (loaded here so Code Injection isn't needed) */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&family=Playfair+Display:wght@600;700&display=swap');
+
+.mwp {
+  
+  --plum-900: #2a1f42;   
+  --plum-800: #3d2d61;   
+  --plum-700: #543e82;   
+  --lilac:    #9e7ebc;   
+  --lilac-300: #b49bd0;  
+  --plum-100: #e9e1f2;
+  --plum-50:  #f6f2fa;
+  --ink: #2a1f42;
+  --ink-muted: #5b5670;  
+  --line: #d9d9d9;
+  --white: #ffffff;
+  --ph: #b45309;          
+
+  --font-head: "Playfair Display", Georgia, serif;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4.5rem;
+  --space-7: 6rem;
+
+  --radius-sm: 8px;
+  --radius-lg: 20px;
+  --container: 1160px;
+  --focus: 0 0 0 3px var(--white), 0 0 0 6px var(--plum-700);
+}
+.mwp *, .mwp *::before, .mwp *::after { box-sizing: border-box; }
+@media (prefers-reduced-motion: reduce) {
+.mwp *, .mwp *::before, .mwp *::after { transition: none !important; }
+}
+.mwp {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--white);
+}
+.mwp h1, .mwp h2, .mwp h3 {
+  font-family: var(--font-head);
+  line-height: 1.15;
+  margin: 0 0 var(--space-2);
+  color: var(--plum-900);
+  text-wrap: balance;
+}
+.mwp h1 { font-size: clamp(2.25rem, 4.6vw, 3.5rem); font-weight: 700; letter-spacing: -0.01em; }
+.mwp h2 { font-size: clamp(1.75rem, 3vw, 2.375rem); font-weight: 700; }
+.mwp h3 { font-family: var(--font-body); font-size: 1.1875rem; font-weight: 800; }
+.mwp p { margin: 0 0 var(--space-2); max-width: 65ch; }
+.mwp a { color: var(--plum-700); text-underline-offset: 0.2em; }
+.mwp a:hover { color: var(--plum-900); }
+.mwp :focus-visible { outline: none; box-shadow: var(--focus); border-radius: 4px; }
+.mwp .container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+.mwp .container { padding-inline: 2rem; }
+}
+.mwp .visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+.mwp .ph {
+  color: var(--ph);
+  background: #fff7ed;
+  outline: 1px dashed #f59e0b;
+  outline-offset: 1px;
+  border-radius: 3px;
+}
+.mwp .icon {
+  width: 1.125rem; height: 1.125rem;
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+  flex-shrink: 0;
+}
+.mwp .icon-lg { width: 2rem; height: 2rem; stroke-width: 1.75; }
+.mwp .btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4em;
+  min-height: 44px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+.mwp .btn-lg { min-height: 52px; padding: 0.75rem 1.5rem; font-size: 1.0625rem; }
+.mwp .btn-primary { background: var(--plum-700); color: var(--white); }
+.mwp .btn-primary:hover { background: var(--plum-900); color: var(--white); }
+.mwp .btn-quiet { background: var(--white); color: var(--plum-900); border-color: var(--line); }
+.mwp .btn-quiet:hover { border-color: var(--plum-700); color: var(--plum-900); }
+.mwp .btn-light { background: var(--white); color: var(--plum-900); }
+.mwp .btn-light:hover { background: var(--plum-100); color: var(--plum-900); }
+.mwp .btn-outline-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.7); }
+.mwp .btn-outline-light:hover { background: rgba(255,255,255,.12); color: var(--white); border-color: var(--white); }
+.mwp .cta-band .ph, .mwp .btn .ph { color: inherit; background: transparent; }
+.mwp .hero { background: var(--white); color: var(--ink); padding-block: var(--space-5) var(--space-6); }
+.mwp .hero-inner { display: grid; gap: var(--space-5); align-items: center; }
+.mwp .hero h1 { margin-bottom: var(--space-3); }
+.mwp .hero-name { display: block; font-size: clamp(2.5rem, 5.2vw, 4.25rem); line-height: 1.05; letter-spacing: -0.015em; color: var(--plum-900); }
+.mwp .hero-credentials {
+  display: block; margin-top: 0.75rem;
+  font-family: var(--font-body); font-weight: 800; font-size: 0.9375rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--plum-700);
+}
+.mwp .hero-role { display: block; margin-top: var(--space-3); font-size: clamp(1.5rem, 2.6vw, 2.125rem); line-height: 1.2; color: var(--plum-700); font-weight: 600; }
+.mwp .lede { font-size: 1.1875rem; color: inherit; }
+.mwp .hero p { max-width: 58ch; }
+.mwp .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: var(--space-4); }
+.mwp .hero-media { margin: 0; position: relative; }
+.mwp .hero-media::before {
+  content: ""; position: absolute; inset: 24px -16px -16px 24px;
+  border-radius: 28px; background: var(--plum-50); border: 1px solid var(--plum-100);
+  z-index: 0;
+}
+.mwp .hero-media img {
+  position: relative; z-index: 1;
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 32% 50%;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px -32px rgba(42,31,66,.5);
+}
+.mwp .hero-caption {
+  position: absolute; z-index: 2; right: var(--space-2); bottom: var(--space-2); left: var(--space-2);
+  max-width: 300px; margin-left: auto;
+  padding: var(--space-2) var(--space-3);
+  background: rgba(42,31,66,.86);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 16px;
+  font: italic 600 1.125rem/1.35 var(--font-head);
+  color: var(--white);
+}
+@media (min-width: 900px) {
+.mwp .hero { padding-block: var(--space-6) var(--space-7); }
+.mwp .hero-inner { grid-template-columns: 1.4fr 1fr; gap: var(--space-6); }
+.mwp .hero-media { max-width: 500px; justify-self: end; width: 100%; }
+}
+.mwp .btn-outline { background: var(--white); color: var(--plum-900); border-color: var(--plum-900); }
+.mwp .btn-outline:hover { background: var(--plum-900); color: var(--white); }
+.mwp .btn-lilac { background: var(--lilac-300); color: var(--plum-900); }
+.mwp .btn-lilac:hover { background: #c4b0dc; color: var(--plum-900); }
+.mwp .btn-ghost-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.55); }
+.mwp .btn-ghost-light:hover { background: rgba(255,255,255,.1); color: var(--white); border-color: var(--white); }
+.mwp .trust-bar { border-block: 1px solid var(--line); background: var(--white); }
+.mwp .trust-list {
+  list-style: none; margin-block: 0;
+  display: grid; grid-template-columns: 1fr;
+}
+.mwp .trust-list li {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: var(--space-2) 0;
+  font-size: 0.9375rem; color: var(--ink-muted); line-height: 1.35;
+}
+.mwp .trust-list li + li { border-top: 1px solid var(--line); }
+.mwp .trust-list strong { display: block; color: var(--plum-900); font-size: 1rem; }
+.mwp .trust-list .icon { color: var(--plum-700); }
+@media (min-width: 520px) {
+.mwp .trust-list { grid-template-columns: repeat(2, 1fr); }
+.mwp .trust-list li { padding: var(--space-3) var(--space-2); }
+.mwp .trust-list li:nth-child(2) { border-top: 0; }
+.mwp .trust-list li:nth-child(even) { border-left: 1px solid var(--line); }
+}
+@media (min-width: 900px) {
+.mwp .trust-list { grid-template-columns: repeat(4, 1fr); }
+.mwp .trust-list li { padding: var(--space-3); border-top: 0 !important; }
+.mwp .trust-list li + li { border-left: 1px solid var(--line); }
+}
+.mwp .about { background: var(--white); padding-block: var(--space-6); }
+.mwp .about-inner { display: grid; gap: var(--space-5); align-items: center; }
+.mwp .about-photo {
+  display: block; width: 100%; max-width: 460px; height: auto;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 15%;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px -32px rgba(42,31,66,.45);
+}
+.mwp .about h2 { font-size: clamp(2.125rem, 4vw, 3.25rem); letter-spacing: -0.01em; }
+.mwp .about-lede { font-size: 1.1875rem; }
+.mwp .about strong { color: var(--plum-900); }
+.mwp .features {
+  list-style: none; margin: var(--space-4) 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3);
+  text-align: center;
+}
+.mwp .features li { display: grid; justify-items: center; gap: 0.5rem; font-weight: 800; color: var(--plum-900); line-height: 1.3; }
+.mwp .features .icon { color: var(--plum-700); }
+@media (min-width: 640px) {
+.mwp .features { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 900px) {
+.mwp .about-inner { grid-template-columns: 1fr 1.3fr; gap: var(--space-6); }
+}
+.mwp .credentials {
+  list-style: none; margin: var(--space-4) 0 0; padding: var(--space-3);
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3);
+  align-items: center; justify-items: center;
+  background: var(--white); border: 1px solid var(--line); border-radius: 20px;
+}
+.mwp .credentials li { min-width: 0; }
+.mwp .credentials img { display: block; width: auto; height: auto; max-width: 100%; max-height: 84px; }
+@media (min-width: 1100px) {
+.mwp .credentials { grid-template-columns: repeat(4, auto); justify-content: space-between; }
+}
+.mwp .services { background: var(--plum-50); padding-block: var(--space-6); }
+.mwp .services-panel {
+  background: var(--white);
+  border-radius: 28px;
+  padding: var(--space-4) var(--space-3);
+  box-shadow: 0 30px 60px -40px rgba(42,31,66,.45);
+  overflow: hidden;
+}
+.mwp .services .section-head { max-width: 860px; margin-bottom: var(--space-4); }
+.mwp .services .section-head h2 { font-size: clamp(2.125rem, 4vw, 3.25rem); letter-spacing: -0.01em; color: var(--plum-900); }
+.mwp .services .section-head p { color: var(--ink-muted); font-size: 1.0625rem; margin: 0; }
+@media (min-width: 768px) {
+.mwp .services-panel { padding: var(--space-5) var(--space-6); }
+}
+.mwp .service-cards {
+  list-style: none; margin: 0; padding: 0.5rem 0.25rem 1.5rem;
+  display: flex; gap: var(--space-3);
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-padding-inline: 0.25rem;
+  scrollbar-width: none;
+}
+.mwp .service-cards::-webkit-scrollbar { display: none; }
+.mwp .service-cards:focus-visible { box-shadow: var(--focus); border-radius: 20px; }
+.mwp .service-card {
+  position: relative;
+  flex: 0 0 82%; max-width: 340px;
+  scroll-snap-align: start;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: var(--space-4) var(--space-3);
+  border-radius: 22px;
+  color: var(--white);
+  background: linear-gradient(160deg, #7259a8 0%, var(--plum-700) 45%, #3d2d61 100%);
+  box-shadow: 0 18px 36px -22px rgba(42,31,66,.7);
+  transition: transform 200ms ease;
+}
+@media (min-width: 640px) {
+.mwp .service-card { flex-basis: 44%; }
+}
+@media (min-width: 1000px) {
+.mwp .service-card { flex-basis: 30%; }
+}
+.mwp .service-card:first-child, .mwp .service-card:hover, .mwp .service-card:focus-within {
+  background: linear-gradient(160deg, #c4b0dc 0%, var(--lilac-300) 100%);
+  color: var(--plum-900);
+}
+.mwp .service-cards:hover .service-card:first-child:not(:hover), .mwp .service-cards:focus-within .service-card:first-child:not(:focus-within) {
+  background: linear-gradient(160deg, #7259a8 0%, var(--plum-700) 45%, #3d2d61 100%);
+  color: var(--white);
+}
+@media (prefers-reduced-motion: no-preference) {
+.mwp .service-card:hover { transform: translateY(-4px); }
+}
+.mwp .card-icon {
+  display: grid; place-items: center;
+  width: 64px; height: 64px; margin-bottom: var(--space-3);
+  background: var(--white); border-radius: 16px;
+  box-shadow: 0 8px 18px -10px rgba(42,31,66,.6);
+}
+.mwp .card-icon svg { width: 34px; height: 34px; fill: none; stroke: var(--plum-700); stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.mwp .service-card h3 { color: inherit; font-family: var(--font-body); font-weight: 800; font-size: 1.375rem; line-height: 1.25; margin-bottom: 0.75rem; }
+.mwp .service-card p { color: inherit; font-size: 0.9875rem; margin: 0 0 var(--space-3); }
+.mwp .card-link {
+  margin-top: auto;
+  font-weight: 800; color: inherit; text-decoration: underline; text-underline-offset: 0.25em;
+}
+.mwp .card-link:hover { color: inherit; }
+.mwp .card-link::after { content: ""; position: absolute; inset: 0; border-radius: 22px; }
+.mwp .card-link:focus-visible { box-shadow: none; }
+.mwp .card-link:focus-visible::after { box-shadow: var(--focus); }
+.mwp .carousel-controls { display: flex; align-items: center; gap: 0.75rem; margin-top: var(--space-2); }
+.mwp .carousel-btn {
+  display: grid; place-items: center;
+  width: 48px; height: 48px; padding: 0;
+  background: var(--white); color: var(--plum-900);
+  border: 1.5px solid var(--plum-900); border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+.mwp .carousel-btn:hover:not(:disabled) { background: var(--plum-900); color: var(--white); }
+.mwp .carousel-btn:disabled { opacity: .35; cursor: default; }
+.mwp .carousel-progress {
+  flex: 1; max-width: 320px; height: 3px; margin-left: var(--space-2);
+  background: var(--line); border-radius: 3px; overflow: hidden;
+}
+.mwp .carousel-progress span { display: block; height: 100%; width: 30%; background: var(--plum-700); border-radius: 3px; transition: margin-left 160ms ease; }
+.mwp .new-patients { padding-block: var(--space-6); }
+.mwp .steps { list-style: none; counter-reset: step; margin: var(--space-3) 0 0; padding: 0; display: grid; gap: var(--space-4); }
+.mwp .steps li { counter-increment: step; position: relative; padding-left: 3.5rem; }
+.mwp .steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: -0.15rem;
+  width: 2.5rem; height: 2.5rem; display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--plum-700); color: var(--white);
+  font: 800 1.0625rem var(--font-body);
+}
+.mwp .steps p { color: var(--ink-muted); }
+@media (min-width: 900px) {
+.mwp .steps { grid-template-columns: repeat(3, 1fr); }
+}
+.mwp .visit { padding-block: var(--space-6); border-top: 1px solid var(--line); }
+.mwp .visit-inner { display: grid; gap: var(--space-5); }
+.mwp .address { font-style: normal; margin-bottom: var(--space-3); font-size: 1.125rem; }
+.mwp .hours { border-collapse: collapse; width: 100%; max-width: 440px; margin-bottom: var(--space-3); }
+.mwp .hours th, .mwp .hours td { text-align: left; padding: 0.625rem 0; border-bottom: 1px solid var(--line); }
+.mwp .hours th { font-weight: 600; padding-right: var(--space-3); }
+.mwp .hours td { white-space: nowrap; }
+.mwp .hint { color: var(--ink-muted); font-size: 0.9625rem; }
+.mwp .map { width: 100%; aspect-ratio: 4 / 3; border: 1px solid var(--line); border-radius: var(--radius-lg); }
+@media (min-width: 900px) {
+.mwp .visit-inner { grid-template-columns: 1fr 1.2fr; gap: var(--space-6); align-items: start; }
+}
+.mwp .cta-band { background: var(--plum-700); color: #f1ecf8; padding-block: var(--space-6); }
+.mwp .cta-band h2 { color: var(--white); }
+.mwp .cta-band p { color: #f1ecf8; }
+.mwp .cta-inner { display: grid; gap: var(--space-3); align-items: center; }
+.mwp .cta-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+@media (min-width: 900px) {
+.mwp .cta-inner { grid-template-columns: 1.4fr 1fr; }
+.mwp .cta-actions { justify-content: flex-end; }
+}
+.mwp .page-hero {
+  background: var(--plum-50);
+  border-bottom: 1px solid var(--plum-100);
+  padding-block: var(--space-4) var(--space-5);
+}
+.mwp .page-hero h1 { max-width: 22ch; color: var(--plum-900); font-size: clamp(2.25rem, 4.6vw, 3.5rem); }
+.mwp .page-hero .lede { max-width: 60ch; color: var(--ink); }
+.mwp .page-hero .hero-actions { margin-top: var(--space-3); }
+.mwp .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; margin: 0 0 var(--space-3); padding: 0; font-size: 0.9375rem; }
+.mwp .breadcrumb li + li::before { content: "/"; margin-right: 0.5rem; color: var(--ink-muted); }
+.mwp .breadcrumb [aria-current] { color: var(--ink-muted); }
+.mwp .page-body { display: grid; gap: var(--space-5); padding-block: var(--space-5) var(--space-6); }
+@media (min-width: 1000px) {
+.mwp .page-body { grid-template-columns: minmax(0, 1fr) 300px; gap: var(--space-6); align-items: start; }
+.mwp .page-body--single { grid-template-columns: minmax(0, 1fr); }
+.mwp .side-card { position: sticky; top: 120px; }
+}
+.mwp .prose { max-width: 70ch; }
+.mwp .prose h2 { font-size: clamp(1.5rem, 2.4vw, 1.875rem); margin-top: var(--space-5); }
+.mwp .prose h2:first-child { margin-top: 0; }
+.mwp .prose ul { padding-left: 1.25rem; margin: 0 0 var(--space-2); }
+.mwp .prose li { margin-bottom: 0.5rem; }
+.mwp .prose li::marker { color: var(--plum-700); }
+.mwp .callout {
+  border-left: 4px solid var(--plum-700);
+  background: var(--plum-50);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.mwp .side-card {
+  display: grid; gap: var(--space-2);
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  max-width: 420px;
+}
+.mwp .side-card img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 15%; border-radius: var(--radius-sm); }
+.mwp .side-card p { margin-bottom: 0.5rem; }
+.mwp .side-name { font: 700 1.25rem var(--font-head); color: var(--plum-900); }
+.mwp .side-card a { font-weight: 700; }
+.mwp .empty-state {
+  font-size: 1.1875rem;
+  padding: var(--space-4);
+  background: var(--plum-50); border: 1px dashed var(--plum-100); border-radius: 20px;
+}
+
+/* ===== My Wellness Physicians: Squarespace glue =====
+   Every page's content sits inside <div class="mwp"> in a Code Block.
+   These rules let that content run edge to edge and remove the
+   section padding Squarespace adds around it. */
+.mwp {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  text-align: left;
+}
+body:has(.mwp) { overflow-x: clip; }
+.page-section:has(.mwp) {
+  padding-bottom: 0 !important;
+  min-height: 0 !important;
+}
+/* Keep the first section's top spacing: Squarespace uses it to make room
+   for the header, which can sit on top of the first section. */
+.page-section:has(.mwp):not(:first-child) { padding-top: 0 !important; }
+.page-section:has(.mwp) .content-wrapper {
+  padding: 0 !important;
+  max-width: none !important;
+}
+.sqs-block-code:has(.mwp) { padding: 0 !important; }
+/* Hide a whole section (for example the image library) by adding a Code Block
+   containing <div class="mwp-hidden-section"></div> to it. */
+.page-section:has(.mwp-hidden-section) { display: none !important; }
+.mwp img { max-width: 100%; }
+/* Keep the theme's heading and link styling out of this content. */
+.mwp h1, .mwp h2, .mwp h3, .mwp p, .mwp li, .mwp a, .mwp dt, .mwp dd, .mwp th, .mwp td, .mwp address {
+  text-transform: none;
+}
+.mwp h2, .mwp h3, .mwp p, .mwp li, .mwp a { letter-spacing: normal; }
+.mwp h1 { letter-spacing: -0.01em; }
+.mwp a { background-image: none; }
+.mwp ul, .mwp ol { margin-top: 0; }
+
+/* Footer snippet */
+.mwp-footer { background: var(--plum-900); color: #ddd5ea; padding-block: var(--space-5); font-size: 0.9375rem; }
+.mwp-footer a { color: var(--white); }
+.mwp-footer .footer-grid { display: grid; gap: var(--space-3); }
+.mwp-footer .footer-name { font: 700 1.25rem var(--font-head); color: var(--white); margin-bottom: 0.5rem; }
+.mwp-footer .footer-emergency { font-weight: 600; color: var(--white); }
+.mwp-footer .footer-legal { margin: 0; color: #c9bddb; }
+@media (min-width: 900px) {
+  .mwp-footer .footer-grid { grid-template-columns: 1fr 1fr; }
+  .mwp-footer .footer-legal { grid-column: 1 / -1; padding-top: var(--space-3); border-top: 1px solid rgba(255,255,255,.15); }
+}
+
+</style>
+<div class="mwp">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><span aria-current="page">Medical weight loss</span></li>
+          </ol>
+        </nav>
+        <h1 id="page-title">Medical weight loss in Leesburg, VA</h1>
+        <p class="lede">Physician-supervised weight loss from Dr. Minnie Cruz-Tolentino, a board-certified obesity medicine doctor, for patients across Loudoun County.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary btn-lg" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book an appointment</a>
+          <a class="btn btn-outline btn-lg" href="tel:+17037779355">Call 703-777-9355</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="container page-body">
+      <article class="prose">
+        <h2>Weight loss that treats the cause</h2>
+        <p>Obesity is a chronic medical condition, not a lack of willpower. Genetics, hormones, sleep, stress, other health conditions and some medications can all make it harder to lose weight and keep it off.</p>
+        <p>Medical weight loss looks at those causes. Instead of a one-size-fits-all diet, you get a plan built around your health history and goals, with a physician following your progress over time.</p>
+
+        <h2>How we help</h2>
+        <ul>
+          <li><strong>A full medical evaluation</strong> of your health history, current medications and the factors that affect your weight.</li>
+          <li><strong>A personalized care plan</strong> based on evidence-based treatment.</li>
+          <li><strong>Nutritional education</strong> so you understand what works for your body.</li>
+          <li><strong>Ongoing follow-up</strong> to adjust your plan as you progress.</li>
+        </ul>
+        <p>Our goal is sustainable results, not quick fixes.</p>
+
+        <h2>Why see an obesity medicine specialist</h2>
+        <p>Dr. Cruz-Tolentino is board-certified by the American Board of Obesity Medicine and the American Board of Family Medicine. That combination means your weight is treated as part of your overall health, alongside conditions such as high blood pressure, diabetes and hormonal imbalance.</p>
+
+        <h2>In person or by telemedicine</h2>
+        <p>See us at our office in Leesburg, or have your follow-up visits by telemedicine from home. Patients come to us from across Loudoun County and surrounding areas.</p>
+      </article>
+      <aside class="side-card" aria-label="About the doctor">
+        <img src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/61a7e950-1824-4f75-941b-242c34c58927/dr-cruz-tolentino-portrait.jpg?format=1000w" width="500" height="547" loading="lazy" alt="Dr. Minnie Cruz-Tolentino">
+        <div>
+          <p class="side-name">Dr. Minnie Cruz-Tolentino</p>
+          <p>Double board-certified in Family Medicine and Obesity Medicine, with over 19 years of experience.</p>
+          <a href="/#about">About Dr. Cruz-Tolentino</a>
+        </div>
+      </aside>
+    </div>
+
+    <section class="cta-band" id="contact" aria-labelledby="contact-title">
+      <div class="container cta-inner">
+        <div>
+          <h2 id="contact-title">Ready to feel your best?</h2>
+          <p>Book online, call during office hours, or send us an email.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-light btn-lg" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book an appointment</a>
+          <a class="btn btn-outline-light btn-lg" href="tel:+17037779355">Call 703-777-9355</a>
+          <a class="btn btn-outline-light btn-lg" href="mailto:info@mywellnessphysicians.com">Email us</a>
+        </div>
+      </div>
+    </section>
+  
+</div>
+<script type="application/ld+json">
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://www.mywellnessphysicians.com/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Medical weight loss",
+        "item": "https://www.mywellnessphysicians.com/medical-weight-loss"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "MedicalWebPage",
+    "url": "https://www.mywellnessphysicians.com/medical-weight-loss",
+    "name": "Medical weight loss in Leesburg, VA",
+    "about": {
+      "@type": "MedicalCondition",
+      "name": "Obesity",
+      "alternateName": []
+    },
+    "description": "Physician-supervised medical weight loss from a board-certified obesity medicine doctor in Leesburg, VA.",
+    "audience": {
+      "@type": "Patient"
+    },
+    "lastReviewed": "2026-10-01",
+    "reviewedBy": {
+      "@type": "Physician",
+      "name": "Dr. Minnie Cruz-Tolentino"
+    },
+    "publisher": {
+      "@id": "https://www.mywellnessphysicians.com/#clinic"
+    }
+  }
+]
+</script>
+----- END WEIGHT LOSS (copy down to the line above) -----
+
+
+====================================================
+PAGE: Privacy policy
+URL slug: privacy-policy
+Note: Use your existing Privacy Policy page; replace what is on it.
+SEO title: Privacy Policy | My Wellness Physicians
+SEO description: Patient notice of privacy practices (HIPAA) for My Wellness Physicians, LLC in Leesburg, VA.
+====================================================
+----- START PRIVACY POLICY (copy from the next line) -----
+<style>
+/* Fonts (loaded here so Code Injection isn't needed) */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&family=Playfair+Display:wght@600;700&display=swap');
+
+.mwp {
+  
+  --plum-900: #2a1f42;   
+  --plum-800: #3d2d61;   
+  --plum-700: #543e82;   
+  --lilac:    #9e7ebc;   
+  --lilac-300: #b49bd0;  
+  --plum-100: #e9e1f2;
+  --plum-50:  #f6f2fa;
+  --ink: #2a1f42;
+  --ink-muted: #5b5670;  
+  --line: #d9d9d9;
+  --white: #ffffff;
+  --ph: #b45309;          
+
+  --font-head: "Playfair Display", Georgia, serif;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4.5rem;
+  --space-7: 6rem;
+
+  --radius-sm: 8px;
+  --radius-lg: 20px;
+  --container: 1160px;
+  --focus: 0 0 0 3px var(--white), 0 0 0 6px var(--plum-700);
+}
+.mwp *, .mwp *::before, .mwp *::after { box-sizing: border-box; }
+@media (prefers-reduced-motion: reduce) {
+.mwp *, .mwp *::before, .mwp *::after { transition: none !important; }
+}
+.mwp {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--white);
+}
+.mwp h1, .mwp h2, .mwp h3 {
+  font-family: var(--font-head);
+  line-height: 1.15;
+  margin: 0 0 var(--space-2);
+  color: var(--plum-900);
+  text-wrap: balance;
+}
+.mwp h1 { font-size: clamp(2.25rem, 4.6vw, 3.5rem); font-weight: 700; letter-spacing: -0.01em; }
+.mwp h2 { font-size: clamp(1.75rem, 3vw, 2.375rem); font-weight: 700; }
+.mwp h3 { font-family: var(--font-body); font-size: 1.1875rem; font-weight: 800; }
+.mwp p { margin: 0 0 var(--space-2); max-width: 65ch; }
+.mwp a { color: var(--plum-700); text-underline-offset: 0.2em; }
+.mwp a:hover { color: var(--plum-900); }
+.mwp :focus-visible { outline: none; box-shadow: var(--focus); border-radius: 4px; }
+.mwp .container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+.mwp .container { padding-inline: 2rem; }
+}
+.mwp .visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+.mwp .ph {
+  color: var(--ph);
+  background: #fff7ed;
+  outline: 1px dashed #f59e0b;
+  outline-offset: 1px;
+  border-radius: 3px;
+}
+.mwp .icon {
+  width: 1.125rem; height: 1.125rem;
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+  flex-shrink: 0;
+}
+.mwp .icon-lg { width: 2rem; height: 2rem; stroke-width: 1.75; }
+.mwp .btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4em;
+  min-height: 44px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+.mwp .btn-lg { min-height: 52px; padding: 0.75rem 1.5rem; font-size: 1.0625rem; }
+.mwp .btn-primary { background: var(--plum-700); color: var(--white); }
+.mwp .btn-primary:hover { background: var(--plum-900); color: var(--white); }
+.mwp .btn-quiet { background: var(--white); color: var(--plum-900); border-color: var(--line); }
+.mwp .btn-quiet:hover { border-color: var(--plum-700); color: var(--plum-900); }
+.mwp .btn-light { background: var(--white); color: var(--plum-900); }
+.mwp .btn-light:hover { background: var(--plum-100); color: var(--plum-900); }
+.mwp .btn-outline-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.7); }
+.mwp .btn-outline-light:hover { background: rgba(255,255,255,.12); color: var(--white); border-color: var(--white); }
+.mwp .cta-band .ph, .mwp .btn .ph { color: inherit; background: transparent; }
+.mwp .hero { background: var(--white); color: var(--ink); padding-block: var(--space-5) var(--space-6); }
+.mwp .hero-inner { display: grid; gap: var(--space-5); align-items: center; }
+.mwp .hero h1 { margin-bottom: var(--space-3); }
+.mwp .hero-name { display: block; font-size: clamp(2.5rem, 5.2vw, 4.25rem); line-height: 1.05; letter-spacing: -0.015em; color: var(--plum-900); }
+.mwp .hero-credentials {
+  display: block; margin-top: 0.75rem;
+  font-family: var(--font-body); font-weight: 800; font-size: 0.9375rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--plum-700);
+}
+.mwp .hero-role { display: block; margin-top: var(--space-3); font-size: clamp(1.5rem, 2.6vw, 2.125rem); line-height: 1.2; color: var(--plum-700); font-weight: 600; }
+.mwp .lede { font-size: 1.1875rem; color: inherit; }
+.mwp .hero p { max-width: 58ch; }
+.mwp .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: var(--space-4); }
+.mwp .hero-media { margin: 0; position: relative; }
+.mwp .hero-media::before {
+  content: ""; position: absolute; inset: 24px -16px -16px 24px;
+  border-radius: 28px; background: var(--plum-50); border: 1px solid var(--plum-100);
+  z-index: 0;
+}
+.mwp .hero-media img {
+  position: relative; z-index: 1;
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 32% 50%;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px -32px rgba(42,31,66,.5);
+}
+.mwp .hero-caption {
+  position: absolute; z-index: 2; right: var(--space-2); bottom: var(--space-2); left: var(--space-2);
+  max-width: 300px; margin-left: auto;
+  padding: var(--space-2) var(--space-3);
+  background: rgba(42,31,66,.86);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 16px;
+  font: italic 600 1.125rem/1.35 var(--font-head);
+  color: var(--white);
+}
+@media (min-width: 900px) {
+.mwp .hero { padding-block: var(--space-6) var(--space-7); }
+.mwp .hero-inner { grid-template-columns: 1.4fr 1fr; gap: var(--space-6); }
+.mwp .hero-media { max-width: 500px; justify-self: end; width: 100%; }
+}
+.mwp .btn-outline { background: var(--white); color: var(--plum-900); border-color: var(--plum-900); }
+.mwp .btn-outline:hover { background: var(--plum-900); color: var(--white); }
+.mwp .btn-lilac { background: var(--lilac-300); color: var(--plum-900); }
+.mwp .btn-lilac:hover { background: #c4b0dc; color: var(--plum-900); }
+.mwp .btn-ghost-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.55); }
+.mwp .btn-ghost-light:hover { background: rgba(255,255,255,.1); color: var(--white); border-color: var(--white); }
+.mwp .trust-bar { border-block: 1px solid var(--line); background: var(--white); }
+.mwp .trust-list {
+  list-style: none; margin-block: 0;
+  display: grid; grid-template-columns: 1fr;
+}
+.mwp .trust-list li {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: var(--space-2) 0;
+  font-size: 0.9375rem; color: var(--ink-muted); line-height: 1.35;
+}
+.mwp .trust-list li + li { border-top: 1px solid var(--line); }
+.mwp .trust-list strong { display: block; color: var(--plum-900); font-size: 1rem; }
+.mwp .trust-list .icon { color: var(--plum-700); }
+@media (min-width: 520px) {
+.mwp .trust-list { grid-template-columns: repeat(2, 1fr); }
+.mwp .trust-list li { padding: var(--space-3) var(--space-2); }
+.mwp .trust-list li:nth-child(2) { border-top: 0; }
+.mwp .trust-list li:nth-child(even) { border-left: 1px solid var(--line); }
+}
+@media (min-width: 900px) {
+.mwp .trust-list { grid-template-columns: repeat(4, 1fr); }
+.mwp .trust-list li { padding: var(--space-3); border-top: 0 !important; }
+.mwp .trust-list li + li { border-left: 1px solid var(--line); }
+}
+.mwp .about { background: var(--white); padding-block: var(--space-6); }
+.mwp .about-inner { display: grid; gap: var(--space-5); align-items: center; }
+.mwp .about-photo {
+  display: block; width: 100%; max-width: 460px; height: auto;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 15%;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px -32px rgba(42,31,66,.45);
+}
+.mwp .about h2 { font-size: clamp(2.125rem, 4vw, 3.25rem); letter-spacing: -0.01em; }
+.mwp .about-lede { font-size: 1.1875rem; }
+.mwp .about strong { color: var(--plum-900); }
+.mwp .features {
+  list-style: none; margin: var(--space-4) 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3);
+  text-align: center;
+}
+.mwp .features li { display: grid; justify-items: center; gap: 0.5rem; font-weight: 800; color: var(--plum-900); line-height: 1.3; }
+.mwp .features .icon { color: var(--plum-700); }
+@media (min-width: 640px) {
+.mwp .features { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 900px) {
+.mwp .about-inner { grid-template-columns: 1fr 1.3fr; gap: var(--space-6); }
+}
+.mwp .credentials {
+  list-style: none; margin: var(--space-4) 0 0; padding: var(--space-3);
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3);
+  align-items: center; justify-items: center;
+  background: var(--white); border: 1px solid var(--line); border-radius: 20px;
+}
+.mwp .credentials li { min-width: 0; }
+.mwp .credentials img { display: block; width: auto; height: auto; max-width: 100%; max-height: 84px; }
+@media (min-width: 1100px) {
+.mwp .credentials { grid-template-columns: repeat(4, auto); justify-content: space-between; }
+}
+.mwp .services { background: var(--plum-50); padding-block: var(--space-6); }
+.mwp .services-panel {
+  background: var(--white);
+  border-radius: 28px;
+  padding: var(--space-4) var(--space-3);
+  box-shadow: 0 30px 60px -40px rgba(42,31,66,.45);
+  overflow: hidden;
+}
+.mwp .services .section-head { max-width: 860px; margin-bottom: var(--space-4); }
+.mwp .services .section-head h2 { font-size: clamp(2.125rem, 4vw, 3.25rem); letter-spacing: -0.01em; color: var(--plum-900); }
+.mwp .services .section-head p { color: var(--ink-muted); font-size: 1.0625rem; margin: 0; }
+@media (min-width: 768px) {
+.mwp .services-panel { padding: var(--space-5) var(--space-6); }
+}
+.mwp .service-cards {
+  list-style: none; margin: 0; padding: 0.5rem 0.25rem 1.5rem;
+  display: flex; gap: var(--space-3);
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-padding-inline: 0.25rem;
+  scrollbar-width: none;
+}
+.mwp .service-cards::-webkit-scrollbar { display: none; }
+.mwp .service-cards:focus-visible { box-shadow: var(--focus); border-radius: 20px; }
+.mwp .service-card {
+  position: relative;
+  flex: 0 0 82%; max-width: 340px;
+  scroll-snap-align: start;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: var(--space-4) var(--space-3);
+  border-radius: 22px;
+  color: var(--white);
+  background: linear-gradient(160deg, #7259a8 0%, var(--plum-700) 45%, #3d2d61 100%);
+  box-shadow: 0 18px 36px -22px rgba(42,31,66,.7);
+  transition: transform 200ms ease;
+}
+@media (min-width: 640px) {
+.mwp .service-card { flex-basis: 44%; }
+}
+@media (min-width: 1000px) {
+.mwp .service-card { flex-basis: 30%; }
+}
+.mwp .service-card:first-child, .mwp .service-card:hover, .mwp .service-card:focus-within {
+  background: linear-gradient(160deg, #c4b0dc 0%, var(--lilac-300) 100%);
+  color: var(--plum-900);
+}
+.mwp .service-cards:hover .service-card:first-child:not(:hover), .mwp .service-cards:focus-within .service-card:first-child:not(:focus-within) {
+  background: linear-gradient(160deg, #7259a8 0%, var(--plum-700) 45%, #3d2d61 100%);
+  color: var(--white);
+}
+@media (prefers-reduced-motion: no-preference) {
+.mwp .service-card:hover { transform: translateY(-4px); }
+}
+.mwp .card-icon {
+  display: grid; place-items: center;
+  width: 64px; height: 64px; margin-bottom: var(--space-3);
+  background: var(--white); border-radius: 16px;
+  box-shadow: 0 8px 18px -10px rgba(42,31,66,.6);
+}
+.mwp .card-icon svg { width: 34px; height: 34px; fill: none; stroke: var(--plum-700); stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.mwp .service-card h3 { color: inherit; font-family: var(--font-body); font-weight: 800; font-size: 1.375rem; line-height: 1.25; margin-bottom: 0.75rem; }
+.mwp .service-card p { color: inherit; font-size: 0.9875rem; margin: 0 0 var(--space-3); }
+.mwp .card-link {
+  margin-top: auto;
+  font-weight: 800; color: inherit; text-decoration: underline; text-underline-offset: 0.25em;
+}
+.mwp .card-link:hover { color: inherit; }
+.mwp .card-link::after { content: ""; position: absolute; inset: 0; border-radius: 22px; }
+.mwp .card-link:focus-visible { box-shadow: none; }
+.mwp .card-link:focus-visible::after { box-shadow: var(--focus); }
+.mwp .carousel-controls { display: flex; align-items: center; gap: 0.75rem; margin-top: var(--space-2); }
+.mwp .carousel-btn {
+  display: grid; place-items: center;
+  width: 48px; height: 48px; padding: 0;
+  background: var(--white); color: var(--plum-900);
+  border: 1.5px solid var(--plum-900); border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+.mwp .carousel-btn:hover:not(:disabled) { background: var(--plum-900); color: var(--white); }
+.mwp .carousel-btn:disabled { opacity: .35; cursor: default; }
+.mwp .carousel-progress {
+  flex: 1; max-width: 320px; height: 3px; margin-left: var(--space-2);
+  background: var(--line); border-radius: 3px; overflow: hidden;
+}
+.mwp .carousel-progress span { display: block; height: 100%; width: 30%; background: var(--plum-700); border-radius: 3px; transition: margin-left 160ms ease; }
+.mwp .new-patients { padding-block: var(--space-6); }
+.mwp .steps { list-style: none; counter-reset: step; margin: var(--space-3) 0 0; padding: 0; display: grid; gap: var(--space-4); }
+.mwp .steps li { counter-increment: step; position: relative; padding-left: 3.5rem; }
+.mwp .steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: -0.15rem;
+  width: 2.5rem; height: 2.5rem; display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--plum-700); color: var(--white);
+  font: 800 1.0625rem var(--font-body);
+}
+.mwp .steps p { color: var(--ink-muted); }
+@media (min-width: 900px) {
+.mwp .steps { grid-template-columns: repeat(3, 1fr); }
+}
+.mwp .visit { padding-block: var(--space-6); border-top: 1px solid var(--line); }
+.mwp .visit-inner { display: grid; gap: var(--space-5); }
+.mwp .address { font-style: normal; margin-bottom: var(--space-3); font-size: 1.125rem; }
+.mwp .hours { border-collapse: collapse; width: 100%; max-width: 440px; margin-bottom: var(--space-3); }
+.mwp .hours th, .mwp .hours td { text-align: left; padding: 0.625rem 0; border-bottom: 1px solid var(--line); }
+.mwp .hours th { font-weight: 600; padding-right: var(--space-3); }
+.mwp .hours td { white-space: nowrap; }
+.mwp .hint { color: var(--ink-muted); font-size: 0.9625rem; }
+.mwp .map { width: 100%; aspect-ratio: 4 / 3; border: 1px solid var(--line); border-radius: var(--radius-lg); }
+@media (min-width: 900px) {
+.mwp .visit-inner { grid-template-columns: 1fr 1.2fr; gap: var(--space-6); align-items: start; }
+}
+.mwp .cta-band { background: var(--plum-700); color: #f1ecf8; padding-block: var(--space-6); }
+.mwp .cta-band h2 { color: var(--white); }
+.mwp .cta-band p { color: #f1ecf8; }
+.mwp .cta-inner { display: grid; gap: var(--space-3); align-items: center; }
+.mwp .cta-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+@media (min-width: 900px) {
+.mwp .cta-inner { grid-template-columns: 1.4fr 1fr; }
+.mwp .cta-actions { justify-content: flex-end; }
+}
+.mwp .page-hero {
+  background: var(--plum-50);
+  border-bottom: 1px solid var(--plum-100);
+  padding-block: var(--space-4) var(--space-5);
+}
+.mwp .page-hero h1 { max-width: 22ch; color: var(--plum-900); font-size: clamp(2.25rem, 4.6vw, 3.5rem); }
+.mwp .page-hero .lede { max-width: 60ch; color: var(--ink); }
+.mwp .page-hero .hero-actions { margin-top: var(--space-3); }
+.mwp .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; margin: 0 0 var(--space-3); padding: 0; font-size: 0.9375rem; }
+.mwp .breadcrumb li + li::before { content: "/"; margin-right: 0.5rem; color: var(--ink-muted); }
+.mwp .breadcrumb [aria-current] { color: var(--ink-muted); }
+.mwp .page-body { display: grid; gap: var(--space-5); padding-block: var(--space-5) var(--space-6); }
+@media (min-width: 1000px) {
+.mwp .page-body { grid-template-columns: minmax(0, 1fr) 300px; gap: var(--space-6); align-items: start; }
+.mwp .page-body--single { grid-template-columns: minmax(0, 1fr); }
+.mwp .side-card { position: sticky; top: 120px; }
+}
+.mwp .prose { max-width: 70ch; }
+.mwp .prose h2 { font-size: clamp(1.5rem, 2.4vw, 1.875rem); margin-top: var(--space-5); }
+.mwp .prose h2:first-child { margin-top: 0; }
+.mwp .prose ul { padding-left: 1.25rem; margin: 0 0 var(--space-2); }
+.mwp .prose li { margin-bottom: 0.5rem; }
+.mwp .prose li::marker { color: var(--plum-700); }
+.mwp .callout {
+  border-left: 4px solid var(--plum-700);
+  background: var(--plum-50);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.mwp .side-card {
+  display: grid; gap: var(--space-2);
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  max-width: 420px;
+}
+.mwp .side-card img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 15%; border-radius: var(--radius-sm); }
+.mwp .side-card p { margin-bottom: 0.5rem; }
+.mwp .side-name { font: 700 1.25rem var(--font-head); color: var(--plum-900); }
+.mwp .side-card a { font-weight: 700; }
+.mwp .empty-state {
+  font-size: 1.1875rem;
+  padding: var(--space-4);
+  background: var(--plum-50); border: 1px dashed var(--plum-100); border-radius: 20px;
+}
+
+/* ===== My Wellness Physicians: Squarespace glue =====
+   Every page's content sits inside <div class="mwp"> in a Code Block.
+   These rules let that content run edge to edge and remove the
+   section padding Squarespace adds around it. */
+.mwp {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  text-align: left;
+}
+body:has(.mwp) { overflow-x: clip; }
+.page-section:has(.mwp) {
+  padding-bottom: 0 !important;
+  min-height: 0 !important;
+}
+/* Keep the first section's top spacing: Squarespace uses it to make room
+   for the header, which can sit on top of the first section. */
+.page-section:has(.mwp):not(:first-child) { padding-top: 0 !important; }
+.page-section:has(.mwp) .content-wrapper {
+  padding: 0 !important;
+  max-width: none !important;
+}
+.sqs-block-code:has(.mwp) { padding: 0 !important; }
+/* Hide a whole section (for example the image library) by adding a Code Block
+   containing <div class="mwp-hidden-section"></div> to it. */
+.page-section:has(.mwp-hidden-section) { display: none !important; }
+.mwp img { max-width: 100%; }
+/* Keep the theme's heading and link styling out of this content. */
+.mwp h1, .mwp h2, .mwp h3, .mwp p, .mwp li, .mwp a, .mwp dt, .mwp dd, .mwp th, .mwp td, .mwp address {
+  text-transform: none;
+}
+.mwp h2, .mwp h3, .mwp p, .mwp li, .mwp a { letter-spacing: normal; }
+.mwp h1 { letter-spacing: -0.01em; }
+.mwp a { background-image: none; }
+.mwp ul, .mwp ol { margin-top: 0; }
+
+/* Footer snippet */
+.mwp-footer { background: var(--plum-900); color: #ddd5ea; padding-block: var(--space-5); font-size: 0.9375rem; }
+.mwp-footer a { color: var(--white); }
+.mwp-footer .footer-grid { display: grid; gap: var(--space-3); }
+.mwp-footer .footer-name { font: 700 1.25rem var(--font-head); color: var(--white); margin-bottom: 0.5rem; }
+.mwp-footer .footer-emergency { font-weight: 600; color: var(--white); }
+.mwp-footer .footer-legal { margin: 0; color: #c9bddb; }
+@media (min-width: 900px) {
+  .mwp-footer .footer-grid { grid-template-columns: 1fr 1fr; }
+  .mwp-footer .footer-legal { grid-column: 1 / -1; padding-top: var(--space-3); border-top: 1px solid rgba(255,255,255,.15); }
+}
+
+</style>
+<div class="mwp">
+    <section class="page-hero" aria-labelledby="page-title">
+      <div class="container">
+        <nav class="breadcrumb" aria-label="Breadcrumb">
+          <ol>
+            <li><a href="/">Home</a></li>
+            <li><span aria-current="page">Privacy policy</span></li>
+          </ol>
+        </nav>
+        <h1 id="page-title">Privacy policy</h1>
+        <p class="lede">Our patient notice of privacy practices: how medical information about you may be used and disclosed, and how you can get access to it.</p>
+      </div>
+    </section>
+
+    <div class="container page-body page-body--single">
+      <article class="prose">
+        <h2>My Wellness Physicians, LLC – Patient Notice of Privacy Practices</h2>
+        <p>As Required by the Privacy Regulations Created as a Result of the Health Insurance Portability and Accountability Act of 1996-(HIPAA), Health Information Technology for Economic and Clinical Health Act (HITECH Act), and associated regulations and amendments</p>
+        <p class="callout"><strong>THIS NOTICE DESCRIBES HOW MEDICAL INFORMATION ABOUT YOU MAY BE USED OR DISCLOSED AND HOW YOU CAN GET ACCESS TO THIS INFORMATION. PLEASE REVIEW IT CAREFULLY.</strong></p>
+        <p>If you have any questions about this notice or if you need more information, please contact: My Wellness Physicians, LLC, 1604 Village Market Blvd SE Suite 119 Leesburg, VA 20175</p>
+
+        <h2>About this notice</h2>
+        <p>We understand that health information about you is personal and we are committed to protecting your information. We create a record of the care and services you receive at all divisions of My Wellness Physicians, LLC. We need this record to provide care (treatment), for payment of care provided, for health care operations, and to comply with certain legal requirements. This Notice will tell you about the ways in which we may use and disclose health information about you. It also describes your rights and certain obligations we have regarding the use and disclosure of health information. We are required by law to follow the terms of this Notice that is currently in effect.</p>
+
+        <h2>What is protected health information (PHI)?</h2>
+        <p>PHI is information that individually identifies you. We create a record or get from you or from another health care provider, health plan, your employer, or a health care clearinghouse that relates to:</p>
+        <ul>
+          <li>Your past, present, or future physical or mental health or conditions,</li>
+          <li>The provision of health care to you, or</li>
+          <li>The past, present, or future payment for your health care.</li>
+        </ul>
+
+        <h2>How we may use and disclose your PHI</h2>
+        <p>We may use and disclose your PHI in the following circumstances:</p>
+        <ul>
+          <li><strong>Treatment.</strong> We may use or disclose your PHI to give you medical treatment or services and to manage and coordinate your medical care. For example, your PHI may be provided to a physician or other health care provider (e.g., a specialist or laboratory) to whom you have been referred to ensure that the physician or other health care provider has the necessary information to diagnose or treat you or provide you with a service.</li>
+          <li><strong>Payment.</strong> We may use and disclose your PHI so that we can bill for the treatment and services you receive from us and can collect payment from you, a health plan, or a third party. This use and disclosure may include certain activities that your health insurance plan may undertake before it approves or pays for the health care services we recommend for you, such as making a determination of eligibility or coverage for insurance benefits, reviewing services provided to you for medical necessity, and undertaking utilization review activities. For example, we may need to give your health plan information about your treatment in order for your health plan to agree to pay for that treatment.</li>
+          <li><strong>Health Care Operations.</strong> We may use and disclose PHI for our health care operations. For example, we may use your PHI to internally review the quality of the treatment and services you receive and to evaluate the performance of our team members in caring for you. We also may disclose information to physicians, nurses, medical technicians, medical students, and other authorized personnel for educational and learning purposes.</li>
+          <li><strong>Appointment Reminders/Treatment Alternatives/Health-Related Benefits and Services.</strong> We may use and disclose PHI to contact you to remind you that you have an appointment for medical care, or to contact you to tell you about possible treatment options or alternatives or health related benefits and services that may be of interest to you.</li>
+          <li><strong>As Required by Law.</strong> We will disclose PHI about you when required to do so by international, federal, state, or local law.</li>
+          <li><strong>To Avert a Serious Threat to Health or Safety.</strong> We may use and disclose PHI when necessary to prevent a serious threat to your health or safety or to the health or safety of others. But we will only disclose the information to someone who may be able to help prevent the threat.</li>
+          <li><strong>Business Associates.</strong> We may disclose PHI to our business associates who perform functions on our behalf or provide us with services if the PHI is necessary for those functions or services. For example, we may use another company to do our billing, or to provide transcription or consulting services for us. All of our business associates are obligated, under contract with us, to protect the privacy and ensure the security of your PHI.</li>
+          <li><strong>Organ and Tissue Donation.</strong> If you are an organ or tissue donor, we may use or disclose your PHI to organizations that handle organ procurement or transplantation such as an organ donation bank as necessary to facilitate organ or tissue donation and transplantation.</li>
+          <li><strong>Military and Veterans.</strong> If you are a member of the armed forces, we may disclose PHI as required by military command authorities. We also may disclose PHI to the appropriate foreign military authority if you are a member of a foreign military.</li>
+          <li><strong>Workers Compensation.</strong> We may use or disclose PHI for workers compensation or similar programs that provide benefits for work-related injuries or illness.</li>
+          <li><strong>Public Health Risks.</strong> We may disclose PHI for public health activities. This includes disclosures to: (1) a person subject to the jurisdiction of the Food and Drug Administration for purposes related to the quality, safety or effectiveness of an FDA-regulated product or activity; (2) prevent or control disease, injury or disability; (3) report births and deaths; (4) report child abuse or neglect; (5) report reactions to medications or problems with products; (6) notify people of recalls of products they may be using; and (7) a person who may have been exposed to a disease or may be at risk for contracting or spreading a disease or condition.</li>
+          <li><strong>Abuse, Neglect, or Domestic Violence.</strong> We may disclose PHI to the appropriate government authority if we believe a patient has been the victim of abuse, neglect, or domestic violence and the patient agrees or we are required or authorized by law to make that disclosure.</li>
+          <li><strong>Health Oversight Activities.</strong> We may disclose PHI to a health oversight agency for activities authorized by law. These oversight activities include, for example, audits, investigations, inspections, licensure, and similar activities that are necessary for the government to monitor the health care system, government programs, and compliance with civil rights laws.</li>
+          <li><strong>Data Breach Notification Purposes.</strong> We may use or disclose your PHI to provide legally required notices of unauthorized access to or disclosure of your health information.</li>
+          <li><strong>Lawsuits and Disputes.</strong> If you are involved in a lawsuit or a dispute, we may disclose PHI in response to a court or administrative order. We also may disclose PHI in response to a subpoena, discovery request, or other legal process from someone else involved in the dispute, but only if efforts have been made to tell you about the request or to get an order protecting the information requested. We may also use or disclose your PHI to defend ourselves in the event of a lawsuit.</li>
+          <li><strong>Law Enforcement.</strong> We may disclose PHI, so long as applicable legal requirements are met, for law enforcement purposes.</li>
+          <li><strong>Military Activity and National Security.</strong> If you are involved with military, national security or intelligence activities or if you are in law enforcement custody, we may disclose your PHI to authorized officials so they may carry out their legal duties under the law.</li>
+          <li><strong>Coroners, Medical Examiners, and Funeral Directors.</strong> We may disclose PHI to a coroner, medical examiner, or funeral director so that they can carry out their duties.</li>
+        </ul>
+
+        <h2>Uses and disclosures that require us to give you an opportunity to object and opt out</h2>
+        <ul>
+          <li><strong>Individuals Involved in Your Care.</strong> Unless you object in writing, we may disclose to a member of your family, a relative, a close friend or any other person you identify, your PHI that directly relates to that person’s involvement in your health care. If you are unable to agree or object to such a disclosure, we may disclose such information as necessary if we determine that it is in your best interest based on our professional judgment.</li>
+          <li><strong>Payment for Your Care.</strong> Unless you object in writing, you can exercise your rights under HIPAA that your healthcare provider not disclose information about services received when you pay in full out of pocket for the service and refuse to file a claim with your health plan.</li>
+          <li><strong>Disaster Relief.</strong> We may disclose your PHI to disaster relief organizations that seek your PHI to coordinate your care, or notify family and friends of your location or condition in a disaster. We will provide you with an opportunity to agree or object to such a disclosure whenever we practicably can do so.</li>
+        </ul>
+        <ul>
+          <li>Most uses and disclosures of psychotherapy notes;</li>
+          <li>Uses and disclosures of PHI for marketing purposes; and</li>
+          <li>Disclosures that constitute a sale of your PHI.</li>
+        </ul>
+        <p>Other uses and disclosures of PHI not covered by this Notice or the laws that apply to us will be made only with your written authorization. If you do give us an authorization, you may revoke it at any time by submitting a written revocation to our Privacy Officer and we will no longer disclose PHI under the authorization. But disclosure that we made in reliance on your authorization before you revoked it will not be affected by the revocation.</p>
+
+        <h2>Your rights regarding your PHI</h2>
+        <p>You have the following rights, subject to certain limitations, regarding your PHI:</p>
+        <ul>
+          <li><strong>Inspect and Copy.</strong> You have the right to inspect, receive, and copy PHI that may be used to make decisions about your care or payment for your care. We have up to 30 days to make your PHI available to you and we may charge you a reasonable fee for the costs of copying, mailing or other supplies associated with your request. You can only direct us in writing to submit your PHI to a third party not covered in this notice. We may not charge you a fee if you need the information for a claim for benefits under the Social Security Act or any other state or federal needs-based benefit program. We may deny your request in certain limited circumstances. If we do deny your request, you have the right to have the denial reviewed by a licensed healthcare professional who was not directly involved in the denial of your request, and we will comply with the outcome of the review.</li>
+          <li><strong>Summary or Explanation.</strong> We can also provide you with a summary of your PHI, rather than the entire record, or we can provide you with an explanation of the PHI which has been provided to you, so long as you agree to this alternative form and pay the associated fees.</li>
+          <li><strong>Electronic Copy of Electronic Medical Records.</strong> If your PHI is maintained in an electronic format (known as an electronic medical record or an electronic health record), you have the right to request that an electronic copy of your record be given to you or transmitted to another individual or entity. If the PHI is not readily producible in the form or format you request your record will be provided in a readable hard copy form.</li>
+          <li><strong>Receive Notice of a Breach.</strong> You have the right to be notified upon a breach of any of your unsecured PHI.</li>
+          <li><strong>Request Amendments.</strong> If you feel that the PHI we have is incorrect or incomplete, you may ask us to amend the information. You have the right to request an amendment for as long as the information is kept by or for us.</li>
+          <li><strong>Accounting of Disclosures.</strong> You have the right to ask for an accounting of disclosures, which is a list of the disclosures we made of your PHI. To request this list or accounting of disclosures, you must submit your request in writing to the Privacy Officer. The first accounting of disclosures you request within any 12 month period will be free.</li>
+          <li><strong>Request Restrictions.</strong> You have the right to request a restriction or limitation on the PHI we use or disclose about you for treatment, payment, or health care operations. We are not required by federal regulation to agree to your request. If we do agree with your request, we will comply unless the information is needed to provide emergency treatment. To request restrictions, you must make your request in writing to the Privacy Officer. Your request must state the specific restriction requested, whether you want to limit our use and/or disclosure; and to whom you want the restriction to apply.</li>
+          <li><strong>Request Confidential Communications.</strong> You have the right to request that we communicate with you only in certain ways to preserve your privacy. For example, you may request that we contact you by mail at a specific address or call you only at your work number. You must make any such request in writing and you must specify how or where we are to contact you.</li>
+          <li><strong>Changes to This Notice.</strong> We reserve the right to change this Notice. We reserve the right to make the changed Notice effective for PHI we already have as well as for any PHI we create or receive in the future. A copy of our current Notice is posted in our office and on our website.</li>
+          <li><strong>Complaints.</strong> If you believe your privacy rights have been violated, you may file a complaint with My Wellness Physicians, LLC., Privacy Officer, at the address listed at the beginning of this Notice or with the Secretary of the U.S. Department of Health and Human Services.</li>
+        </ul>
+
+        <h2>Text messaging</h2>
+        <ul>
+          <li>No mobile information will be shared with third parties/affiliates for marketing/promotional purposes. All other categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</li>
+          <li><strong>OPT IN CONSENT:</strong> By submitting your phone number, you are authorizing to send you text messages and notifications. Message/data rates apply. Reply STOP to unsubscribe to a message sent from us.</li>
+        </ul>
+
+        <h2>Filing a complaint with the Secretary</h2>
+        <p>To file a complaint with the Secretary, mail it to: Secretary of the U.S. Department of Health and Humans Services, 200 Independence Ave., S.W., Washington, D.C. 20201. Call <a href="tel:+12026190257">(202) 619-0257</a> (or toll free <a href="tel:+18776966775">(877) 696-6775</a> or go to the website of the Office for Civil Rights, for more information. You will not be penalized for filing a complaint. By using our site, you consent to our privacy policy.</p>
+      </article>
+    </div>
+
+    <section class="cta-band" id="contact" aria-labelledby="contact-title">
+      <div class="container cta-inner">
+        <div>
+          <h2 id="contact-title">Ready to feel your best?</h2>
+          <p>Book online, call during office hours, or send us an email.</p>
+        </div>
+        <div class="cta-actions">
+          <a class="btn btn-light btn-lg" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book an appointment</a>
+          <a class="btn btn-outline-light btn-lg" href="tel:+17037779355">Call 703-777-9355</a>
+          <a class="btn btn-outline-light btn-lg" href="mailto:info@mywellnessphysicians.com">Email us</a>
+        </div>
+      </div>
+    </section>
+  
+</div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://www.mywellnessphysicians.com/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Privacy policy",
+      "item": "https://www.mywellnessphysicians.com/privacy-policy"
+    }
+  ]
+}
+</script>
+----- END PRIVACY POLICY (copy down to the line above) -----
+
+
+====================================================
+FOOTER (shared by every page)
+Edit any page -> scroll to the footer -> Edit Footer -> Add Block -> Code.
+====================================================
+----- START FOOTER (copy from the next line) -----
+<style>
+/* Fonts (loaded here so Code Injection isn't needed) */
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:opsz,wght@6..12,400;6..12,600;6..12,700;6..12,800&family=Playfair+Display:wght@600;700&display=swap');
+
+.mwp {
+  
+  --plum-900: #2a1f42;   
+  --plum-800: #3d2d61;   
+  --plum-700: #543e82;   
+  --lilac:    #9e7ebc;   
+  --lilac-300: #b49bd0;  
+  --plum-100: #e9e1f2;
+  --plum-50:  #f6f2fa;
+  --ink: #2a1f42;
+  --ink-muted: #5b5670;  
+  --line: #d9d9d9;
+  --white: #ffffff;
+  --ph: #b45309;          
+
+  --font-head: "Playfair Display", Georgia, serif;
+  --font-body: "Nunito Sans", system-ui, sans-serif;
+
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2rem;
+  --space-5: 3rem;
+  --space-6: 4.5rem;
+  --space-7: 6rem;
+
+  --radius-sm: 8px;
+  --radius-lg: 20px;
+  --container: 1160px;
+  --focus: 0 0 0 3px var(--white), 0 0 0 6px var(--plum-700);
+}
+.mwp *, .mwp *::before, .mwp *::after { box-sizing: border-box; }
+@media (prefers-reduced-motion: reduce) {
+.mwp *, .mwp *::before, .mwp *::after { transition: none !important; }
+}
+.mwp {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--white);
+}
+.mwp h1, .mwp h2, .mwp h3 {
+  font-family: var(--font-head);
+  line-height: 1.15;
+  margin: 0 0 var(--space-2);
+  color: var(--plum-900);
+  text-wrap: balance;
+}
+.mwp h1 { font-size: clamp(2.25rem, 4.6vw, 3.5rem); font-weight: 700; letter-spacing: -0.01em; }
+.mwp h2 { font-size: clamp(1.75rem, 3vw, 2.375rem); font-weight: 700; }
+.mwp h3 { font-family: var(--font-body); font-size: 1.1875rem; font-weight: 800; }
+.mwp p { margin: 0 0 var(--space-2); max-width: 65ch; }
+.mwp a { color: var(--plum-700); text-underline-offset: 0.2em; }
+.mwp a:hover { color: var(--plum-900); }
+.mwp :focus-visible { outline: none; box-shadow: var(--focus); border-radius: 4px; }
+.mwp .container {
+  width: 100%;
+  max-width: var(--container);
+  margin-inline: auto;
+  padding-inline: 1rem;
+}
+@media (min-width: 768px) {
+.mwp .container { padding-inline: 2rem; }
+}
+.mwp .visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+.mwp .ph {
+  color: var(--ph);
+  background: #fff7ed;
+  outline: 1px dashed #f59e0b;
+  outline-offset: 1px;
+  border-radius: 3px;
+}
+.mwp .icon {
+  width: 1.125rem; height: 1.125rem;
+  fill: none; stroke: currentColor; stroke-width: 2;
+  stroke-linecap: round; stroke-linejoin: round;
+  flex-shrink: 0;
+}
+.mwp .icon-lg { width: 2rem; height: 2rem; stroke-width: 1.75; }
+.mwp .btn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 0.4em;
+  min-height: 44px;
+  padding: 0.625rem 1.25rem;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease, border-color 160ms ease;
+}
+.mwp .btn-lg { min-height: 52px; padding: 0.75rem 1.5rem; font-size: 1.0625rem; }
+.mwp .btn-primary { background: var(--plum-700); color: var(--white); }
+.mwp .btn-primary:hover { background: var(--plum-900); color: var(--white); }
+.mwp .btn-quiet { background: var(--white); color: var(--plum-900); border-color: var(--line); }
+.mwp .btn-quiet:hover { border-color: var(--plum-700); color: var(--plum-900); }
+.mwp .btn-light { background: var(--white); color: var(--plum-900); }
+.mwp .btn-light:hover { background: var(--plum-100); color: var(--plum-900); }
+.mwp .btn-outline-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.7); }
+.mwp .btn-outline-light:hover { background: rgba(255,255,255,.12); color: var(--white); border-color: var(--white); }
+.mwp .cta-band .ph, .mwp .btn .ph { color: inherit; background: transparent; }
+.mwp .hero { background: var(--white); color: var(--ink); padding-block: var(--space-5) var(--space-6); }
+.mwp .hero-inner { display: grid; gap: var(--space-5); align-items: center; }
+.mwp .hero h1 { margin-bottom: var(--space-3); }
+.mwp .hero-name { display: block; font-size: clamp(2.5rem, 5.2vw, 4.25rem); line-height: 1.05; letter-spacing: -0.015em; color: var(--plum-900); }
+.mwp .hero-credentials {
+  display: block; margin-top: 0.75rem;
+  font-family: var(--font-body); font-weight: 800; font-size: 0.9375rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--plum-700);
+}
+.mwp .hero-role { display: block; margin-top: var(--space-3); font-size: clamp(1.5rem, 2.6vw, 2.125rem); line-height: 1.2; color: var(--plum-700); font-weight: 600; }
+.mwp .lede { font-size: 1.1875rem; color: inherit; }
+.mwp .hero p { max-width: 58ch; }
+.mwp .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: var(--space-4); }
+.mwp .hero-media { margin: 0; position: relative; }
+.mwp .hero-media::before {
+  content: ""; position: absolute; inset: 24px -16px -16px 24px;
+  border-radius: 28px; background: var(--plum-50); border: 1px solid var(--plum-100);
+  z-index: 0;
+}
+.mwp .hero-media img {
+  position: relative; z-index: 1;
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 32% 50%;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px -32px rgba(42,31,66,.5);
+}
+.mwp .hero-caption {
+  position: absolute; z-index: 2; right: var(--space-2); bottom: var(--space-2); left: var(--space-2);
+  max-width: 300px; margin-left: auto;
+  padding: var(--space-2) var(--space-3);
+  background: rgba(42,31,66,.86);
+  border: 1px solid rgba(255,255,255,.18);
+  border-radius: 16px;
+  font: italic 600 1.125rem/1.35 var(--font-head);
+  color: var(--white);
+}
+@media (min-width: 900px) {
+.mwp .hero { padding-block: var(--space-6) var(--space-7); }
+.mwp .hero-inner { grid-template-columns: 1.4fr 1fr; gap: var(--space-6); }
+.mwp .hero-media { max-width: 500px; justify-self: end; width: 100%; }
+}
+.mwp .btn-outline { background: var(--white); color: var(--plum-900); border-color: var(--plum-900); }
+.mwp .btn-outline:hover { background: var(--plum-900); color: var(--white); }
+.mwp .btn-lilac { background: var(--lilac-300); color: var(--plum-900); }
+.mwp .btn-lilac:hover { background: #c4b0dc; color: var(--plum-900); }
+.mwp .btn-ghost-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.55); }
+.mwp .btn-ghost-light:hover { background: rgba(255,255,255,.1); color: var(--white); border-color: var(--white); }
+.mwp .trust-bar { border-block: 1px solid var(--line); background: var(--white); }
+.mwp .trust-list {
+  list-style: none; margin-block: 0;
+  display: grid; grid-template-columns: 1fr;
+}
+.mwp .trust-list li {
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: var(--space-2) 0;
+  font-size: 0.9375rem; color: var(--ink-muted); line-height: 1.35;
+}
+.mwp .trust-list li + li { border-top: 1px solid var(--line); }
+.mwp .trust-list strong { display: block; color: var(--plum-900); font-size: 1rem; }
+.mwp .trust-list .icon { color: var(--plum-700); }
+@media (min-width: 520px) {
+.mwp .trust-list { grid-template-columns: repeat(2, 1fr); }
+.mwp .trust-list li { padding: var(--space-3) var(--space-2); }
+.mwp .trust-list li:nth-child(2) { border-top: 0; }
+.mwp .trust-list li:nth-child(even) { border-left: 1px solid var(--line); }
+}
+@media (min-width: 900px) {
+.mwp .trust-list { grid-template-columns: repeat(4, 1fr); }
+.mwp .trust-list li { padding: var(--space-3); border-top: 0 !important; }
+.mwp .trust-list li + li { border-left: 1px solid var(--line); }
+}
+.mwp .about { background: var(--white); padding-block: var(--space-6); }
+.mwp .about-inner { display: grid; gap: var(--space-5); align-items: center; }
+.mwp .about-photo {
+  display: block; width: 100%; max-width: 460px; height: auto;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 15%;
+  border-radius: 24px;
+  box-shadow: 0 30px 60px -32px rgba(42,31,66,.45);
+}
+.mwp .about h2 { font-size: clamp(2.125rem, 4vw, 3.25rem); letter-spacing: -0.01em; }
+.mwp .about-lede { font-size: 1.1875rem; }
+.mwp .about strong { color: var(--plum-900); }
+.mwp .features {
+  list-style: none; margin: var(--space-4) 0 0; padding: 0;
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3);
+  text-align: center;
+}
+.mwp .features li { display: grid; justify-items: center; gap: 0.5rem; font-weight: 800; color: var(--plum-900); line-height: 1.3; }
+.mwp .features .icon { color: var(--plum-700); }
+@media (min-width: 640px) {
+.mwp .features { grid-template-columns: repeat(4, 1fr); }
+}
+@media (min-width: 900px) {
+.mwp .about-inner { grid-template-columns: 1fr 1.3fr; gap: var(--space-6); }
+}
+.mwp .credentials {
+  list-style: none; margin: var(--space-4) 0 0; padding: var(--space-3);
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-3);
+  align-items: center; justify-items: center;
+  background: var(--white); border: 1px solid var(--line); border-radius: 20px;
+}
+.mwp .credentials li { min-width: 0; }
+.mwp .credentials img { display: block; width: auto; height: auto; max-width: 100%; max-height: 84px; }
+@media (min-width: 1100px) {
+.mwp .credentials { grid-template-columns: repeat(4, auto); justify-content: space-between; }
+}
+.mwp .services { background: var(--plum-50); padding-block: var(--space-6); }
+.mwp .services-panel {
+  background: var(--white);
+  border-radius: 28px;
+  padding: var(--space-4) var(--space-3);
+  box-shadow: 0 30px 60px -40px rgba(42,31,66,.45);
+  overflow: hidden;
+}
+.mwp .services .section-head { max-width: 860px; margin-bottom: var(--space-4); }
+.mwp .services .section-head h2 { font-size: clamp(2.125rem, 4vw, 3.25rem); letter-spacing: -0.01em; color: var(--plum-900); }
+.mwp .services .section-head p { color: var(--ink-muted); font-size: 1.0625rem; margin: 0; }
+@media (min-width: 768px) {
+.mwp .services-panel { padding: var(--space-5) var(--space-6); }
+}
+.mwp .service-cards {
+  list-style: none; margin: 0; padding: 0.5rem 0.25rem 1.5rem;
+  display: flex; gap: var(--space-3);
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-padding-inline: 0.25rem;
+  scrollbar-width: none;
+}
+.mwp .service-cards::-webkit-scrollbar { display: none; }
+.mwp .service-cards:focus-visible { box-shadow: var(--focus); border-radius: 20px; }
+.mwp .service-card {
+  position: relative;
+  flex: 0 0 82%; max-width: 340px;
+  scroll-snap-align: start;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: var(--space-4) var(--space-3);
+  border-radius: 22px;
+  color: var(--white);
+  background: linear-gradient(160deg, #7259a8 0%, var(--plum-700) 45%, #3d2d61 100%);
+  box-shadow: 0 18px 36px -22px rgba(42,31,66,.7);
+  transition: transform 200ms ease;
+}
+@media (min-width: 640px) {
+.mwp .service-card { flex-basis: 44%; }
+}
+@media (min-width: 1000px) {
+.mwp .service-card { flex-basis: 30%; }
+}
+.mwp .service-card:first-child, .mwp .service-card:hover, .mwp .service-card:focus-within {
+  background: linear-gradient(160deg, #c4b0dc 0%, var(--lilac-300) 100%);
+  color: var(--plum-900);
+}
+.mwp .service-cards:hover .service-card:first-child:not(:hover), .mwp .service-cards:focus-within .service-card:first-child:not(:focus-within) {
+  background: linear-gradient(160deg, #7259a8 0%, var(--plum-700) 45%, #3d2d61 100%);
+  color: var(--white);
+}
+@media (prefers-reduced-motion: no-preference) {
+.mwp .service-card:hover { transform: translateY(-4px); }
+}
+.mwp .card-icon {
+  display: grid; place-items: center;
+  width: 64px; height: 64px; margin-bottom: var(--space-3);
+  background: var(--white); border-radius: 16px;
+  box-shadow: 0 8px 18px -10px rgba(42,31,66,.6);
+}
+.mwp .card-icon svg { width: 34px; height: 34px; fill: none; stroke: var(--plum-700); stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.mwp .service-card h3 { color: inherit; font-family: var(--font-body); font-weight: 800; font-size: 1.375rem; line-height: 1.25; margin-bottom: 0.75rem; }
+.mwp .service-card p { color: inherit; font-size: 0.9875rem; margin: 0 0 var(--space-3); }
+.mwp .card-link {
+  margin-top: auto;
+  font-weight: 800; color: inherit; text-decoration: underline; text-underline-offset: 0.25em;
+}
+.mwp .card-link:hover { color: inherit; }
+.mwp .card-link::after { content: ""; position: absolute; inset: 0; border-radius: 22px; }
+.mwp .card-link:focus-visible { box-shadow: none; }
+.mwp .card-link:focus-visible::after { box-shadow: var(--focus); }
+.mwp .carousel-controls { display: flex; align-items: center; gap: 0.75rem; margin-top: var(--space-2); }
+.mwp .carousel-btn {
+  display: grid; place-items: center;
+  width: 48px; height: 48px; padding: 0;
+  background: var(--white); color: var(--plum-900);
+  border: 1.5px solid var(--plum-900); border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+.mwp .carousel-btn:hover:not(:disabled) { background: var(--plum-900); color: var(--white); }
+.mwp .carousel-btn:disabled { opacity: .35; cursor: default; }
+.mwp .carousel-progress {
+  flex: 1; max-width: 320px; height: 3px; margin-left: var(--space-2);
+  background: var(--line); border-radius: 3px; overflow: hidden;
+}
+.mwp .carousel-progress span { display: block; height: 100%; width: 30%; background: var(--plum-700); border-radius: 3px; transition: margin-left 160ms ease; }
+.mwp .new-patients { padding-block: var(--space-6); }
+.mwp .steps { list-style: none; counter-reset: step; margin: var(--space-3) 0 0; padding: 0; display: grid; gap: var(--space-4); }
+.mwp .steps li { counter-increment: step; position: relative; padding-left: 3.5rem; }
+.mwp .steps li::before {
+  content: counter(step);
+  position: absolute; left: 0; top: -0.15rem;
+  width: 2.5rem; height: 2.5rem; display: grid; place-items: center;
+  border-radius: 50%;
+  background: var(--plum-700); color: var(--white);
+  font: 800 1.0625rem var(--font-body);
+}
+.mwp .steps p { color: var(--ink-muted); }
+@media (min-width: 900px) {
+.mwp .steps { grid-template-columns: repeat(3, 1fr); }
+}
+.mwp .visit { padding-block: var(--space-6); border-top: 1px solid var(--line); }
+.mwp .visit-inner { display: grid; gap: var(--space-5); }
+.mwp .address { font-style: normal; margin-bottom: var(--space-3); font-size: 1.125rem; }
+.mwp .hours { border-collapse: collapse; width: 100%; max-width: 440px; margin-bottom: var(--space-3); }
+.mwp .hours th, .mwp .hours td { text-align: left; padding: 0.625rem 0; border-bottom: 1px solid var(--line); }
+.mwp .hours th { font-weight: 600; padding-right: var(--space-3); }
+.mwp .hours td { white-space: nowrap; }
+.mwp .hint { color: var(--ink-muted); font-size: 0.9625rem; }
+.mwp .map { width: 100%; aspect-ratio: 4 / 3; border: 1px solid var(--line); border-radius: var(--radius-lg); }
+@media (min-width: 900px) {
+.mwp .visit-inner { grid-template-columns: 1fr 1.2fr; gap: var(--space-6); align-items: start; }
+}
+.mwp .cta-band { background: var(--plum-700); color: #f1ecf8; padding-block: var(--space-6); }
+.mwp .cta-band h2 { color: var(--white); }
+.mwp .cta-band p { color: #f1ecf8; }
+.mwp .cta-inner { display: grid; gap: var(--space-3); align-items: center; }
+.mwp .cta-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+@media (min-width: 900px) {
+.mwp .cta-inner { grid-template-columns: 1.4fr 1fr; }
+.mwp .cta-actions { justify-content: flex-end; }
+}
+.mwp .page-hero {
+  background: var(--plum-50);
+  border-bottom: 1px solid var(--plum-100);
+  padding-block: var(--space-4) var(--space-5);
+}
+.mwp .page-hero h1 { max-width: 22ch; color: var(--plum-900); font-size: clamp(2.25rem, 4.6vw, 3.5rem); }
+.mwp .page-hero .lede { max-width: 60ch; color: var(--ink); }
+.mwp .page-hero .hero-actions { margin-top: var(--space-3); }
+.mwp .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; margin: 0 0 var(--space-3); padding: 0; font-size: 0.9375rem; }
+.mwp .breadcrumb li + li::before { content: "/"; margin-right: 0.5rem; color: var(--ink-muted); }
+.mwp .breadcrumb [aria-current] { color: var(--ink-muted); }
+.mwp .page-body { display: grid; gap: var(--space-5); padding-block: var(--space-5) var(--space-6); }
+@media (min-width: 1000px) {
+.mwp .page-body { grid-template-columns: minmax(0, 1fr) 300px; gap: var(--space-6); align-items: start; }
+.mwp .page-body--single { grid-template-columns: minmax(0, 1fr); }
+.mwp .side-card { position: sticky; top: 120px; }
+}
+.mwp .prose { max-width: 70ch; }
+.mwp .prose h2 { font-size: clamp(1.5rem, 2.4vw, 1.875rem); margin-top: var(--space-5); }
+.mwp .prose h2:first-child { margin-top: 0; }
+.mwp .prose ul { padding-left: 1.25rem; margin: 0 0 var(--space-2); }
+.mwp .prose li { margin-bottom: 0.5rem; }
+.mwp .prose li::marker { color: var(--plum-700); }
+.mwp .callout {
+  border-left: 4px solid var(--plum-700);
+  background: var(--plum-50);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+.mwp .side-card {
+  display: grid; gap: var(--space-2);
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  max-width: 420px;
+}
+.mwp .side-card img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 15%; border-radius: var(--radius-sm); }
+.mwp .side-card p { margin-bottom: 0.5rem; }
+.mwp .side-name { font: 700 1.25rem var(--font-head); color: var(--plum-900); }
+.mwp .side-card a { font-weight: 700; }
+.mwp .empty-state {
+  font-size: 1.1875rem;
+  padding: var(--space-4);
+  background: var(--plum-50); border: 1px dashed var(--plum-100); border-radius: 20px;
+}
+
+/* ===== My Wellness Physicians: Squarespace glue =====
+   Every page's content sits inside <div class="mwp"> in a Code Block.
+   These rules let that content run edge to edge and remove the
+   section padding Squarespace adds around it. */
+.mwp {
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  text-align: left;
+}
+body:has(.mwp) { overflow-x: clip; }
+.page-section:has(.mwp) {
+  padding-bottom: 0 !important;
+  min-height: 0 !important;
+}
+/* Keep the first section's top spacing: Squarespace uses it to make room
+   for the header, which can sit on top of the first section. */
+.page-section:has(.mwp):not(:first-child) { padding-top: 0 !important; }
+.page-section:has(.mwp) .content-wrapper {
+  padding: 0 !important;
+  max-width: none !important;
+}
+.sqs-block-code:has(.mwp) { padding: 0 !important; }
+/* Hide a whole section (for example the image library) by adding a Code Block
+   containing <div class="mwp-hidden-section"></div> to it. */
+.page-section:has(.mwp-hidden-section) { display: none !important; }
+.mwp img { max-width: 100%; }
+/* Keep the theme's heading and link styling out of this content. */
+.mwp h1, .mwp h2, .mwp h3, .mwp p, .mwp li, .mwp a, .mwp dt, .mwp dd, .mwp th, .mwp td, .mwp address {
+  text-transform: none;
+}
+.mwp h2, .mwp h3, .mwp p, .mwp li, .mwp a { letter-spacing: normal; }
+.mwp h1 { letter-spacing: -0.01em; }
+.mwp a { background-image: none; }
+.mwp ul, .mwp ol { margin-top: 0; }
+
+/* Footer snippet */
+.mwp-footer { background: var(--plum-900); color: #ddd5ea; padding-block: var(--space-5); font-size: 0.9375rem; }
+.mwp-footer a { color: var(--white); }
+.mwp-footer .footer-grid { display: grid; gap: var(--space-3); }
+.mwp-footer .footer-name { font: 700 1.25rem var(--font-head); color: var(--white); margin-bottom: 0.5rem; }
+.mwp-footer .footer-emergency { font-weight: 600; color: var(--white); }
+.mwp-footer .footer-legal { margin: 0; color: #c9bddb; }
+@media (min-width: 900px) {
+  .mwp-footer .footer-grid { grid-template-columns: 1fr 1fr; }
+  .mwp-footer .footer-legal { grid-column: 1 / -1; padding-top: var(--space-3); border-top: 1px solid rgba(255,255,255,.15); }
+}
+
+</style>
+<div class="mwp">
+  <div class="mwp-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-name">My Wellness Physicians</p>
+        <p>
+          1604 Village Market Blvd SE, Suite 119<br>
+          Leesburg, VA 20175<br>
+          <a href="tel:+17037779355">703-777-9355</a> ·
+          <a href="mailto:info@mywellnessphysicians.com">info@mywellnessphysicians.com</a>
+        </p>
+      </div>
+      <p class="footer-emergency">In a medical emergency, call 911 or go to the nearest emergency department.</p>
+      <p class="footer-legal">© 2026 My Wellness Physicians. <a href="/privacy-policy">Privacy policy</a></p>
+    </div>
+  </div>
+</div>
+----- END FOOTER (copy down to the line above) -----
+
+
+====================================================
+HIDE THE IMAGE LIBRARY SECTION
+If your six images sit in a section of a visible page, add a Code block to
+that section with this one line (the page's own block above must also be on
+that page, since it carries the styling that does the hiding):
+====================================================
+<div class="mwp-hidden-section"></div>
