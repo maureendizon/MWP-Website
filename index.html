@@ -264,94 +264,67 @@
 
     <section class="services" id="services" aria-labelledby="services-title">
       <div class="container">
-        <div class="section-head">
-          <h2 id="services-title">Clinical specialties.</h2>
-          <p>Each specialty draws on double board certification in Family Medicine and Obesity Medicine and over 19 years of experience, with care that addresses the root causes of weight gain, hormonal imbalance and chronic health concerns.</p>
-          <p class="chips"><span class="chips-label">Also helping with:</span>
-            <span class="chip">Hormonal imbalance</span>
-            <span class="chip">Chronic health concerns</span>
-            <span class="chip">Preventive care for men &amp; women</span>
-          </p>
-        </div>
-        <ul class="service-cards">
+        <div class="services-panel">
+          <div class="section-head">
+            <h2 id="services-title">Clinical specialties.</h2>
+            <p>Each specialty draws on double board certification in Family Medicine and Obesity Medicine and over 19 years of experience, with care that addresses the root causes of weight gain, hormonal imbalance and chronic health concerns.</p>
+          </div>
+          <div class="carousel" data-carousel>
+            <ul class="service-cards" id="service-cards" tabindex="0" aria-label="Clinical specialties, scroll sideways for more">
           <li class="service-card" id="lipedema">
-            <div class="card-art" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 2.7s-6 6.3-6 11.3a6 6 0 0 0 12 0c0-5-6-11.3-6-11.3z"/></svg>
-            </div>
-            <div class="card-body">
-              <h3>Lipedema</h3>
-              <p>Diagnosis and ongoing management of lipedema, a chronic condition that causes painful fat build-up, usually in the legs and arms, and is often mistaken for ordinary weight gain.</p>
-              <a class="card-link" href="lipedema-treatment/">Learn more<span class="visually-hidden"> about lipedema treatment</span>
-                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></a>
-            </div>
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 2.7s-6 6.3-6 11.3a6 6 0 0 0 12 0c0-5-6-11.3-6-11.3z"/></svg></span>
+            <h3>Lipedema</h3>
+            <p>Diagnosis and ongoing management of lipedema, a chronic condition that causes painful fat build-up, usually in the legs and arms, and is often mistaken for ordinary weight gain.</p>
+            <a class="card-link" href="lipedema-treatment/">Learn more<span class="visually-hidden"> about lipedema treatment</span></a>
           </li>
           <li class="service-card" id="lymphedema">
-            <div class="card-art" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M2 7c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2M2 12c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2M2 17c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2"/></svg>
-            </div>
-            <div class="card-body">
-              <h3>Lymphedema</h3>
-              <p>Diagnosis and management of lymphedema, swelling caused by a build-up of lymph fluid when the lymphatic system is blocked or damaged.</p>
-              <a class="card-link" href="lymphedema-treatment/">Learn more<span class="visually-hidden"> about lymphedema treatment</span>
-                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></a>
-            </div>
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M2 7c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2M2 12c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2M2 17c2 0 2 2 4 2s2-2 4-2 2 2 4 2 2-2 4-2 2 2 4 2"/></svg></span>
+            <h3>Lymphedema</h3>
+            <p>Diagnosis and management of lymphedema, swelling caused by a build-up of lymph fluid when the lymphatic system is blocked or damaged.</p>
+            <a class="card-link" href="lymphedema-treatment/">Learn more<span class="visually-hidden"> about lymphedema treatment</span></a>
           </li>
           <li class="service-card" id="weight-loss">
-            <div class="card-art" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg>
-            </div>
-            <div class="card-body">
-              <h3>Weight loss &amp; obesity management</h3>
-              <p>Physician-supervised weight loss from a board-certified obesity medicine doctor, with nutritional education and a plan built around your health history.</p>
-              <a class="card-link" href="medical-weight-loss/">Learn more<span class="visually-hidden"> about weight loss and obesity management</span>
-                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></a>
-            </div>
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 3v18M7 21h10M5 7h14M5 7l-3 7a3 3 0 0 0 6 0zM19 7l-3 7a3 3 0 0 0 6 0z"/></svg></span>
+            <h3>Weight loss &amp; obesity management</h3>
+            <p>Physician-supervised weight loss from a board-certified obesity medicine doctor, with nutritional education and a plan built around your health history.</p>
+            <a class="card-link" href="medical-weight-loss/">Learn more<span class="visually-hidden"> about weight loss and obesity management</span></a>
           </li>
           <li class="service-card" id="hormone-therapy">
-            <div class="card-art" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7zM8.5 8.5l7 7"/></svg>
-            </div>
-            <div class="card-body">
-              <h3>Hormone therapy for men &amp; women</h3>
-              <p>Hormone replacement therapy (HRT) for men and women dealing with hormonal imbalance, guided by your symptoms and health history.</p>
-              <a class="card-link" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book a visit<span class="visually-hidden"> for hormone therapy</span>
-                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></a>
-            </div>
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="m10.5 20.5 10-10a4.95 4.95 0 1 0-7-7l-10 10a4.95 4.95 0 1 0 7 7zM8.5 8.5l7 7"/></svg></span>
+            <h3>Hormone therapy for men &amp; women</h3>
+            <p>Hormone replacement therapy (HRT) for men and women dealing with hormonal imbalance, guided by your symptoms and health history.</p>
+            <a class="card-link" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book a visit<span class="visually-hidden"> for hormone therapy</span></a>
           </li>
           <li class="service-card" id="primary-care">
-            <div class="card-art" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-            </div>
-            <div class="card-body">
-              <h3>Primary care</h3>
-              <p>Comprehensive primary care for men and women: preventive check-ups, early detection and ongoing management of chronic conditions.</p>
-              <a class="card-link" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book a visit<span class="visually-hidden"> for primary care</span>
-                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></a>
-            </div>
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg></span>
+            <h3>Primary care</h3>
+            <p>Comprehensive primary care for men and women: preventive check-ups, early detection and ongoing management of chronic conditions.</p>
+            <a class="card-link" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book a visit<span class="visually-hidden"> for primary care</span></a>
           </li>
           <li class="service-card" id="wellness-consultation">
-            <div class="card-art" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg>
-            </div>
-            <div class="card-body">
-              <h3>Wellness consultation</h3>
-              <p>A one-on-one visit to review your health, goals and concerns, and map out a personalized plan for feeling your best.</p>
-              <a class="card-link" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book a visit<span class="visually-hidden"> for a wellness consultation</span>
-                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></a>
-            </div>
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/><path d="M8 9h8M8 13h5"/></svg></span>
+            <h3>Wellness consultation</h3>
+            <p>A one-on-one visit to review your health, goals and concerns, and map out a personalized plan for feeling your best.</p>
+            <a class="card-link" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book a visit<span class="visually-hidden"> for a wellness consultation</span></a>
           </li>
           <li class="service-card" id="iv-therapy-peptides">
-            <div class="card-art" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M9 2h6M10 2v3M14 2v3M7 5h10v6a5 5 0 0 1-10 0z"/><path d="M12 16v6"/></svg>
-            </div>
-            <div class="card-body">
-              <h3>IV therapy &amp; peptides</h3>
-              <p>IV therapy and peptide therapy, offered when appropriate as part of a personalized, physician-guided plan.</p>
-              <a class="card-link" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book a visit<span class="visually-hidden"> for IV therapy and peptides</span>
-                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg></a>
-            </div>
+            <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M9 2h6M10 2v3M14 2v3M7 5h10v6a5 5 0 0 1-10 0z"/><path d="M12 16v6"/></svg></span>
+            <h3>IV therapy &amp; peptides</h3>
+            <p>IV therapy and peptide therapy, offered when appropriate as part of a personalized, physician-guided plan.</p>
+            <a class="card-link" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book a visit<span class="visually-hidden"> for IV therapy and peptides</span></a>
           </li>
-        </ul>
+            </ul>
+            <div class="carousel-controls">
+              <button class="carousel-btn" type="button" data-dir="-1" aria-controls="service-cards" aria-label="Previous specialties">
+                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M19 12H5M11 6l-6 6 6 6"/></svg>
+              </button>
+              <button class="carousel-btn" type="button" data-dir="1" aria-controls="service-cards" aria-label="Next specialties">
+                <svg class="icon" aria-hidden="true" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </button>
+              <div class="carousel-progress" aria-hidden="true"><span></span></div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -439,5 +412,6 @@
   </footer>
 
   <script src="main.js"></script>
+  <script src="carousel.js"></script>
 </body>
 </html>

@@ -115,6 +115,8 @@ For each one:
 5. In the section's settings (pencil icon), choose the plainest options: no background image, smallest section height.
 6. Click **Save** and check the page.
 
+The homepage code includes a small script for the services carousel's arrow buttons. Squarespace may not run scripts while you're editing, so test the arrows on the live page. Without the script the cards still scroll sideways by swiping or with a trackpad.
+
 The code makes the content run edge to edge and removes Squarespace's section padding, so a thin gap or a slightly different spacing in the editor is normal. Check the live page in a private browser window.
 
 ## 6. Search titles, descriptions and search-engine data

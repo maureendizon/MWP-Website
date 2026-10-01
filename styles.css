@@ -328,48 +328,96 @@ a.utility-item:hover { color: var(--white); text-decoration: underline; }
 .credentials img { display: block; width: auto; height: auto; max-width: 100%; max-height: 84px; }
 @media (min-width: 1100px) { .credentials { grid-template-columns: repeat(4, auto); justify-content: space-between; } }
 
-/* Services */
+/* Services carousel: white panel, colored cards in a sideways-scrolling row */
 .services { background: var(--plum-50); padding-block: var(--space-6); }
-.section-head { text-align: center; max-width: 760px; margin: 0 auto var(--space-5); }
-.section-head h2 { font-size: clamp(2.125rem, 4vw, 3.25rem); letter-spacing: -0.01em; }
-.section-head p { margin-inline: auto; color: var(--ink-muted); font-size: 1.125rem; }
-.chips { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 0.5rem; margin-top: var(--space-3); }
-.chips-label { font-weight: 800; color: var(--plum-900); margin-right: 0.25rem; }
-.chip {
-  display: inline-block; padding: 0.375rem 1rem;
-  background: var(--white); border: 1px solid var(--plum-100); border-radius: 999px;
-  font-weight: 700; font-size: 0.9375rem; color: var(--plum-700);
-}
-.service-cards { list-style: none; margin: 0; padding: 0; display: grid; gap: var(--space-3); }
-.service-card {
-  display: flex; flex-direction: column;
+.services-panel {
   background: var(--white);
-  border-radius: 20px; overflow: hidden;
-  box-shadow: 0 18px 40px -28px rgba(42,31,66,.5);
+  border-radius: 28px;
+  padding: var(--space-4) var(--space-3);
+  box-shadow: 0 30px 60px -40px rgba(42,31,66,.45);
+  overflow: hidden;
 }
-.card-art {
+.services .section-head { max-width: 860px; margin-bottom: var(--space-4); }
+.services .section-head h2 { font-size: clamp(2.125rem, 4vw, 3.25rem); letter-spacing: -0.01em; color: var(--plum-900); }
+.services .section-head p { color: var(--ink-muted); font-size: 1.0625rem; margin: 0; }
+@media (min-width: 768px) { .services-panel { padding: var(--space-5) var(--space-6); } }
+
+.service-cards {
+  list-style: none; margin: 0; padding: 0.5rem 0.25rem 1.5rem;
+  display: flex; gap: var(--space-3);
+  overflow-x: auto; overscroll-behavior-x: contain;
+  scroll-snap-type: x mandatory; scroll-padding-inline: 0.25rem;
+  scrollbar-width: none;
+}
+.service-cards::-webkit-scrollbar { display: none; }
+.service-cards:focus-visible { box-shadow: var(--focus); border-radius: 20px; }
+
+.service-card {
+  position: relative;
+  flex: 0 0 82%; max-width: 340px;
+  scroll-snap-align: start;
+  display: flex; flex-direction: column; align-items: center; text-align: center;
+  padding: var(--space-4) var(--space-3);
+  border-radius: 22px;
+  color: var(--white);
+  background: linear-gradient(160deg, #7259a8 0%, var(--plum-700) 45%, #3d2d61 100%);
+  box-shadow: 0 18px 36px -22px rgba(42,31,66,.7);
+  transition: transform 200ms ease;
+}
+@media (min-width: 640px) { .service-card { flex-basis: 44%; } }
+@media (min-width: 1000px) { .service-card { flex-basis: 30%; } }
+
+/* Highlighted card: the first one by default, or whichever is hovered or focused */
+.service-card:first-child,
+.service-card:hover,
+.service-card:focus-within {
+  background: linear-gradient(160deg, #c4b0dc 0%, var(--lilac-300) 100%);
+  color: var(--plum-900);
+}
+.service-cards:hover .service-card:first-child:not(:hover),
+.service-cards:focus-within .service-card:first-child:not(:focus-within) {
+  background: linear-gradient(160deg, #7259a8 0%, var(--plum-700) 45%, #3d2d61 100%);
+  color: var(--white);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .service-card:hover { transform: translateY(-4px); }
+}
+
+.card-icon {
   display: grid; place-items: center;
-  height: 190px;
-  background:
-    radial-gradient(circle at 80% 20%, rgba(158,126,188,.28), transparent 60%),
-    var(--plum-900);
+  width: 64px; height: 64px; margin-bottom: var(--space-3);
+  background: var(--white); border-radius: 16px;
+  box-shadow: 0 8px 18px -10px rgba(42,31,66,.6);
 }
-.card-art svg { width: 56px; height: 56px; fill: none; stroke: var(--lilac-300); stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
-.card-body { display: flex; flex-direction: column; flex: 1; padding: var(--space-3); }
-.card-body h3 { color: var(--plum-700); font-size: 1.3125rem; margin-bottom: 0.5rem; }
-.card-body p { color: var(--ink-muted); }
-.card-link { display: inline-flex; align-items: center; gap: 0.25rem; margin-top: auto; font-weight: 800; text-decoration: none; }
-.card-link:hover { text-decoration: underline; }
-@media (min-width: 640px) { .service-cards { grid-template-columns: repeat(2, 1fr); } }
-.service-card:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: 100%; max-width: 560px; }
-@media (min-width: 1000px) {
-  .service-cards { grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
-  .service-card:last-child:nth-child(odd) { grid-column: auto; max-width: none; }
-  .service-card:last-child:nth-child(3n+1) { grid-column: 2; }
+.card-icon svg { width: 34px; height: 34px; fill: none; stroke: var(--plum-700); stroke-width: 1.75; stroke-linecap: round; stroke-linejoin: round; }
+.service-card h3 { color: inherit; font-family: var(--font-body); font-weight: 800; font-size: 1.375rem; line-height: 1.25; margin-bottom: 0.75rem; }
+.service-card p { color: inherit; font-size: 0.9875rem; margin: 0 0 var(--space-3); }
+.card-link {
+  margin-top: auto;
+  font-weight: 800; color: inherit; text-decoration: underline; text-underline-offset: 0.25em;
 }
-/* Card photos: an <img> inside .card-art replaces the icon. */
-.card-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
-.card-art:has(img) { background: var(--plum-100); }
+.card-link:hover { color: inherit; }
+/* The whole card is clickable through its link. */
+.card-link::after { content: ""; position: absolute; inset: 0; border-radius: 22px; }
+.card-link:focus-visible { box-shadow: none; }
+.card-link:focus-visible::after { box-shadow: var(--focus); }
+
+.carousel-controls { display: flex; align-items: center; gap: 0.75rem; margin-top: var(--space-2); }
+.carousel-btn {
+  display: grid; place-items: center;
+  width: 48px; height: 48px; padding: 0;
+  background: var(--white); color: var(--plum-900);
+  border: 1.5px solid var(--plum-900); border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 160ms ease, color 160ms ease;
+}
+.carousel-btn:hover:not(:disabled) { background: var(--plum-900); color: var(--white); }
+.carousel-btn:disabled { opacity: .35; cursor: default; }
+.carousel-progress {
+  flex: 1; max-width: 320px; height: 3px; margin-left: var(--space-2);
+  background: var(--line); border-radius: 3px; overflow: hidden;
+}
+.carousel-progress span { display: block; height: 100%; width: 30%; background: var(--plum-700); border-radius: 3px; transition: margin-left 160ms ease; }
 
 /* New patients: a real sequence, so numbered */
 .new-patients { padding-block: var(--space-6); }
