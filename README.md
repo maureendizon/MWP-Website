@@ -19,3 +19,7 @@ Placeholder text is wrapped in `<span class="ph">[…]</span>` and shows with an
 ## Search
 
 `sitemap.xml` lists every page; add new pages to it. Each page has its own title, description, canonical URL and structured data (JSON-LD) in the `<head>`.
+
+## Squarespace
+
+The `squarespace/` folder has the same site split into pieces to paste into a Squarespace site, with a step-by-step guide in `squarespace/README.md`. If you change a page here, the Squarespace pieces need regenerating to match.
