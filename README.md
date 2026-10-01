@@ -14,7 +14,7 @@ Shared styles are in `styles.css` and the mobile menu script in `main.js`. The h
 
 ## Placeholders
 
-Placeholder text is wrapped in `<span class="ph">[…]</span>` and shows with an orange dashed outline. The only one left is the privacy policy text in `privacy-policy/index.html`.
+Placeholder text is wrapped in `<span class="ph">[…]</span>` and shows with an orange dashed outline. There are none left.
 
 ## Search
 
