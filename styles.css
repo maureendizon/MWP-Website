@@ -196,6 +196,12 @@ a.utility-item:hover { color: var(--white); text-decoration: underline; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-block: var(--space-3) var(--space-2); }
 .hero-note { font-size: 0.9375rem; color: var(--ink-muted); }
 .hero-media { margin: 0; }
+.hero-media img {
+  display: block; width: 100%; height: auto;
+  aspect-ratio: 5 / 4; object-fit: cover; object-position: 30% 50%;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 24px 48px -28px rgba(42,31,66,.45);
+}
 
 .photo-slot {
   display: grid; place-items: center;
@@ -266,7 +272,17 @@ a.utility-item:hover { color: var(--white); text-decoration: underline; }
 /* About */
 .about { background: var(--plum-50); padding-block: var(--space-6); }
 .about-inner { display: grid; gap: var(--space-5); align-items: center; }
-.about .photo-slot { max-width: 420px; width: 100%; }
+.about-photo {
+  display: block; width: 100%; max-width: 420px; height: auto;
+  aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 15%;
+  border-radius: var(--radius-lg);
+}
+.about-inner { align-items: start; }
+.credentials { margin: var(--space-4) 0 0; display: grid; gap: var(--space-2); border-top: 1px solid var(--line); padding-top: var(--space-3); }
+.credentials div { display: grid; gap: 0.125rem; }
+.credentials dt { font-weight: 800; color: var(--plum-700); font-size: 0.9375rem; }
+.credentials dd { margin: 0; }
+@media (min-width: 640px) { .credentials { grid-template-columns: 1fr 1fr; gap: var(--space-3); } }
 @media (min-width: 900px) { .about-inner { grid-template-columns: 1fr 1.4fr; gap: var(--space-6); } }
 
 /* New patients: a real sequence, so numbered */
@@ -291,6 +307,7 @@ a.utility-item:hover { color: var(--white); text-decoration: underline; }
 .hours { border-collapse: collapse; width: 100%; max-width: 440px; margin-bottom: var(--space-3); }
 .hours th, .hours td { text-align: left; padding: 0.625rem 0; border-bottom: 1px solid var(--line); }
 .hours th { font-weight: 600; padding-right: var(--space-3); }
+.hours td { white-space: nowrap; }
 .hint { color: var(--ink-muted); font-size: 0.9625rem; }
 .map { width: 100%; aspect-ratio: 4 / 3; border: 1px solid var(--line); border-radius: var(--radius-lg); }
 @media (min-width: 900px) { .visit-inner { grid-template-columns: 1fr 1.2fr; gap: var(--space-6); align-items: start; } }
