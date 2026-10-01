@@ -4,11 +4,13 @@ This folder turns the website into pieces you paste into Squarespace (version 7.
 
 | File | Where it goes |
 |------|---------------|
-| `1-site-header-code.html` | Site-wide Code Injection (loads the fonts) |
-| `2-custom-css.css` | Custom CSS (all the styling) |
+| `1-site-header-code.txt` | Site-wide Code Injection (loads the fonts) |
+| `2-custom-css.txt` | Custom CSS (all the styling) |
 | `images-to-upload/` | Uploaded to Squarespace (step 3) |
-| `page-code/*.html` | One Code Block per page, plus the footer |
-| `page-seo/*-header-code.html` | Each page's own Code Injection (search-engine data) |
+| `page-code/*.txt` | One Code Block per page, plus the footer |
+| `page-seo/*-header-code.txt` | Each page's own Code Injection (search-engine data) |
+
+The code files are plain text. Open one (it opens in a text app such as Notepad or TextEdit), select everything (Ctrl+A on Windows, Cmd+A on Mac), copy, and paste it into Squarespace.
 
 Squarespace renames its menus from time to time. If a menu below isn't where this says, use the search box in the Squarespace dashboard to find it by name.
 
@@ -19,13 +21,13 @@ Squarespace renames its menus from time to time. If a menu below isn't where thi
 ## 1. Load the fonts (site-wide)
 
 1. Open **Settings → Developer Tools → Code Injection**. On some accounts it's **Settings → Advanced → Code Injection**.
-2. Paste the whole of `1-site-header-code.html` into the **Header** box.
+2. Paste the whole of `1-site-header-code.txt` into the **Header** box.
 3. Click **Save**.
 
 ## 2. Add the styling
 
 1. Open **Website → Pages**, scroll to the bottom and click **Custom Code → Custom CSS**. On older accounts it's **Design → Custom CSS**.
-2. Paste the whole of `2-custom-css.css` into the box. If something is already there, paste below it.
+2. Paste the whole of `2-custom-css.txt` into the box. If something is already there, paste below it.
 3. Click **Save**.
 
 The styling only affects content inside the pasted code, so the rest of your site stays as it is.
@@ -84,11 +86,11 @@ Do this for each page in the table. For the privacy policy, edit your existing p
 
 | Page title | URL slug | Code Block | Page code injection |
 |------------|----------|------------|---------------------|
-| Home (new) | `home-new` | `page-code/home.html` | `page-seo/home-header-code.html` |
-| Medical weight loss | `medical-weight-loss` | `page-code/medical-weight-loss.html` | `page-seo/medical-weight-loss-header-code.html` |
-| Lipedema treatment | `lipedema-treatment` | `page-code/lipedema-treatment.html` | `page-seo/lipedema-treatment-header-code.html` |
-| Lymphedema treatment | `lymphedema-treatment` | `page-code/lymphedema-treatment.html` | `page-seo/lymphedema-treatment-header-code.html` |
-| Privacy policy | `privacy-policy` | `page-code/privacy-policy.html` | `page-seo/privacy-policy-header-code.html` |
+| Home (new) | `home-new` | `page-code/home.txt` | `page-seo/home-header-code.txt` |
+| Medical weight loss | `medical-weight-loss` | `page-code/medical-weight-loss.txt` | `page-seo/medical-weight-loss-header-code.txt` |
+| Lipedema treatment | `lipedema-treatment` | `page-code/lipedema-treatment.txt` | `page-seo/lipedema-treatment-header-code.txt` |
+| Lymphedema treatment | `lymphedema-treatment` | `page-code/lymphedema-treatment.txt` | `page-seo/lymphedema-treatment-header-code.txt` |
+| Privacy policy | `privacy-policy` | `page-code/privacy-policy.txt` | `page-seo/privacy-policy-header-code.txt` |
 
 For each one:
 
@@ -106,7 +108,7 @@ The code makes the content run edge to edge and removes Squarespace's section pa
 For each page, open its **settings (gear icon)**:
 
 1. On the **SEO** tab, paste the title and description from the table below.
-2. On the **Advanced** tab, paste the matching `page-seo/…-header-code.html` file into **Page Header Code Injection**.
+2. On the **Advanced** tab, paste the matching `page-seo/…-header-code.txt` file into **Page Header Code Injection**.
 
 | Page | SEO title | SEO description |
 |------|-----------|-----------------|
@@ -123,7 +125,7 @@ Squarespace may add your site name to the end of SEO titles automatically. If ti
 ## 7. Footer
 
 1. Open any page, click **Edit**, scroll to the footer and click **Edit Footer**.
-2. Delete the existing blocks you don't want, then **Add Block → Code** and paste `page-code/footer.html`.
+2. Delete the existing blocks you don't want, then **Add Block → Code** and paste `page-code/footer.txt`.
 3. Click **Save**. The footer is shared by every page.
 
 ## 8. Site-wide settings
