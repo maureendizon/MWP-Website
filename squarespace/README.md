@@ -2,11 +2,14 @@
 
 This folder turns the website into pieces you paste into Squarespace (version 7.1). Nothing here needs Code Injection. The carousel arrows and the map embed run inside Code Blocks; if your plan or trial blocks them, the cards still scroll by swiping and the "Get directions" button still works. Squarespace keeps its own header, menu and page settings; the page content goes into Code Blocks.
 
-**Easiest way:** open `ALL-IN-ONE.txt`. It holds every page's code in one file, each block with its own styling built in (no Custom CSS needed), plus each page's search title and description. Follow the short instructions at the top of that file. The rest of this guide covers the same steps in more detail, using the separate files.
+**Simplest way:** open `FULL-PAGES-ONE-FILE.txt`. Each page is one complete block (address bar, logo, menu with the Services dropdown, content and footer) that hides Squarespace's own header and footer, so the page matches the preview exactly and you don't set up the Squarespace menu at all. Instructions are at the top of that file.
+
+**Alternative:** `ALL-IN-ONE.txt`. It holds every page's code in one file, each block with its own styling built in (no Custom CSS needed), plus each page's search title and description. Follow the short instructions at the top of that file. The rest of this guide covers the same steps in more detail, using the separate files.
 
 | File | Where it goes |
 |------|---------------|
-| `ALL-IN-ONE.txt` | Everything in one file: copy each page's block into that page's Code Block |
+| `FULL-PAGES-ONE-FILE.txt` | Complete pages, including the menu and footer, one block per page |
+| `ALL-IN-ONE.txt` | Page content only (uses Squarespace's own header and menu), one block per page |
 | `2-custom-css.txt` | Custom CSS (all the styling; not needed if you use `ALL-IN-ONE.txt`) |
 | `images-to-upload/` | Uploaded to Squarespace (step 3) |
 | `page-code/*.txt` | One Code Block per page (including its search-engine data), plus the footer |
