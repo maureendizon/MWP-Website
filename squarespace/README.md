@@ -79,6 +79,7 @@ Open any page, click **Edit**, then hover over the header and click **Edit Site 
 - **Logo:** under **Site Title & Logo**, upload `site-logo.png`.
 - **Button:** turn on **Button**. Set the text to `Book an appointment` and the link to `https://scheduling.symplast.com/mywellnessphysicians/3?provider=7`.
 - **Colors:** in **Site Styles → Colors**, set the button color to `#543e82` and the header background to white. Keep the header white: the logo is purple and wouldn't show on a dark header.
+- **Header style:** under **Style**, choose a **solid** white header rather than a transparent or "dynamic" one. A transparent header sits on top of the first section and can cover the page's heading.
 - **Button shape:** in **Site Styles → Buttons**, set the shape to **Pill** so the header button matches the rounded buttons on the pages.
 
 Menu, added under **Website → Pages → Main Navigation**, in this order:

@@ -392,10 +392,12 @@
 }
 body:has(.mwp) { overflow-x: clip; }
 .page-section:has(.mwp) {
-  padding-top: 0 !important;
   padding-bottom: 0 !important;
   min-height: 0 !important;
 }
+/* Keep the first section's top spacing: Squarespace uses it to make room
+   for the header, which can sit on top of the first section. */
+.page-section:has(.mwp):not(:first-child) { padding-top: 0 !important; }
 .page-section:has(.mwp) .content-wrapper {
   padding: 0 !important;
   max-width: none !important;
