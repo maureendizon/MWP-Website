@@ -53,6 +53,8 @@ The page code needs a web address for each of these six images in `images-to-upl
 
 Keep this page afterwards. Deleting it may eventually remove the images from Squarespace.
 
+Make sure the page is under **Not Linked**, not **Main Navigation**, so it doesn't appear in your menu. If you put the images in a section of a visible page instead, don't delete them; hide the section: add a **Code Block** to that section containing `<div class="mwp-hidden-section"></div>` and click **Save**. The Custom CSS from step 2 hides any section with that code on the live site.
+
 **Option B: Custom CSS file upload (if your account has it)**
 
 At the bottom of the Custom CSS panel, look for **Manage Custom Files**, **Custom files** or **Add images or fonts**. Upload the six files there, then click each one: Squarespace adds a line like `url(https://…)` to the CSS box. Copy the address between the brackets and delete that line from the CSS box.

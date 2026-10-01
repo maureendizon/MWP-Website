@@ -401,6 +401,9 @@ body:has(.mwp) { overflow-x: clip; }
   max-width: none !important;
 }
 .sqs-block-code:has(.mwp) { padding: 0 !important; }
+/* Hide a whole section (for example the image library) by adding a Code Block
+   containing <div class="mwp-hidden-section"></div> to it. */
+.page-section:has(.mwp-hidden-section) { display: none !important; }
 .mwp img { max-width: 100%; }
 /* Keep the theme's heading and link styling out of this content. */
 .mwp h1, .mwp h2, .mwp h3, .mwp p, .mwp li, .mwp a, .mwp dt, .mwp dd, .mwp th, .mwp td, .mwp address {
