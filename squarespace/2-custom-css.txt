@@ -106,35 +106,35 @@
 .mwp .btn-outline-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.7); }
 .mwp .btn-outline-light:hover { background: rgba(255,255,255,.12); color: var(--white); border-color: var(--white); }
 .mwp .cta-band .ph, .mwp .btn .ph { color: inherit; background: transparent; }
-.mwp .hero {
-  background:
-    radial-gradient(circle at 85% 15%, rgba(158,126,188,.22), transparent 55%),
-    var(--plum-900);
-  color: #e6dcf2;
-  padding-block: var(--space-5) var(--space-6);
-}
+.mwp .hero { background: var(--white); color: var(--ink); padding-block: var(--space-5) var(--space-6); }
 .mwp .hero-inner { display: grid; gap: var(--space-5); align-items: center; }
-.mwp .hero h1 { color: var(--white); margin-bottom: var(--space-2); }
-.mwp .hero-name { display: block; font-size: clamp(2.5rem, 5.4vw, 4.25rem); line-height: 1.05; letter-spacing: -0.015em; }
-.mwp .hero-role { display: block; margin-top: var(--space-2); font-size: clamp(1.5rem, 2.6vw, 2.125rem); line-height: 1.2; color: var(--lilac); font-weight: 600; }
+.mwp .hero h1 { margin-bottom: var(--space-3); }
+.mwp .hero-name { display: block; font-size: clamp(2.5rem, 5.2vw, 4.25rem); line-height: 1.05; letter-spacing: -0.015em; color: var(--plum-900); }
 .mwp .hero-credentials {
-  margin: 0 0 var(--space-3);
-  font-weight: 800; font-size: 0.875rem;
-  letter-spacing: 0.08em; text-transform: uppercase;
-  color: var(--lilac-300);
+  display: block; margin-top: 0.75rem;
+  font-family: var(--font-body); font-weight: 800; font-size: 0.9375rem;
+  letter-spacing: 0.12em; text-transform: uppercase;
+  color: var(--plum-700);
 }
+.mwp .hero-role { display: block; margin-top: var(--space-3); font-size: clamp(1.5rem, 2.6vw, 2.125rem); line-height: 1.2; color: var(--plum-700); font-weight: 600; }
 .mwp .lede { font-size: 1.1875rem; color: inherit; }
-.mwp .hero .lede { color: #e6dcf2; max-width: 56ch; }
+.mwp .hero p { max-width: 58ch; }
 .mwp .hero-actions { display: flex; flex-wrap: wrap; gap: 0.75rem; margin-top: var(--space-4); }
 .mwp .hero-media { margin: 0; position: relative; }
+.mwp .hero-media::before {
+  content: ""; position: absolute; inset: 24px -16px -16px 24px;
+  border-radius: 28px; background: var(--plum-50); border: 1px solid var(--plum-100);
+  z-index: 0;
+}
 .mwp .hero-media img {
+  position: relative; z-index: 1;
   display: block; width: 100%; height: auto;
   aspect-ratio: 4 / 5; object-fit: cover; object-position: 32% 50%;
   border-radius: 24px;
-  box-shadow: 0 30px 60px -30px rgba(0,0,0,.6);
+  box-shadow: 0 30px 60px -32px rgba(42,31,66,.5);
 }
 .mwp .hero-caption {
-  position: absolute; right: var(--space-2); bottom: var(--space-2); left: var(--space-2);
+  position: absolute; z-index: 2; right: var(--space-2); bottom: var(--space-2); left: var(--space-2);
   max-width: 300px; margin-left: auto;
   padding: var(--space-2) var(--space-3);
   background: rgba(42,31,66,.86);
@@ -146,13 +146,15 @@
 @media (min-width: 900px) {
 .mwp .hero { padding-block: var(--space-6) var(--space-7); }
 .mwp .hero-inner { grid-template-columns: 1.4fr 1fr; gap: var(--space-6); }
-.mwp .hero-media { max-width: 520px; justify-self: end; width: 100%; }
+.mwp .hero-media { max-width: 500px; justify-self: end; width: 100%; }
 }
+.mwp .btn-outline { background: var(--white); color: var(--plum-900); border-color: var(--plum-900); }
+.mwp .btn-outline:hover { background: var(--plum-900); color: var(--white); }
 .mwp .btn-lilac { background: var(--lilac-300); color: var(--plum-900); }
 .mwp .btn-lilac:hover { background: #c4b0dc; color: var(--plum-900); }
 .mwp .btn-ghost-light { background: transparent; color: var(--white); border-color: rgba(255,255,255,.55); }
 .mwp .btn-ghost-light:hover { background: rgba(255,255,255,.1); color: var(--white); border-color: var(--white); }
-.mwp .trust-bar { border-bottom: 1px solid var(--line); background: var(--white); }
+.mwp .trust-bar { border-block: 1px solid var(--line); background: var(--white); }
 .mwp .trust-list {
   list-style: none; margin-block: 0;
   display: grid; grid-template-columns: 1fr;
@@ -231,7 +233,7 @@
 }
 .mwp .card-art {
   display: grid; place-items: center;
-  height: 150px;
+  height: 190px;
   background:
     radial-gradient(circle at 80% 20%, rgba(158,126,188,.28), transparent 60%),
     var(--plum-900);
@@ -245,12 +247,14 @@
 @media (min-width: 640px) {
 .mwp .service-cards { grid-template-columns: repeat(2, 1fr); }
 }
+.mwp .service-card:last-child:nth-child(odd) { grid-column: 1 / -1; justify-self: center; width: 100%; max-width: 560px; }
 @media (min-width: 1000px) {
-.mwp .service-cards { grid-template-columns: repeat(6, 1fr); gap: var(--space-4); }
-.mwp .service-card { grid-column: span 2; }
-.mwp .service-card:nth-child(4) { grid-column: 2 / span 2; }
-.mwp .service-card:nth-child(5) { grid-column: 4 / span 2; }
+.mwp .service-cards { grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+.mwp .service-card:last-child:nth-child(odd) { grid-column: auto; max-width: none; }
+.mwp .service-card:last-child:nth-child(3n+1) { grid-column: 2; }
 }
+.mwp .card-art img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.mwp .card-art:has(img) { background: var(--plum-100); }
 .mwp .new-patients { padding-block: var(--space-6); }
 .mwp .steps { list-style: none; counter-reset: step; margin: var(--space-3) 0 0; padding: 0; display: grid; gap: var(--space-4); }
 .mwp .steps li { counter-increment: step; position: relative; padding-left: 3.5rem; }
@@ -288,20 +292,16 @@
 .mwp .cta-actions { justify-content: flex-end; }
 }
 .mwp .page-hero {
-  background:
-    radial-gradient(circle at 85% 15%, rgba(158,126,188,.22), transparent 55%),
-    var(--plum-900);
-  color: #e6dcf2;
+  background: var(--plum-50);
+  border-bottom: 1px solid var(--plum-100);
   padding-block: var(--space-4) var(--space-5);
 }
-.mwp .page-hero h1 { max-width: 22ch; color: var(--white); font-size: clamp(2.25rem, 4.6vw, 3.5rem); }
-.mwp .page-hero .lede { max-width: 60ch; color: #e6dcf2; }
+.mwp .page-hero h1 { max-width: 22ch; color: var(--plum-900); font-size: clamp(2.25rem, 4.6vw, 3.5rem); }
+.mwp .page-hero .lede { max-width: 60ch; color: var(--ink); }
 .mwp .page-hero .hero-actions { margin-top: var(--space-3); }
 .mwp .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; margin: 0 0 var(--space-3); padding: 0; font-size: 0.9375rem; }
-.mwp .breadcrumb a { color: var(--lilac-300); }
-.mwp .breadcrumb a:hover { color: var(--white); }
-.mwp .breadcrumb li + li::before { content: "/"; margin-right: 0.5rem; color: #c9bddb; }
-.mwp .breadcrumb [aria-current] { color: #ddd5ea; }
+.mwp .breadcrumb li + li::before { content: "/"; margin-right: 0.5rem; color: var(--ink-muted); }
+.mwp .breadcrumb [aria-current] { color: var(--ink-muted); }
 .mwp .page-body { display: grid; gap: var(--space-5); padding-block: var(--space-5) var(--space-6); }
 @media (min-width: 1000px) {
 .mwp .page-body { grid-template-columns: minmax(0, 1fr) 300px; gap: var(--space-6); align-items: start; }
@@ -330,6 +330,11 @@
 .mwp .side-card p { margin-bottom: 0.5rem; }
 .mwp .side-name { font: 700 1.25rem var(--font-head); color: var(--plum-900); }
 .mwp .side-card a { font-weight: 700; }
+.mwp .empty-state {
+  font-size: 1.1875rem;
+  padding: var(--space-4);
+  background: var(--plum-50); border: 1px dashed var(--plum-100); border-radius: 20px;
+}
 
 /* ===== My Wellness Physicians: Squarespace glue =====
    Every page's content sits inside <div class="mwp"> in a Code Block.

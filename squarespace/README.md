@@ -79,17 +79,18 @@ Open any page, click **Edit**, then hover over the header and click **Edit Site 
 - **Colors:** in **Site Styles → Colors**, set the button color to `#543e82` and the header background to white. Keep the header white: the logo is purple and wouldn't show on a dark header.
 - **Button shape:** in **Site Styles → Buttons**, set the shape to **Pill** so the header button matches the rounded buttons on the pages.
 
-Menu links, added under **Website → Pages → Main Navigation → + → Link**:
+Menu, added under **Website → Pages → Main Navigation**, in this order:
 
-| Link text | Address |
-|-----------|---------|
-| Services | `/#services` |
-| Meet the doctor | `/#about` |
-| New patients | `/#new-patients` |
-| Hours & location | `/#visit` |
-| Contact | `/#contact` |
+1. **Services**: click **+ → Folder** and name it `Services`. Inside it, add:
+   - your **Lipedema treatment**, **Lymphedema treatment** and **Medical weight loss** pages (drag them into the folder, and rename their menu titles to `Lipedema`, `Lymphedema` and `Weight loss & obesity management`)
+   - four **Links**: `Hormone therapy for men & women` → `/#hormone-therapy`, `Primary care` → `/#primary-care`, `Wellness consultation` → `/#wellness-consultation`, `IV therapy & peptides` → `/#iv-therapy-peptides`
+2. **Meet the Doctor**: **+ → Link** → `/#about`
+3. **New Patients**: **+ → Link** → `/#new-patients`
+4. **Blog**: **+ → Blog**. Squarespace's own blog page, so you can write and publish posts in the editor. Set its URL slug to `blog`.
+5. **Events**: **+ → Events**. Squarespace's own events page, for adding events with dates and locations. Set its URL slug to `events`.
+6. **Contact**: **+ → Link** → `/#visit`
 
-If you'd rather show the condition pages in the menu, add a **Folder** called Services containing the three condition pages.
+Squarespace shows folders as dropdown menus on desktop and as expandable lists on phones, so the Services menu works like the one on the preview site.
 
 Optional: turn on the **Announcement Bar** (under **Site Styles** or **Marketing**) with "1604 Village Market Blvd SE, Leesburg, VA · 703-777-9355".
 
@@ -125,7 +126,7 @@ For each page, open its **settings (gear icon)**:
 
 | Page | SEO title | SEO description |
 |------|-----------|-----------------|
-| Home | Weight Loss, Lipedema & Lymphedema Doctor in Leesburg, VA \| My Wellness Physicians | Medical weight loss, lipedema and lymphedema treatment, and hormone therapy in Leesburg, VA. Dr. Minnie Cruz-Tolentino is double board-certified in Family and Obesity Medicine, serving Loudoun County in person and by telemedicine. |
+| Home | Lipedema, Weight Loss & Obesity Doctor in Leesburg, VA \| My Wellness Physicians | Lipedema and lymphedema care, weight loss and obesity management, hormone therapy, primary care and IV therapy in Leesburg, VA. Dr. Minnie Cruz-Tolentino, MD, FAAFP, DABOM, serves Loudoun County and Northern Virginia in person and by telemedicine. |
 | Medical weight loss | Medical Weight Loss Doctor in Leesburg, VA \| My Wellness Physicians | Physician-supervised medical weight loss in Leesburg, VA from a board-certified obesity medicine doctor. Personalized plans for lasting results, serving Loudoun County in person and by telemedicine. |
 | Lipedema treatment | Lipedema Treatment in Leesburg, VA \| My Wellness Physicians | Lipedema diagnosis and management in Leesburg, VA. Dr. Minnie Cruz-Tolentino helps patients across Loudoun County understand and manage lipedema, in person or by telemedicine. |
 | Lymphedema treatment | Lymphedema Treatment in Leesburg, VA \| My Wellness Physicians | Lymphedema diagnosis and management in Leesburg, VA. Dr. Minnie Cruz-Tolentino helps patients across Loudoun County manage swelling from lymphedema, in person or by telemedicine. |

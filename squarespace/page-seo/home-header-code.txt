@@ -4,7 +4,7 @@
   "@type": "MedicalClinic",
   "@id": "https://www.mywellnessphysicians.com/#clinic",
   "name": "My Wellness Physicians",
-  "description": "Obesity medicine and hormone therapy practice in Leesburg, Virginia offering medical weight loss, lipedema and lymphedema diagnosis and management, hormone replacement therapy, and preventive primary care.",
+  "description": "Lipedema, weight loss and obesity medicine practice in Leesburg, Virginia offering lipedema and lymphedema care, weight loss and obesity management, hormone therapy for men and women, primary care, wellness consultations, and IV therapy and peptides.",
   "url": "https://www.mywellnessphysicians.com/",
   "telephone": "+1-703-777-9355",
   "email": "info@mywellnessphysicians.com",
@@ -24,6 +24,10 @@
     {
       "@type": "AdministrativeArea",
       "name": "Loudoun County, VA"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Northern Virginia"
     }
   ],
   "openingHoursSpecification": [
@@ -46,10 +50,6 @@
   "availableService": [
     {
       "@type": "MedicalTherapy",
-      "name": "Medical weight loss"
-    },
-    {
-      "@type": "MedicalTherapy",
       "name": "Lipedema diagnosis and management"
     },
     {
@@ -58,11 +58,23 @@
     },
     {
       "@type": "MedicalTherapy",
-      "name": "Hormone replacement therapy"
+      "name": "Weight loss and obesity management"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Hormone therapy for men and women"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Wellness consultation"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "IV therapy and peptides"
     },
     {
       "@type": "MedicalProcedure",
-      "name": "Preventive health care"
+      "name": "Primary care"
     }
   ],
   "potentialAction": {
@@ -71,7 +83,7 @@
   },
   "employee": {
     "@type": "Physician",
-    "name": "Dr. Minnie Cruz-Tolentino"
+    "name": "Minnie Cruz-Tolentino, MD, FAAFP, DABOM"
   }
 }
 </script>

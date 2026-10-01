@@ -24,3 +24,18 @@ document.addEventListener('keydown', (e) => {
 });
 
 document.getElementById('year').textContent = new Date().getFullYear();
+
+// Services dropdown: opens on click (not hover) so it works with touch and keyboard.
+document.querySelectorAll('.sub-toggle').forEach((btn) => {
+  const item = btn.closest('.has-sub');
+  const close = () => { btn.setAttribute('aria-expanded', 'false'); item.classList.remove('is-open'); };
+  btn.addEventListener('click', () => {
+    const open = btn.getAttribute('aria-expanded') === 'true';
+    btn.setAttribute('aria-expanded', String(!open));
+    item.classList.toggle('is-open', !open);
+  });
+  document.addEventListener('click', (e) => { if (!item.contains(e.target)) close(); });
+  item.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && item.classList.contains('is-open')) { e.stopPropagation(); close(); btn.focus(); }
+  });
+});

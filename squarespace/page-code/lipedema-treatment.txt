@@ -10,8 +10,8 @@
         <h1 id="page-title">Lipedema treatment in Leesburg, VA</h1>
         <p class="lede">Diagnosis and ongoing management of lipedema from Dr. Minnie Cruz-Tolentino, for patients across Loudoun County.</p>
         <div class="hero-actions">
-          <a class="btn btn-lilac btn-lg" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book an appointment</a>
-          <a class="btn btn-ghost-light btn-lg" href="tel:+17037779355">Call 703-777-9355</a>
+          <a class="btn btn-primary btn-lg" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book an appointment</a>
+          <a class="btn btn-outline btn-lg" href="tel:+17037779355">Call 703-777-9355</a>
         </div>
       </div>
     </section>
