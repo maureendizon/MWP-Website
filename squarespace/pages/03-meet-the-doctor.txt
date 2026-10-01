@@ -559,6 +559,11 @@ body:has(.mwp-full) #footer-sections,
 body:has(.mwp-full) footer.sections { display: none !important; }
 body:has(.mwp-full) .page-section:has(.mwp) { padding-top: 0 !important; }
 .mwp-full .site-header { z-index: 50; }
+/* Make the Code Block span the whole width of Squarespace's layout grid,
+   however it was sized or placed in the editor. */
+.fe-block:has(.mwp-full) { grid-column: 1 / -1 !important; margin-left: 0 !important; margin-right: 0 !important; }
+.sqs-col-12:has(.mwp-full), .sqs-block:has(.mwp-full) { width: 100% !important; max-width: none !important; }
+.fluid-engine:has(.mwp-full) { padding-left: 0 !important; padding-right: 0 !important; }
 </style>
 <div class="mwp mwp-full">
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -705,6 +710,24 @@ body:has(.mwp-full) .page-section:has(.mwp) { padding-top: 0 !important; }
 
   
 </div>
+<script>
+(function () {
+// Line the page up with the window edges, wherever Squarespace placed the Code Block.
+const page = document.querySelector('.mwp-full');
+if (page) {
+  const align = () => {
+    page.style.left = '0';
+    page.style.marginLeft = '0';
+    const offset = page.getBoundingClientRect().left;
+    page.style.marginLeft = (-offset) + 'px';
+    page.style.width = document.documentElement.clientWidth + 'px';
+  };
+  align();
+  window.addEventListener('resize', align);
+  window.addEventListener('load', align);
+}
+})();
+</script>
 <script>
 (function () {
 // Mobile menu toggle: the nav is a plain list on desktop and collapses behind a button on small screens.
