@@ -333,3 +333,46 @@ a.utility-item:hover { color: var(--white); text-decoration: underline; }
 .footer-notice { font-weight: 600; color: var(--white); }
 .footer-legal { margin: 0; color: #c9bddb; }
 @media (min-width: 900px) { .footer-inner { grid-template-columns: 1fr 1fr; } .footer-legal { grid-column: 1 / -1; padding-top: var(--space-3); border-top: 1px solid rgba(255,255,255,.15); } }
+
+/* Service "more" links on the homepage */
+.service-more { display: inline-block; margin-top: 0.5rem; font-weight: 700; }
+
+/* Inner pages */
+.page-hero { background: var(--plum-50); padding-block: var(--space-4) var(--space-5); }
+.page-hero h1 { max-width: 22ch; }
+.page-hero .lede { max-width: 60ch; }
+.breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem 0.5rem; margin: 0 0 var(--space-3); padding: 0; font-size: 0.9375rem; }
+.breadcrumb li + li::before { content: "/"; margin-right: 0.5rem; color: var(--ink-muted); }
+.breadcrumb [aria-current] { color: var(--ink-muted); }
+
+.page-body { display: grid; gap: var(--space-5); padding-block: var(--space-5) var(--space-6); }
+@media (min-width: 1000px) {
+  .page-body { grid-template-columns: minmax(0, 1fr) 300px; gap: var(--space-6); align-items: start; }
+  .page-body--single { grid-template-columns: minmax(0, 1fr); }
+  .side-card { position: sticky; top: 120px; }
+}
+.prose { max-width: 70ch; }
+.prose h2 { font-size: clamp(1.5rem, 2.4vw, 1.875rem); margin-top: var(--space-5); }
+.prose h2:first-child { margin-top: 0; }
+.prose ul { padding-left: 1.25rem; margin: 0 0 var(--space-2); }
+.prose li { margin-bottom: 0.5rem; }
+.prose li::marker { color: var(--plum-700); }
+.callout {
+  border-left: 4px solid var(--plum-700);
+  background: var(--plum-50);
+  padding: var(--space-2) var(--space-3);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.side-card {
+  display: grid; gap: var(--space-2);
+  border: 1px solid var(--line); border-radius: var(--radius-lg);
+  padding: var(--space-3);
+  max-width: 420px;
+}
+.side-card img { width: 100%; height: auto; aspect-ratio: 1 / 1; object-fit: cover; object-position: 50% 15%; border-radius: var(--radius-sm); }
+.side-card p { margin-bottom: 0.5rem; }
+.side-name { font: 700 1.25rem var(--font-head); color: var(--plum-900); }
+.side-card a { font-weight: 700; }
+
+.site-nav a[aria-current="page"] { color: var(--plum-700); text-decoration: underline; text-underline-offset: 0.35em; }
