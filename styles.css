@@ -515,3 +515,6 @@ a.utility-item:hover { color: var(--white); text-decoration: underline; }
   padding: var(--space-4);
   background: var(--plum-50); border: 1px dashed var(--plum-100); border-radius: 20px;
 }
+
+/* Contact page: phone, email and booking under the address */
+.contact-lines { font-size: 1.125rem; font-weight: 700; margin-bottom: var(--space-3); }

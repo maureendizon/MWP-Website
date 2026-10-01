@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://www.mywellnessphysicians.com/</loc></url>
+  <url><loc>https://www.mywellnessphysicians.com/services/</loc></url>
+  <url><loc>https://www.mywellnessphysicians.com/meet-the-doctor/</loc></url>
+  <url><loc>https://www.mywellnessphysicians.com/new-patients/</loc></url>
   <url><loc>https://www.mywellnessphysicians.com/medical-weight-loss/</loc></url>
   <url><loc>https://www.mywellnessphysicians.com/lipedema-treatment/</loc></url>
   <url><loc>https://www.mywellnessphysicians.com/lymphedema-treatment/</loc></url>
   <url><loc>https://www.mywellnessphysicians.com/blog/</loc></url>
   <url><loc>https://www.mywellnessphysicians.com/events/</loc></url>
+  <url><loc>https://www.mywellnessphysicians.com/contact/</loc></url>
   <url><loc>https://www.mywellnessphysicians.com/privacy-policy/</loc></url>
 </urlset>
