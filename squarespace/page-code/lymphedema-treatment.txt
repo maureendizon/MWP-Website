@@ -40,7 +40,7 @@
         <p>See us at our office in Leesburg, or have follow-up visits by telemedicine. Patients come to us from across Loudoun County and surrounding areas.</p>
       </article>
       <aside class="side-card" aria-label="About the doctor">
-        <img src="{{PORTRAIT_PHOTO}}" width="500" height="547" loading="lazy" alt="Dr. Minnie Cruz-Tolentino">
+        <img src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/61a7e950-1824-4f75-941b-242c34c58927/dr-cruz-tolentino-portrait.jpg?format=1000w" width="500" height="547" loading="lazy" alt="Dr. Minnie Cruz-Tolentino">
         <div>
           <p class="side-name">Dr. Minnie Cruz-Tolentino</p>
           <p>Double board-certified in Family Medicine and Obesity Medicine, with over 19 years of experience.</p>

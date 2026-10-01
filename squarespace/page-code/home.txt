@@ -11,7 +11,7 @@
         </div>
         <figure class="hero-media">
           <img
-            src="{{HERO_PHOTO}}"
+            src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/757e3715-907f-4480-b5a3-70a8eca5c328/dr-cruz-tolentino-clinic.jpg?format=1500w"
             width="1200" height="675"
             alt="Dr. Minnie Cruz-Tolentino in the hallway of My Wellness Physicians in Leesburg, VA"
             >
@@ -111,7 +111,7 @@
     <section class="about" id="about" aria-labelledby="about-title">
       <div class="container about-inner">
         <img class="about-photo"
-          src="{{PORTRAIT_PHOTO}}"
+          src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/61a7e950-1824-4f75-941b-242c34c58927/dr-cruz-tolentino-portrait.jpg?format=1000w"
           width="900" height="984" loading="lazy"
           alt="Portrait of Dr. Minnie Cruz-Tolentino, obesity medicine physician in Leesburg, VA">
         <div>
@@ -119,10 +119,10 @@
           <p>Dr. Cruz-Tolentino is double board-certified in Family Medicine and Obesity Medicine, with over 19 years of experience helping patients achieve lasting wellness. As the founder of My Wellness Physicians, she specializes in lipedema and lymphedema diagnosis and management, medical weight loss, hormone replacement therapy and preventive health care for men and women across Loudoun County and surrounding areas.</p>
           <p>She pairs her medical background with a compassionate, patient-centered approach. Her goal is to guide every patient toward sustainable results through evidence-based treatment, nutritional education and a personalized care plan, because true transformation begins when you understand your body.</p>
           <ul class="credentials" aria-label="Certifications and recognition">
-            <li><img src="{{LOGO_ABFM}}" width="199" height="152" loading="lazy" alt="Board Certified, American Board of Family Medicine"></li>
-            <li><img src="{{LOGO_ABOM}}" width="293" height="78" loading="lazy" alt="American Board of Obesity Medicine, Certified Diplomate"></li>
-            <li><img src="{{LOGO_MENOPAUSE}}" width="218" height="102" loading="lazy" alt="The Menopause Society"></li>
-            <li><img src="{{LOGO_BEST_OF_LOUDOUN}}" width="123" height="134" loading="lazy" alt="Best of Loudoun 2025 Winner, Loudoun Times-Mirror"></li>
+            <li><img src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/a41b11d4-63fa-4343-aace-c71d86c2e567/abfm-board-certified.png?format=500w" width="199" height="152" loading="lazy" alt="Board Certified, American Board of Family Medicine"></li>
+            <li><img src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/0e838b43-73f1-4aad-b476-1fac945b27e6/abom-diplomate.png?format=750w" width="293" height="78" loading="lazy" alt="American Board of Obesity Medicine, Certified Diplomate"></li>
+            <li><img src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/7071d39f-ec71-45a9-bb00-8a8038a1ce7d/menopause-society.png?format=500w" width="218" height="102" loading="lazy" alt="The Menopause Society"></li>
+            <li><img src="https://images.squarespace-cdn.com/content/v1/6abe7c20de71f62d44ad27f3/4c68c64d-b413-44ef-aa23-8019bd356824/best-of-loudoun-2025.png?format=500w" width="123" height="134" loading="lazy" alt="Best of Loudoun 2025 Winner, Loudoun Times-Mirror"></li>
           </ul>
         </div>
       </div>
