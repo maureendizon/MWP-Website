@@ -34,18 +34,30 @@ The styling only affects content inside the pasted code, so the rest of your sit
 
 ## 3. Upload the images and get their web addresses
 
-The page code needs a web address for each image. Squarespace gives you one when you upload through Custom CSS:
+The page code needs a web address for each of these six images in `images-to-upload/`:
 
-1. In the Custom CSS window, click **Manage Custom Files**, then upload these six files from `images-to-upload/`:
-   - `dr-cruz-tolentino-clinic.jpg`
-   - `dr-cruz-tolentino-portrait.jpg`
-   - `abfm-board-certified.png`
-   - `abom-diplomate.png`
-   - `menopause-society.png`
-   - `best-of-loudoun-2025.png`
-2. Click a file in the list. Squarespace adds a line like `url(https://images.squarespace-cdn.com/…)` to the CSS box. Copy the address between the brackets, then delete that line from the CSS box.
-3. Repeat for each file.
-4. Send the six addresses to Claude, which will fill them into the page code for you. Or do it yourself: in each file in `page-code/`, replace each placeholder with its address:
+- `dr-cruz-tolentino-clinic.jpg`
+- `dr-cruz-tolentino-portrait.jpg`
+- `abfm-board-certified.png`
+- `abom-diplomate.png`
+- `menopause-society.png`
+- `best-of-loudoun-2025.png`
+
+**Option A: a hidden "image library" page (works on every account)**
+
+1. **Website → Pages → +** under **Not Linked → Blank page**. Name it `Image library`.
+2. In the page's **settings (gear icon) → SEO**, turn on **Hide page from search results**.
+3. Click **Edit**, add a section, then add six **Image** blocks, one per image. Click **Save**.
+4. Open `https://www.mywellnessphysicians.com/image-library` in a private browser window.
+5. Right-click each image (Ctrl-click on a Mac) → **Copy image address**. Each starts with `https://images.squarespace-cdn.com/`.
+
+Keep this page afterwards. Deleting it may eventually remove the images from Squarespace.
+
+**Option B: Custom CSS file upload (if your account has it)**
+
+At the bottom of the Custom CSS panel, look for **Manage Custom Files**, **Custom files** or **Add images or fonts**. Upload the six files there, then click each one: Squarespace adds a line like `url(https://…)` to the CSS box. Copy the address between the brackets and delete that line from the CSS box.
+
+**Then:** send the six addresses to Claude, which will fill them into the page code for you. Or do it yourself: in each file in `page-code/`, replace each placeholder with its address:
 
 | Placeholder | Image |
 |-------------|-------|
