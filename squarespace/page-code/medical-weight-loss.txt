@@ -10,8 +10,8 @@
         <h1 id="page-title">Medical weight loss in Leesburg, VA</h1>
         <p class="lede">Physician-supervised weight loss from Dr. Minnie Cruz-Tolentino, a board-certified obesity medicine doctor, for patients across Loudoun County.</p>
         <div class="hero-actions">
-          <a class="btn btn-primary btn-lg" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book an appointment</a>
-          <a class="btn btn-quiet btn-lg" href="tel:+17037779355">Call 703-777-9355</a>
+          <a class="btn btn-lilac btn-lg" href="https://scheduling.symplast.com/mywellnessphysicians/3?provider=7">Book an appointment</a>
+          <a class="btn btn-ghost-light btn-lg" href="tel:+17037779355">Call 703-777-9355</a>
         </div>
       </div>
     </section>
