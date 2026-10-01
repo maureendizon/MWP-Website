@@ -6,4 +6,4 @@ Static site: `index.html`, `styles.css`, `main.js`. No build step; open `index.h
 
 Placeholder text is wrapped in `<span class="ph">[…]</span>` and shows with an orange dashed outline. Replace the text and remove the `ph` span. Photo spaces are the `photo-slot` elements; replace each with an `<img>` that has descriptive alt text.
 
-Remaining placeholder: privacy policy link.
+All placeholders have been filled in.
