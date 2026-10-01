@@ -254,3 +254,92 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
   update();
 });
 </script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MedicalClinic",
+  "@id": "https://www.mywellnessphysicians.com/#clinic",
+  "name": "My Wellness Physicians",
+  "description": "Lipedema, weight loss and obesity medicine practice in Leesburg, Virginia offering lipedema and lymphedema care, weight loss and obesity management, hormone therapy for men and women, primary care, wellness consultations, and IV therapy and peptides.",
+  "url": "https://www.mywellnessphysicians.com/",
+  "telephone": "+1-703-777-9355",
+  "email": "info@mywellnessphysicians.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "1604 Village Market Blvd SE, Suite 119",
+    "addressLocality": "Leesburg",
+    "addressRegion": "VA",
+    "postalCode": "20175",
+    "addressCountry": "US"
+  },
+  "areaServed": [
+    {
+      "@type": "City",
+      "name": "Leesburg, VA"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Loudoun County, VA"
+    },
+    {
+      "@type": "AdministrativeArea",
+      "name": "Northern Virginia"
+    }
+  ],
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Friday"
+      ],
+      "opens": "08:30",
+      "closes": "17:30"
+    }
+  ],
+  "medicalSpecialty": [
+    "PrimaryCare"
+  ],
+  "availableService": [
+    {
+      "@type": "MedicalTherapy",
+      "name": "Lipedema diagnosis and management"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Lymphedema diagnosis and management"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Weight loss and obesity management"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Hormone therapy for men and women"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "Wellness consultation"
+    },
+    {
+      "@type": "MedicalTherapy",
+      "name": "IV therapy and peptides"
+    },
+    {
+      "@type": "MedicalProcedure",
+      "name": "Primary care"
+    }
+  ],
+  "potentialAction": {
+    "@type": "ReserveAction",
+    "target": "https://scheduling.symplast.com/mywellnessphysicians/3?provider=7"
+  },
+  "employee": {
+    "@type": "Physician",
+    "name": "Minnie Cruz-Tolentino, MD, FAAFP, DABOM"
+  }
+}
+</script>

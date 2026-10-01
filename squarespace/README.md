@@ -1,14 +1,12 @@
 # Putting the site into Squarespace
 
-This folder turns the website into pieces you paste into Squarespace (version 7.1, Core plan or higher). Squarespace keeps its own header, menu and page settings; the page content goes into Code Blocks.
+This folder turns the website into pieces you paste into Squarespace (version 7.1). Nothing here needs Code Injection. The carousel arrows and the map embed run inside Code Blocks; if your plan or trial blocks them, the cards still scroll by swiping and the "Get directions" button still works. Squarespace keeps its own header, menu and page settings; the page content goes into Code Blocks.
 
 | File | Where it goes |
 |------|---------------|
-| `1-site-header-code.txt` | Site-wide Code Injection (loads the fonts) |
 | `2-custom-css.txt` | Custom CSS (all the styling) |
 | `images-to-upload/` | Uploaded to Squarespace (step 3) |
-| `page-code/*.txt` | One Code Block per page, plus the footer |
-| `page-seo/*-header-code.txt` | Each page's own Code Injection (search-engine data) |
+| `page-code/*.txt` | One Code Block per page (including its search-engine data), plus the footer |
 
 The code files are plain text. Open one (it opens in a text app such as Notepad or TextEdit), select everything (Ctrl+A on Windows, Cmd+A on Mac), copy, and paste it into Squarespace.
 
@@ -18,16 +16,14 @@ Squarespace renames its menus from time to time. If a menu below isn't where thi
 
 ---
 
-## 1. Load the fonts (site-wide)
+## 1. Fonts
 
-1. Open **Settings → Developer Tools → Code Injection**. On some accounts it's **Settings → Advanced → Code Injection**.
-2. Paste the whole of `1-site-header-code.txt` into the **Header** box.
-3. Click **Save**.
+Nothing to do: the fonts load from the Custom CSS in step 2. (Earlier versions of this kit used Code Injection for this. If you pasted anything into Code Injection, you can delete it.)
 
 ## 2. Add the styling
 
 1. Open **Website → Pages**, scroll to the bottom and click **Custom Code → Custom CSS**. On older accounts it's **Design → Custom CSS**.
-2. Paste the whole of `2-custom-css.txt` into the box. If something is already there, paste below it.
+2. Paste the whole of `2-custom-css.txt` into the box, **at the very top**. The first lines load the fonts, and they only work at the top. If you pasted an earlier version of this file, delete it first.
 3. Click **Save**.
 
 The styling only affects content inside the pasted code, so the rest of your site stays as it is.
@@ -101,13 +97,13 @@ Optional: turn on the **Announcement Bar** (under **Site Styles** or **Marketing
 
 Do this for each page in the table. For the privacy policy, edit your existing page instead of creating a new one.
 
-| Page title | URL slug | Code Block | Page code injection |
+| Page title | URL slug | Code Block |
 |------------|----------|------------|---------------------|
-| Home (new) | `home-new` | `page-code/home.txt` | `page-seo/home-header-code.txt` |
-| Medical weight loss | `medical-weight-loss` | `page-code/medical-weight-loss.txt` | `page-seo/medical-weight-loss-header-code.txt` |
-| Lipedema treatment | `lipedema-treatment` | `page-code/lipedema-treatment.txt` | `page-seo/lipedema-treatment-header-code.txt` |
-| Lymphedema treatment | `lymphedema-treatment` | `page-code/lymphedema-treatment.txt` | `page-seo/lymphedema-treatment-header-code.txt` |
-| Privacy policy | `privacy-policy` | `page-code/privacy-policy.txt` | `page-seo/privacy-policy-header-code.txt` |
+| Home (new) | `home-new` | `page-code/home.txt` |
+| Medical weight loss | `medical-weight-loss` | `page-code/medical-weight-loss.txt` |
+| Lipedema treatment | `lipedema-treatment` | `page-code/lipedema-treatment.txt` |
+| Lymphedema treatment | `lymphedema-treatment` | `page-code/lymphedema-treatment.txt` |
+| Privacy policy | `privacy-policy` | `page-code/privacy-policy.txt` |
 
 For each one:
 
@@ -122,12 +118,9 @@ The homepage code includes a small script for the services carousel's arrow butt
 
 The code makes the content run edge to edge and removes Squarespace's section padding, so a thin gap or a slightly different spacing in the editor is normal. Check the live page in a private browser window.
 
-## 6. Search titles, descriptions and search-engine data
+## 6. Search titles and descriptions
 
-For each page, open its **settings (gear icon)**:
-
-1. On the **SEO** tab, paste the title and description from the table below.
-2. On the **Advanced** tab, paste the matching `page-seo/…-header-code.txt` file into **Page Header Code Injection**.
+For each page, open its **settings (gear icon)** and, on the **SEO** tab, paste the title and description from the table below. The search-engine data (business details, hours, services) is already inside each page's Code Block.
 
 | Page | SEO title | SEO description |
 |------|-----------|-----------------|
